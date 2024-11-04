@@ -1,4 +1,4 @@
 # Enlaces de Interes:
 
-[GitHub](https://github.com/)
-[figma](https://www.figma.com/)
+- [GitHub](https://github.com/)
+- [figma](https://www.figma.com/)
