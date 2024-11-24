@@ -1,6 +1,6 @@
 # Diseño BBDD
-- [Requisitos Funcionales]
-- [Diseño Conceptual]
+- [Requisitos Funcionales](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Dise%C3%B1o_BBDD.md#requisitos-funcionales)
+- [Diseño Conceptual](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Dise%C3%B1o_BBDD.md#dise%C3%B1o-conceptual)
 
 ## Requisitos Funcionales
 
@@ -65,31 +65,42 @@ Guardaremos también las formas de pago del cliente. Cada cliente puede guardar 
 
 ### Participación:
 Un cine tiene muchas salas, una sala pertenece a un solo cine (0, N) (1, 1)
+
 Una sala tiene muchas butacas, una butaca pertenece a una sola sala (0, N) (1, 1)
+
 Una pelicula pertenece muchos generos, un genero puede ser de muchas peliculas (0, N) (0, N)
+
 Una pelicula puede ser VOS o Doblada. (Herencia: Especialización - Total Exclusiva)
+
 Un artista puede dirigir muchas peliculas, una pelicula solo puede ser dirigida por un director (0, N) (1, 1)
+
 Un artista puede actuar en muchas peliculas, una pelicula puede tener muchos actores (0, N) (0, N)
-Un doblada puede ser doblada por muchos artistas, un artista puede doblar muchas dobladas (0, N) (0, N)
-Una pelicula tiene muchas sesiones, una sesion solo pertenece a una pelicula (0, N) (1, 1)
-Una sala tiene muchas sesiones, una sesion solo pertenece a una sala (0, N) (1, 1)
+
+Una Pelicula doblada puede ser doblada por muchos artistas, un artista puede doblar muchas peliculas dobladas (0, N) (0, N)
+
+Una pelicula se proyecta en muchas sesiones, una sesion solo proyecta una pelicula (0, N) (1, 1)
+
+Una sala celebra muchas sesiones, una sesion solo es celebrada en una sala (0, N) (1, 1)
+
 Un cliente puede tener muchas FormaDePago, una FormaDePago pertenece a un solo cliente (0, N) (1, 1)
+
 Una FormaDePago puede ser PayPal o MasterCard. (Herencia: Especialización - Total Exclusiva)
+
 Un cliente puede comprar muchas butacas para la misma sesion, una misma butaca puede ser comprada por muchos cliente en muchas sesiones distintas, una sesion puede puede contener compras de muchos clientes y muchas butacas. (0, N) (0, N) (0, N)
 
 ### Cardinalidad:
-Cine y Sala mediante tiene (1, N)
-Sala y Butaca mediante tiene (1, N)
-Pelicula y Genero mediante pertenece (M, N)
-Pelicula y VOS mediante es (Especialidad - Total Exclusiva)
-Pelicula y Doblada mediante es (Especialidad - Total Exclusiva)
-Artista y Pelicula mediante dirige (1: N)
-Artista y Pelicula mediante actua (M, N)
-Artista y Doblada mediante dobla (M, N)
-Pelicula y Sesion mediante proyecta (1, N)
-Sesion y Sala mediante celebra (1, N)
-Cliente y FormaDePago mediante tiene (1, N)
-FormaDePago y PayPal mediante es (Especialidad - Total Exclusiva)
-FormaDePago y MasterCard mediante es (Especialidad - Total Exclusiva)
-Cliente, Sesion y Butaca mediante compra (L, M, N)
+- Cine y Sala mediante tiene (1, N)
+- Sala y Butaca mediante tiene (1, N)
+- Pelicula y Genero mediante pertenece (M, N)
+- Pelicula y VOS mediante es (Especialidad - Total Exclusiva)
+- Pelicula y Doblada mediante es (Especialidad - Total Exclusiva)
+- Artista y Pelicula mediante dirige (1: N)
+- Artista y Pelicula mediante actua (M, N)
+- Artista y Doblada mediante dobla (M, N)
+- Pelicula y Sesion mediante proyecta (1, N)
+- Sesion y Sala mediante celebra (1, N)
+- Cliente y FormaDePago mediante tiene (1, N)
+- FormaDePago y PayPal mediante es (Especialidad - Total Exclusiva)
+- FormaDePago y MasterCard mediante es (Especialidad - Total Exclusiva)
+- Cliente, Sesion y Butaca mediante compra (L, M, N)
 
