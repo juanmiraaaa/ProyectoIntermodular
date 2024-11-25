@@ -104,3 +104,6 @@ Un cliente puede comprar muchas butacas para la misma sesion, una misma butaca p
 - FormaDePago y MasterCard mediante es (Especialidad - Total Exclusiva)
 - Cliente, Sesion y Butaca mediante compra (L, M, N)
 
+### Diagrama Entidad-Relacion:
+
+![Diagrama ER](images/Diagrama-ER.png)
