@@ -47,6 +47,9 @@ Guardaremos también las formas de pago del cliente. Cada cliente puede guardar 
 - PayPal
 - MasterCard
 
+*Añadida la entidad Entrada*
+- Entrada
+
 ### Relaciones:
 - TIENE entre Cine y Sala
 - TIENE entre Sala y Butaca
@@ -61,7 +64,14 @@ Guardaremos también las formas de pago del cliente. Cada cliente puede guardar 
 - TIENE entre Cliente y FormaDePago
 - ES entre FormaDePago y PayPal
 - ES entre FormaDePago y MasterCard
-- COMPRA entre Sesion, Butaca y Cliente
+- COMPRA entre Sesion, Butaca y Cliente **TERNARIA**
+
+*Añadido la entidad Entrada para resolver la ternaria.*
+> COMPRA entre Cliente y Entrada
+>
+> TIENE entre Entrada y Sesion
+>
+> TIENE entre Entrada y Butaca
 
 ### Participación:
 Un cine tiene muchas salas, una sala pertenece a un solo cine (0, N) (1, 1)
@@ -86,7 +96,15 @@ Un cliente puede tener muchas FormaDePago, una FormaDePago pertenece a un solo c
 
 Una FormaDePago puede ser PayPal o MasterCard. (Herencia: Especialización - Total Exclusiva)
 
+**TERNARIA**
 Un cliente puede comprar muchas butacas para la misma sesion, una misma butaca puede ser comprada por muchos cliente en muchas sesiones distintas, una sesion puede puede contener compras de muchos clientes y muchas butacas. (0, N) (0, N) (0, N)
+
+*Añadido entidad Entrada*
+> Un Cliente puede comprar muchas Entradas, una Entrada solo puede ser comprada por un Cliente (0, N) (1, 1)
+>
+> Una Entrada tiene una sola Butaca, una Butaca puede pertenecer a muchas Entradas. (1, 1) (0, N)
+>
+> Una Entrada tiene una sola Sesion, una Sesion puede pertenecer a muchas Entradas. (1, 1) (0, N)
 
 ### Cardinalidad:
 - Cine y Sala mediante tiene (1, N)
@@ -102,8 +120,15 @@ Un cliente puede comprar muchas butacas para la misma sesion, una misma butaca p
 - Cliente y FormaDePago mediante tiene (1, N)
 - FormaDePago y PayPal mediante es (Especialidad - Total Exclusiva)
 - FormaDePago y MasterCard mediante es (Especialidad - Total Exclusiva)
-- Cliente, Sesion y Butaca mediante compra (L, M, N)
+- Cliente, Sesion y Butaca mediante compra (L, M, N) **TERNARIA**
+
+*Añadida la entidad entrada para eliminar la ternaria*
+> Cliente y Entrada mediante compra (1, N)
+>
+> Entrada y Sesion mediante tiene (1, N)
+>
+> Entrada y Butaca mediante tiene (1, N)
 
 ### Diagrama Entidad-Relacion:
 
-![Diagrama ER](images/Diagrama-ER.png)
+![Diagrama ER](images/BBDD-Conceptual.webp)
