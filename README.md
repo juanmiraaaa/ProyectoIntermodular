@@ -55,12 +55,12 @@ Los usuarios se pueden registrar. Si quieres comprar tienes que estar registrado
 ## ENLACES DE INTERES
 [Al Índice](https://github.com/juanmiraaaa/ProyectoIntermodular?tab=readme-ov-file#indice)
 
-- [Diagrama de Gantt](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/DiagramaGantt/Hito2.pdf){:target="_blank"}
+- [Diagrama de Gantt](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/DiagramaGantt/Hito2.pdf)
 
-- [Analisis de Requisitos](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/AnalisisRequisitos/AnalisisRequisitos.pdf){:target="_blank"}
+- [Analisis de Requisitos](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/AnalisisRequisitos/AnalisisRequisitos.pdf)
 
-- [Diseño Conceptual BBDD PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/DisenyoBBDD.pdf){:target="_blank"}
-- [Diseño Conceptual BBDD](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/Diagrama_ER.md){:target="_blank"}
+- [Diseño Conceptual BBDD PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/DisenyoBBDD.pdf)
+- [Diseño Conceptual BBDD](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/Diagrama_ER.md)
 
-- [MockUp Proyecto PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/MockUp/Taquilla%20Classic%20Cinema.pdf){:target="_blank"}
-- [MockUp Prototipo Interactivo](https://www.figma.com/proto/6kiFsAjmcK0EmUDCrRRTd4/Taquilla-Classic-Cinema?node-id=1-2&t=K0zTk4VRqulNikyh-1){:target="_blank"}
+- [MockUp Proyecto PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/MockUp/Taquilla%20Classic%20Cinema.pdf)
+- [MockUp Prototipo Interactivo](https://www.figma.com/proto/6kiFsAjmcK0EmUDCrRRTd4/Taquilla-Classic-Cinema?node-id=1-2&t=K0zTk4VRqulNikyh-1)
