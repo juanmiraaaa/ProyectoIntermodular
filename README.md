@@ -15,7 +15,7 @@ Taquilla online de venta de entradas para un cine
 ## INTRODUCCION
 [Al Índice](https://github.com/juanmiraaaa/ProyectoIntermodular?tab=readme-ov-file#indice)
 
-Una empresa del entorno opera varios cines y nos han pedido desarrollar una taquilla online que permita a sus clientes consultar la cartelera y comprar sus entradas por adelantado.
+Una aplicación de Taquilla Online para cines, que permite consultar la cartelera y comprar las entradas por adelantado
 
 ## DESCRIPCION DEL PROYECTO
 [Al Índice](https://github.com/juanmiraaaa/ProyectoIntermodular?tab=readme-ov-file#indice)
@@ -45,7 +45,7 @@ Los usuarios se pueden registrar. Si quieres comprar tienes que estar registrado
 [Al Índice](https://github.com/juanmiraaaa/ProyectoIntermodular?tab=readme-ov-file#indice)
 
 - Juan Mira (juanmiraaaa)
-- Ismael ()
+- Ismael
 - Siham
 - Andrés (Andrespeerez)
 
@@ -58,7 +58,7 @@ Los usuarios se pueden registrar. Si quieres comprar tienes que estar registrado
 ### Memoria Proyecto
 - [Memoria de Proyecto](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/MemoriaProyecto.pdf)
 
-### organizacion Temporal y de Equipo
+### Organizacion Temporal y de Equipo
 - [Diagrama de Gantt](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/DiagramaGantt/Hito2.pdf)
 
 ### Analisis Requisitos
