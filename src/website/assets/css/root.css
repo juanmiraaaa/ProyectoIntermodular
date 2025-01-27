@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #D43A3A;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Spectral SC", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--body-bg-color);
+}
+
+
+iframe {
+    overflow: hidden;
+    border: none;
+    width: 100%; /* Tomará todo el ancho disponible */
+    height: 100px;
+    display: block;
+}
+
+#header-frame {
+    height: 100px; /* Ajustar según el tamaño del header */
+}
+
+/* Estilo específico para el iframe del footer */
+#footer-frame {
+    height: 425px; /* Ajustar según el tamaño del footer */
+}
+
+
+main {
+    width: 1200px;
+    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
+    box-shadow: 0 10px 15px 10px #333;
+    margin: 0 auto;
+}
+
+
+main section {
+    margin: 0 100px;
+    text-align: center;
+    padding: 60px;
+}
