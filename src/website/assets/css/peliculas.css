@@ -1,48 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-:root {
-    --body-bg-color: #99904D;
-    --navbar-bg-color: #7C0D0D;
-    --main-bg-color: #D43A3A;
-    --footer-bg-color: #7C0D0D;
-
-    --estrenos-bg-color: #457995;
-    --cartelera-bg-color: #B1A78B;
-
-    --list-film-color: #D9D9D9;
-
-    --film-bg-color: #FEFBE7;
-    --film-title-color: #6B621D;
-    --film-desc-color: #47473D;
-    --film-button-bg-color: #3E1164;
-    --film-duration-bg-color: #D9D9D9;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Spectral SC", sans-serif;
-}
-
-body {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--body-bg-color);
-}
-
-main {
-    max-width: 1200px;
-    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
-    box-shadow: 0 0 15px 10px #333;
-    margin: 0 auto;
-}
-
-
-main section {
-    margin: 0 100px;
-    text-align: center;
-    padding: 60px;
-}
 
 #estrenos {
     background-color: var(--estrenos-bg-color);
@@ -125,6 +80,43 @@ form.form-group {
     margin-bottom:15px;
 }
 
+
+select {
+    font-size: 12px;
+} 
+
+#film-name {
+    flex-grow: 1; 
+    width: 200px;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0; 
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] span {
+    display: inline-block;
+    font-size: 16px; 
+}
+
+button[type="submit"]:hover {
+    background-color: darkviolet;
+}
+
+
+
 div.film-list {
     background-color: var(--list-film-color);
     max-width: 800px;
@@ -151,35 +143,6 @@ article.film:last-of-type , button[type="submit"]{
 }
 
 
-
-#film-name {
-    flex-grow: 1; 
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-}
-
-
-button[type="submit"] {
-    padding: 10px 15px;
-    background-color: purple;
-    color: white;
-    border: none;
-    border-radius: 0 4px 4px 0; 
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"] span {
-    display: inline-block;
-    font-size: 18px; 
-}
-
-button[type="submit"]:hover {
-    background-color: darkviolet;
-}
 
 
 
@@ -272,38 +235,4 @@ div.film-detail a.see-more:active {
 }
 
 
-
-
-
-
-
-@media (max-width: 1080px) {
-    main {
-        max-width: 800px;
-    }
-
-    main section {
-        padding: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        max-width: 600px;
-    }
-
-    main section {
-        padding: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        max-width: 400px;
-    }
-
-    main section {
-        padding: 15px;
-    }
-}
 
