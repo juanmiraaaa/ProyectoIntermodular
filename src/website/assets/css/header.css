@@ -1,7 +1,6 @@
 header {
     width: 100vw;
     background-color: var(--navbar-bg-color);
-    box-shadow: 0 10px 15px 10px #333;
 }
 
 header div {
