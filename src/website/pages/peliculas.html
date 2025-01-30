@@ -12,32 +12,31 @@
     <title>Classic Cinema | Películas</title>
 </head>
 <body>
+    <a href="#main-content" class="to-main-content">Ir al contenido principal</a>
     <header>
-        <iframe src="../components/header.html" title="header" id="header-frame" scrolling="no"></iframe>
+        <iframe src="../components/header.html" title="header" id="header-frame"></iframe>
     </header>
 
-    <a href="#" id="scroll-to-top" class="scroll-to-top">
+    <a href="#" id="scroll-to-top" class="scroll-to-top" >
         <span class="ri-arrow-up-s-line"></span>
     </a>
     
 
-    <main class="films">
+    <main class="films" id="main-content">
         <section id="hero">
             <h1>Películas</h1>
-            <p>Investiga nuestra <a href="#cartelera">cartelera</a> y<br> informaté de futuros <a href="#estrenos">estrenos</a></p>
+            <p>Revisa nuestra <a href="#cartelera">cartelera</a> <br> Infórmate de futuros <a href="#estrenos">estrenos</a></p>
         </section>
 
         <section id="estrenos">
             <h2>Estrenos</h2>
 
-            <class="slider-wrapper">
-
+            <div class="slider-wrapper">
                 <div class="slider">
                     <img id="slider-1" src="../assets/img/peliculas/peliculas-estrenos-slider-1.webp" alt="Pelicula 1">
                     <img id="slider-2" src="../assets/img/peliculas/peliculas-estrenos-slider-2.webp" alt="Pelicula 2">
                     <img id="slider-3" src="../assets/img/peliculas/peliculas-estrenos-slider-3.webp" alt="Pelicula 3">
                 </div>
-                
             </div>
 
         </section>
@@ -50,7 +49,7 @@
                 <div class="film-group">
                     <label for="genre"></label>
                     <select id="genre" name="genre">
-                        <option value="" disables selected>Selecciona Género</option>
+                        <option value="" disabled selected>Selecciona Género</option>
                         <option value="action">Acción</option>
                         <option value="comedy">Comedia</option>
                         <option value="drama">Drama</option>
@@ -63,7 +62,7 @@
                 <div class="film-group">
                     <label for="age"></label>
                     <select id="age" name="age">
-                        <option value="" disables selected>Selecciona Edad</option>
+                        <option value="" disabled selected>Selecciona Edad</option>
                         <option value="3">Pegi 3</option>
                         <option value="7">Pegi 7</option>
                         <option value="12">Pegi 12</option>
@@ -75,7 +74,7 @@
                 <div class="film-group">
                     <label for="format"></label>
                     <select id="format" name="format">
-                        <option value="" disables selected>Selecciona Formato</option>
+                        <option value="" disabled selected>Selecciona Formato</option>
                         <option value="2d">2D</option>
                         <option value="3d">3D</option>
                     </select>
@@ -150,7 +149,7 @@
                                 <p>Ver más</p>
                             </a>
                         </div>
-                    </>
+                    </div>
                 </article>
 
                 <article class="film">
@@ -298,7 +297,7 @@
     </main>
 
     <footer>
-        <iframe src="../components/footer.html" title="footer" id="footer-frame" scrolling="no"></iframe>
+        <iframe src="../components/footer.html" title="footer" id="footer-frame"></iframe>
     </footer>
     
 </body>

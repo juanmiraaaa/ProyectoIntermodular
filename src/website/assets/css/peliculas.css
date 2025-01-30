@@ -1,10 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.to-main-content {
+    display: none;
+}
 
 #hero {
     background-color: var(--hero-bg-color);
 }
 
 #hero h1 {
-    color: var(--hero-h1);
+    color: var(--hero-h1-color);
     font-size: 3rem;
     font-weight: 700;
 }
@@ -16,7 +23,7 @@
 }
 
 #hero p a {
-    color: var(--hero-a);
+    color: var(--hero-a-color);
     text-decoration: none;
     font-size: 2rem;
 }
