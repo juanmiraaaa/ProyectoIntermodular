@@ -12,10 +12,21 @@
     <title>Classic Cinema | Películas</title>
 </head>
 <body>
-    <iframe src="../components/header.html" id="header-frame" scrolling="no"></iframe>
+    <header>
+        <iframe src="../components/header.html" title="header" id="header-frame" scrolling="no"></iframe>
+    </header>
 
+    <a href="#" id="scroll-to-top" class="scroll-to-top">
+        <span class="ri-arrow-up-s-line"></span>
+    </a>
+    
 
     <main class="films">
+        <section id="hero">
+            <h1>Películas</h1>
+            <p>Investiga nuestra <a href="#cartelera">cartelera</a> y<br> informaté de futuros <a href="#estrenos">estrenos</a></p>
+        </section>
+
         <section id="estrenos">
             <h2>Estrenos</h2>
 
@@ -286,7 +297,9 @@
         </section>
     </main>
 
-
-    <iframe src="../components/footer.html" id="footer-frame" scrolling="no"></iframe>
+    <footer>
+        <iframe src="../components/footer.html" title="footer" id="footer-frame" scrolling="no"></iframe>
+    </footer>
+    
 </body>
 </html>
