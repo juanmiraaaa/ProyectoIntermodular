@@ -6,10 +6,13 @@
     --main-bg-color: #D43A3A;
     --footer-bg-color: #7C0D0D;
     --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
 
     --nav-a-color: #C1B65F;
     --footer-h4-color: #DEA508;
     --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
 
     --estrenos-bg-color: #457995;
     --cartelera-bg-color: #B1A78B;
@@ -44,13 +47,13 @@ iframe {
     display: block;
 }
 
-#header-frame {
+header iframe {
     height: 100px; 
     box-shadow: 0 10px 15px 10px #333;
     z-index: 10;
 }
 
-#footer-frame {
+footer iframe {
     height: 425px; 
 }
 
