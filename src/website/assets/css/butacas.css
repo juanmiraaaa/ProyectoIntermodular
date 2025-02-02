@@ -2,6 +2,12 @@ html {
     scroll-behavior: smooth;
 }
 
+main section {
+    margin: 0 100px;
+    text-align: center;
+    padding: 60px;
+}
+
 header {
     margin: 0;
     display: block;
