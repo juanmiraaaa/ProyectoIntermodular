@@ -17,6 +17,12 @@ main {
     padding: 0;
 }
 
+main section {
+    margin: 0 100px;
+    text-align: center;
+    padding: 60px;
+}
+
 .to-main-content {
     display: none;
 }
