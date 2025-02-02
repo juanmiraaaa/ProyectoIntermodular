@@ -1,6 +1,9 @@
+
 body {
-    overflow: hidden
+    overflow: hidden;
 }
+
+/*#################### FOOOTER ####################*/
 
 footer{
     width: 100vw;
@@ -8,7 +11,7 @@ footer{
     text-align: justify;
 }
 
-footer div {
+.footer-container {
     margin: 0 auto;
     width: 1200px;
     display: flex;
@@ -17,27 +20,27 @@ footer div {
     padding: 20px;
 }
 
-footer div section {
+.footer-container section {
     flex: 1;
     min-width: 200px;
 }
 
-footer div section:first-child {
+.footer-container section:first-child {
     margin-left: 40px;
 }
 
-footer div section:last-child {
+.footer-container section:last-child {
     margin-right: 40px;
 }
 
-footer div h4 {
+.footer-container section h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     text-align: center;
     color: var(--footer-h4-color);
 }
 
-footer div p {
+.footer-container section p {
     margin-bottom: 15px;
     color: var(--footer-p-color);
 }
@@ -98,3 +101,4 @@ footer div p {
     top: 8px;
     font-size: 1.4rem;
 }
+/*#################### FOOOTER ####################*/
