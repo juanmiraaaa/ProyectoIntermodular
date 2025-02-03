@@ -4,76 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ismael Lucas Aparicio">
-    <title>Classic Cinema areaCliente-Facturas</title>
+    <meta name="description" content="Consulta y descarga tus facturas de Classic Cinema de forma rápida y sencilla.">
+    <meta name="keywords" content="facturas, cine, Classic Cinema, historial de pagos">
+    <meta name="robots" content="index, follow">
+    <title>Classic Cinema | Área Cliente - Facturas</title>
     <link rel="stylesheet" href="../assets/css/root.css">
     <link rel="stylesheet" href="../assets/css/areaCliente-facturas.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
     <header>
-        <iframe src="../components/header.html" title="header"></iframe>
+        <iframe src="../components/header.html" title="Encabezado del sitio" loading="lazy"></iframe>
     </header>
 
     <div class="container">
         <aside class="sidebar">
-            <link href=""><a href="./areaCliente-info.html" class="sidebar-btn">INFORMACIÓN USUARIO</a></link>
-            <link href=""><a href="./areaCliente-entradas.html" class="sidebar-btn">TUS ENTRADAS</a></link>
-            <a class="sidebar-btn active">FACTURAS</a>
+                    <link href=""><a href="./areaCliente-info.html" class="sidebar-btn">INFORMACIÓN USUARIO</a></link>
+                    <link href=""><a href="./areaCliente-entradas.html" class="sidebar-btn">TUS ENTRADAS</a></link>
+                    <a class="sidebar-btn active">FACTURAS</a>
         </aside>
-        <main class="content">
-            <h1>FACTURAS</h1>
-            <div class="facturas-container">
+        
+        <main id="main-content" class="content">
+            <h1>Facturas</h1>
+            <section class="facturas-container">
                 <h2>Mis últimas facturas</h2>
-                <p>Elige el año que quieras consultar</p>
-                <select>
+                <p>Elige el año que quieras consultar:</p>
+                <label for="select-year">Selecciona un año</label>
+                <select id="select-year">
                     <option>2024</option>
                     <option>2025</option>
                 </select>
-
+                
                 <section class="factura-section">
                     <h3>Octubre 2024</h3>
-                    <div class="factura">
+                    <article class="factura">
                         <div class="factura-info">
-                            <p><strong>EL RASCACIELOS</strong> 20/10/2024</p>
-                            <p>CINE ALICANTE</p>
+                            <p><strong>El Rascacielos</strong> - 20/10/2024</p>
+                            <p>Cine Alicante</p>
                             <p class="precio">14,30€</p>
                         </div>
                         <div class="factura-actions">
                             <button>Ver detalles</button>
-                            <button>Descargar pdf</button>
+                            <button>Descargar PDF</button>
                         </div>
-                    </div>
-                    <div class="factura">
+                    </article>
+                    <article class="factura">
                         <div class="factura-info">
-                            <p><strong>SONRÍE</strong> 20/10/2024</p>
-                            <p>CINE TORREVIEJA</p>
+                            <p><strong>Sonríe</strong> - 20/10/2024</p>
+                            <p>Cine Torrevieja</p>
                             <p class="precio">7,15€</p>
                         </div>
                         <div class="factura-actions">
                             <button>Ver detalles</button>
-                            <button>Descargar pdf</button>
+                            <button>Descargar PDF</button>
                         </div>
-                    </div>
+                    </article>
                 </section>
-
+                
                 <section class="factura-section">
                     <h3>Noviembre 2024</h3>
-                    <div class="factura">
+                    <article class="factura">
                         <div class="factura-info">
-                            <p><strong>UNCHARTED</strong> 20/11/2024</p>
-                            <p>CINE DÉNIA</p>
+                            <p><strong>Uncharted</strong> - 20/11/2024</p>
+                            <p>Cine Dénia</p>
                             <p class="precio">7,15€</p>
                         </div>
                         <div class="factura-actions">
                             <button>Ver detalles</button>
-                            <button>Descargar pdf</button>
+                            <button>Descargar PDF</button>
                         </div>
-                    </div>
+                    </article>
                 </section>
-            </div>
+            </section>
         </main>
     </div>
 
-    <footer class="footer">
-        <iframe src="../components/footer.html" title="footer"></iframe>
+    <footer>
+        <iframe src="../components/footer.html" title="Pie de página" loading="lazy"></iframe>
     </footer>
 </body>
+</html>
