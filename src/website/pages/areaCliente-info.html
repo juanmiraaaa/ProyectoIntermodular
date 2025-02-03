@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cinema</title>
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única.">
+    <meta name="author" content="Siham">
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/areaCliente-info.css">
+</head>
+<body>
+    <header>
+        <iframe src="../components/header.html" title="header"></iframe>
+    </header>
+    <main>
+        <aside>
+            <button class="btn">INFORMACIÓN USUARIO</button>
+            <button class="btn">TUS ENTRADAS</button>
+            <button class="btn">FACTURAS</button>
+        </aside>
+        <section class="user-info">
+            <h2>INFORMACIÓN USUARIO</h2>
+            <div class="avatar-section">
+                <div class="avatar">👤</div>
+                <button class="btn-small">Cambiar 🔄</button>
+            </div>
+            <div class="details">
+                <label>Correo electrónico:</label>
+                <input type="text" value="johndoe1234@dominio.com" disabled>
+                <label>Nombre:</label>
+                <input type="text" value="John Doe" disabled>
+                <label>Fecha nacimiento:</label>
+                <input type="text" placeholder="dd-MM-yyyy">
+                <button class="btn-small">Cambiar</button>
+            </div>
+            <h3>Seguridad</h3>
+            <div class="security">
+                <label>Contraseña:</label>
+                <input type="password" value="******">
+                <label>Nueva Contraseña:</label>
+                <input type="password" value="******">
+                <label>Repetir Contraseña:</label>
+                <input type="password" value="******">
+                <label>Autenticación dos pasos:</label>
+                <input type="text" value="******32" disabled>
+            </div>
+            <button class="btn">Cerrar Sesión</button>
+        </section> 
+    </main>
+    <footer>
+        <iframe src="../components/footer.html" title="footer"></iframe>
+    </footer>
+</body>
+</html>
