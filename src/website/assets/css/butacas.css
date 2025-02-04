@@ -58,6 +58,17 @@ main section {
     padding: 40px;
 }
 
+h1 {
+    color: var(--hero-h1-color);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+
 #seats-legend {
     background-color: gray;
     border-radius: 20px;
@@ -132,8 +143,47 @@ span.checked {
     display: none;
 }
 
-input[type="submit"] {
-    display: block;
-    padding: 10px;
+ul {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
 
+ul > li {
+    list-style: none;
+}
+
+#details > p {
+    margin: 10px;
+}
+
+#details > p:last-of-type {
+    margin-bottom: 60px;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 500px;
+    color: white;
+    background-color: var(--film-button-bg-color);
+}
+
+p#detail-price-total {
+    font-size: 1.5rem;
+}
+
+#detail-price-total > span {
+    color: white;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    color: white;
+    background-color: purple;
+}
+
+button[type="submit"]:active {
+    transform: scale(90%);
 }
