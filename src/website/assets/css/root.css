@@ -78,5 +78,4 @@ body > main {
     background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
     box-shadow: 0 10px 15px 10px #333;
     margin: 0 auto;
-    z-index: 9;
 }

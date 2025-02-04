@@ -170,6 +170,7 @@ header > img {
 }
 
 #log img {
+    margin-right: 40px;
     width: 50px;
     height: auto;
     vertical-align: middle;
