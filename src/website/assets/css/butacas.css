@@ -2,10 +2,19 @@ html {
     scroll-behavior: smooth;
 }
 
-main section {
-    margin: 0 100px;
+main > section {
+    margin: 0 auto;
     text-align: center;
-    padding: 60px;
+    width: 60%;
+    background-color: rgba(217, 217, 217, 0.2);
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+main > section:last-of-type {
+    margin-bottom: 0;
 }
 
 header {
@@ -15,11 +24,6 @@ header {
 
 header iframe {
     vertical-align: bottom;
-}
-
-main {
-    margin: 0 auto;
-    padding: 10px;
 }
 
 .to-main-content {
@@ -46,15 +50,6 @@ main {
 
 #scroll-to-top:hover {
     background-color: rgba(0, 0, 0, 1);
-}
-
-main section {
-    width: 60%;
-    background-color: rgba(217, 217, 217, 0.2);
-    margin: 0 auto;
-    margin-bottom: 30px;
-    border-radius: 15px;
-    padding: 40px;
 }
 
 h1 {
