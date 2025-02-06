@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Andrés Pérez Guardiola">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/peliculas.css">
+
+    <title>Classic Cinema | Películas</title>
+</head>
+<body>
+    <a href="#main-content" class="to-main-content">Ir al contenido principal</a>
+    <header>
+        <iframe src="../components/header.html" title="header" id="header-frame"></iframe>
+    </header>
+
+    <a href="#" id="scroll-to-top" class="scroll-to-top" >
+        <span class="ri-arrow-up-s-line"></span>
+    </a>
+    
+
+    <main class="films" id="main-content">
+        <section id="hero">
+            <h1>Películas</h1>
+            <p>Infórmate de futuros <a href="#estrenos">estrenos</a>
+                <br>
+                Revisa nuestra <a href="#cartelera">cartelera</a>
+            </a></p>
+        </section>
+
+        <section id="estrenos">
+            <h2>Estrenos</h2>
+
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slider-1" src="../assets/img/peliculas/peliculas-estrenos-slider-1.webp" alt="Pelicula 1">
+                    <img id="slider-2" src="../assets/img/peliculas/peliculas-estrenos-slider-2.webp" alt="Pelicula 2">
+                    <img id="slider-3" src="../assets/img/peliculas/peliculas-estrenos-slider-3.webp" alt="Pelicula 3">
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="cartelera">
+            <h2>Cartelera</h2>
+            <form id="film-form" action="#">
+
+                <div class="film-group">
+                    <label for="genre"></label>
+                    <select id="genre" name="genre">
+                        <option value="" disabled selected>Selecciona Género</option>
+                        <option value="action">Acción</option>
+                        <option value="comedy">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="horror">Horror</option>
+                        <option value="sci-fi">Ciencia Ficción</option>
+                        <option value="fantasy">Fantasía</option>
+                    </select>
+                </div>
+
+                <div class="film-group">
+                    <label for="age"></label>
+                    <select id="age" name="age">
+                        <option value="" disabled selected>Selecciona Edad</option>
+                        <option value="3">Pegi 3</option>
+                        <option value="7">Pegi 7</option>
+                        <option value="12">Pegi 12</option>
+                        <option value="16">Pegi 16</option>
+                        <option value="18">Pegi 18</option>
+                    </select>
+                </div>
+
+                <div class="film-group">
+                    <label for="format"></label>
+                    <select id="format" name="format">
+                        <option value="" disabled selected>Selecciona Formato</option>
+                        <option value="2d">2D</option>
+                        <option value="3d">3D</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="film-name"></label>
+                    <input type="search" id="film-name" name="q" placeholder="Busca">
+                </div>
+
+                <button type="submit"><span class="ri-search-line"></span></button>
+
+
+            </form>
+
+            <div class="film-list">
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-1.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Star Wars</h3>
+                        <p class="film-desc">El futuro no es lo que esperábamos. En 2154, la humanidad descubrió que no estaba sola, pero no todos los encuentros son amistosos. Una rebelión intergaláctica está a punto de comenzar. Los héroes del Despertar de la Fuerza se unen a las leyendas galácticas en una aventura épica para desentrañar los antiguos misterios de la Fuerza y descubrir sorprendentes revelaciones del pasado.</p>
+                        
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 45min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-2.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Rascacielos</h3>
+                        <p class="film-desc">“En un futuro donde los rascacielos alcanzan las nubes... una familia lucha por sobrevivir.” Un edificio diseñado para ser el más seguro del mundo se convierte en una trampa mortal cuando un grupo de criminales lo incendia. Will Sawyer (Dwayne Johnson), un exmilitar convertido en especialista en seguridad, deberá superar las alturas y sus propios miedos para salvar a su familia, atrapada en el piso más alto. Acción trepidante, un héroe imparable y un rascacielos en llamas. ¿Hasta dónde llegarías para proteger a quienes amas?</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 50min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-3.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Novia por contrato</h3>
+                        <p class="film-desc">Él nunca quiso crecer, pero el amor tiene otros planes.  Tripp (Matthew McConaughey) es un hombre de 35 años que aún vive con sus padres y no tiene intenciones de independizarse. Desesperados, contratan a Paula (Sarah Jessica Parker), una mujer especialista en "ayudar" a hombres como él a dejar el nido. Lo que comienza como un trabajo profesional pronto se complica cuando los sentimientos reales se cruzan. Una comedia romántica llena de risas, torpeza y corazones en juego.  ¿Qué pasa cuando el plan perfecto no sale como esperabas?</p>
+                        
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 32min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-4.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Sonríe</h3>
+                        <p class="film-desc">“Una simple sonrisa... puede esconder el peor de los horrores” Tras presenciar un evento traumático, la doctora Rose Cotter comienza a experimentar extrañas visiones y aterradoras sonrisas que la siguen a todas partes. Mientras su realidad se desmorona, descubre un patrón: todos los que la precedieron están muertos. Con tiempo limitado, Rose debe desentrañar esta misterio antes de convertirse en la próxima víctima. Sonríe, pero no mires atrás.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 55min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-5.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Uncharted</h3>
+                        <p class="film-desc">“Antes del tesoro... hay que sobrevivir a la aventura” Nathan Drake (Tom Holland), un joven cazador de tesoros, se une al astuto Victor “Sully” Sullivan (Mark Wahlberg) en busca de una fortuna perdida hace siglos. Pero no están solos: mercenarios y rivales con sus propios secretos harán de este viaje una carrera mortal. Acción explosiva, enigmas antiguos y paisajes espectaculares te esperan. Prepárate para descubrir el origen de una leyenda.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 58min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-6.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>La sociedad de la nieve</h3>
+                        <p class="film-desc">"Basada en una historia real que desafió los límites de la resistencia humana." En 1972, un avión que transportaba un equipo de rugby uruguayo se estrella en los Andes. Enfrentados al frío extremo, la falta de comida y la desesperación, los sobrevivientes deben tomar decisiones inimaginables para seguir con vida. Una historia de supervivencia, sacrificio y esperanza. ¿Hasta dónde llegarías para vivir?</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 2h 15min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-7.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Canta 2</h3>
+                        <p class="film-desc">"El escenario es más grande, pero los sueños también lo son."  Buster Moon y su grupo de talentosos animales vuelven para conquistar un nuevo reto: llevar su espectáculo al centro de la atención mundial. Pero para hacerlo, necesitan convencer a una estrella retirada del rock, Clay Calloway, de unirse a ellos. Música, risas y momentos emotivos te esperan en esta secuela llena de ritmo. El show debe continuar.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 30min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-8.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Venom</h3>
+                        <p class="film-desc">“Dos entidades, un cuerpo, un destino.” Eddie Brock (Tom Hardy) es un periodista en decadencia que se convierte en el huésped de Venom, un simbionte alienígena con poderes inimaginables y un apetito voraz. Juntos, deberán aprender a coexistir mientras enfrentan a amenazas que buscan destruir todo lo que conocen.  Cuando el héroe y el monstruo son uno mismo, la línea entre el bien y el mal desaparece.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 52min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-9.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>La verdad duele</h3>
+                        <p class="film-desc">"La verdad no siempre es bienvenida."  El Dr. Bennet Omalu (Will Smith), un neuropatólogo forense, descubre una conexión entre las conmociones cerebrales y el daño cerebral en jugadores de fútbol americano. Mientras intenta exponer esta verdad, se enfrenta a la poderosa y agresiva industria de la NFL. Un drama basado en hechos reales sobre valentía, integridad y la lucha por lo correcto.  La verdad puede doler, pero también puede cambiar el mundo.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 45min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="film">
+                    <figure>
+                        <img src="../assets/img/peliculas/peliculas-cartelera-10.webp" alt="Foto Cartelera">
+                    </figure>
+                    <div class="film-content">
+                        <h3>Citizenfour</h3>
+                        <p class="film-desc">Documental dirigido por Laura Poitras que narra cómo Edward Snowden, un excontratista de la NSA, reveló al mundo la existencia de un sistema de vigilancia masiva que compromete la privacidad de millones de personas. A través de grabaciones íntimas y directas en una habitación de hotel en Hong Kong, Snowden comparte su decisión de arriesgarlo todo para exponer la verdad. El filme es un testimonio impactante sobre el poder, la privacidad y la lucha por la libertad en la era digital.</p>
+
+                        <div class="film-detail">
+                            <img class="pegi" src="../assets/img/peliculas/peliculas-pegi3.webp" alt="pegi">
+                            <div class="duration">
+                                <p>Duración: 1h 45min</p>
+                            </div>
+                            <a class="see-more" href="#">
+                                <p>Ver más</p>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <iframe src="../components/footer.html" title="footer" id="footer-frame"></iframe>
+    </footer>
+    
+</body>
+</html>

@@ -13,7 +13,6 @@ h1 {
     text-align: center;
     color: var(--hero-h1-color);
 }
-
 .container {
     background-color: #dbd4c5;
     display: flex;
@@ -65,4 +64,5 @@ button.facebook {
 
 button.google {
     background: #db4437;
+
 }
