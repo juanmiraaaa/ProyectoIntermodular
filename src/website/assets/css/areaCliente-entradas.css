@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body > main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*Pendiente de actualización*/
+#scroll-to-top img {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    padding: 10px 15px;
+    width: 60px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/*Pendiente de actualización*/
+
+aside {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fffdf3;
+}
+
+aside h2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #DEA508;
+    background-color: var(--nav-a-bg-color);
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside h2:hover {
+    color: var(--nav-a-bg-color);
+    background-color: #DEA508;
+}
+
+aside h2:active {
+    color: #fff;
+    background-color: #511111;
+}
+
+aside h2:focus {
+    background-color: #511111;
+}
+
+#container-entradas {
+    width: 56.5%;
+    margin: 40px 0;
+}
+
+#container-entradas header h1 {
+    color: white;
+}
+
+/*Selectores Grupales*/
+/*------------------------------*/
+/*Selectores Individuales*/
+/*------------------------------*/
+
+.tickets {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tickets > main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.ticket-container {
+    width: 100%;
+    background-color: #fffdf3;
+}
+
+.ticket-film {
+    width: 100%-15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px 10px 0 10px;
+    margin-top: 5px;
+}
+
+.film {
+    background-color: #DEA508;
+}
+
+.film img {
+    width: 100px;
+}
+
+.ticket-information {
+    width: 40%;
+    display: block;
+    padding: 10px;
+}
+
+.ticket-information p:nth-of-type(2) {
+    margin-top: 30px;
+}
+
+.ticket-information h2 {
+    display: inline-block;
+}
+
+.ticket-information img {
+    float: right;
+    width: 40px;
+    margin-right: 70px;
+}
+
+.qr-film {
+    display: inline-block;
+    margin: auto 0;
+    margin-left: auto;
+}
+
+.qr-film h2 {
+    display: inline-block;
+}
+
+.qr-film img {
+    width: 140px;
+    vertical-align: text-bottom;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+button img {
+    width: 30px;
+    border: solid 5px transparent;/*evito desplazamiento al hover*/
+}
+
+button img:hover {
+    width: 30px;
+    /*mask-image: url('../img/icons/arrowDown.webp');*/
+    border: 5px solid #000;
+}
