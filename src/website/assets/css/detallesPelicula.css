@@ -136,7 +136,7 @@ form {
     background-color: transparent;
 }
 
-.day-checkbox {
+.day-radio {
     display: none;
     width: 100%;
     height: 100%;
@@ -150,7 +150,7 @@ form {
     inset: 0;
 }
 
-.day-checkbox:checked + label { /*Estilo al seleccionar un día */
+td:has(.day-radio:checked) { /*Estilo al seleccionar un día */
     background-color: #007bff;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -178,7 +178,7 @@ form {
     color: white;
 }
 
-.hour-checkbox {
+.hour-radio {
     display: none;
     width: 100%;
     height: 100%;
@@ -192,7 +192,7 @@ form {
     inset: 0;
 }
 
-.hour-checkbox:checked + label { /*Estilo al seleccionar una hora */
+td:has(.hour-radio:checked) { /*Estilo al seleccionar un día */
     background-color: #007bff;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);

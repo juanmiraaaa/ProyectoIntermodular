@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Juan Mira">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <title>header</title>
+</head>
+<body>
+  <header>
+    <img src="../assets/img/logos/logo-classic-cinema.webp" alt="Logo Classic Cinema">
+    <nav class="navbar">
+      <section class="menus">
+        <section class="menu1">
+          <ul>
+              <li><a href="../index.html#seleccion-cine" target="_parent">CINES</a></li>
+              <li><a href="../pages/peliculas.html" target="_parent">PELÍCULAS</a></li>
+              <li><a href="../pages/contacto.html" target="_parent">CONTACTO</a></li>
+          </ul>
+        </section>
+        <section  class="menu2">
+          <ul>
+            <li class="search">
+              <form class="search-bar" action="/search" method="GET">
+                  <button id="lupa" type="submit"><img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda"></button>
+                  <input type="text" placeholder="Peliculas | Cine" name="searchbar">
+                  <button id="x" type="reset"><img src="../assets/img/icons/icon-x.webp" alt="Icon x"></button>
+              </form>
+            </li>
+            <li id="log">
+              <a href="../pages/areaCliente-info.html" target="_parent"><img src="../assets/img/icons/icon-yellowUser.webp" alt="Icon User"></a>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </nav>
+  </header>
+</body>

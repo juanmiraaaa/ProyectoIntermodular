@@ -101,7 +101,7 @@ select {
     font-size: 20px;
 }
 
-.factura-actions button {
+.factura-actions .btn {
     background-color: #E5D4A8;
     border: none;
     padding: 15px;
