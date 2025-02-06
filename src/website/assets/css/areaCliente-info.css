@@ -3,7 +3,7 @@ main section {
     text-align: center;
     padding: 60px;
 }
-       
+    
         header {
             background-color: var(--navbar-bg-color);
             display: flex;
@@ -12,7 +12,7 @@ main section {
             padding: 15px;
         }
 
-      
+    
         .logo {
             width: 200px;
             height: auto;

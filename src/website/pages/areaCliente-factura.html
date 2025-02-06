@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cinema</title>
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única.">
+    <meta name="author" content="Siham">
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/areaCliente-factura.css">
+</head>
+<body>
+
+<header>
+<iframe src="../components/header.html" title="header"></iframe>
+</header>
+
+<main>
+    <aside>
+        <button class="btn">INFORMACIÓN USUARIO</button>
+        <button class="btn">TUS ENTRADAS</button>
+        <button class="btn">FACTURAS</button>
+    </aside>
+    <section>
+      <div class="fa">
+        FACTURA N° 123456789
+      </div>
+      
+      <div class="main-container">
+        <div class="factura">
+          <img src="../assets/img/logos/logo-classic-cinema.webp" alt="Classic Cinema" class="lg" width="150">
+          
+          <h2>Factura simplificada</h2>
+          
+          <div style="display: flex; justify-content: space-between;">
+            <div>
+              <strong>Classic Cinema</strong><br>
+              Dirección: AV. Juana Elorra, Alicante<br>
+              CIF: B3267898<br>
+              Teléfono: 912765523<br>
+              Email: desconocido@gmail.com
+            </div>
+            <div style="text-align: right;">
+              Número factura: 123456789<br>
+              Fecha Emisión: 11/10/2024
+            </div>
+          </div>
+      
+          <table class="table">
+            <tr>
+              <th>Descripción</th>
+              <th>Cantidad</th>
+              <th>Importe</th>
+              <th>Total</th>
+            </tr>
+            <tr>
+              <td>Producto 1</td>
+              <td>1</td>
+              <td>7,50€</td>
+              <td>7,50€</td>
+            </tr>
+            <tr>
+              <td>Producto 2</td>
+              <td>2</td>
+              <td>8,50€</td>
+              <td>17,00€</td>
+            </tr>
+            <tr class="total-row">
+              <td colspan="3">Total</td>
+              <td>24,50€</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    
+        </main>
+        <footer>
+            <iframe src="../components/footer.html" title="footer"></iframe>
+        </footer>
+    </body>
+    </html>
