@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cinema</title>
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única.">
+    <meta name="author" content="Siham">
+    <link rel="stylesheet" href="../assets/css/root.css">
+<link rel="stylesheet" href="../assets/css/contacto.css">
+</head>
+<body>
+    <header>
+        <iframe src="../components/header.html" title="header"></iframe>
+    </header>
+    <main>
+        <div class="CONTA"><h1>CONTACTA CON NOSOTROS</h1></div>
+        <form class="contact-form">
+            <label for="cine">Cine*</label>
+            <select id="cine">
+                <option>-- Selecciona uno --</option>
+            </select>
+            
+            <label for="consulta">Tipo de consulta*</label>
+            <select id="consulta">
+                <option>-- Selecciona una --</option>
+            </select>
+            
+            <label for="nombre">Nombre*</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            
+            <label for="correo">Correo Electrónico*</label>
+            <input type="email" id="correo" placeholder="Escribe tu correo">
+            
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" placeholder="Escribe tu teléfono">
+            
+            <label for="mensaje">Mensaje*</label>
+            <textarea id="mensaje" placeholder="Escribe aquí"></textarea>
+            
+            <div class="privacy">
+                <input type="checkbox" id="privacidad">
+                <label for="privacidad">He leído y acepto la política de privacidad</label>
+            </div>
+            
+            <button type="submit">ENVIAR</button>
+        </form>
+    </main>
+    <footer>
+        <iframe src="../components/footer.html" title="footer"></iframe>
+    </footer>
+</body>
+</html>
