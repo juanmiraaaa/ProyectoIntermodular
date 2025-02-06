@@ -2,10 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 
-main section {
+main > section {
     margin: 0 100px;
     text-align: center;
-    padding: 60px;
 }
 
 .to-main-content {
@@ -116,7 +115,6 @@ div.slider-wrapper {
 
 
 section#cartelera {
-    margin: 0 100px ;
     text-align: center;
     background-color: var(--cartelera-bg-color);
     padding: 65px; 
