@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cinema</title>
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única.">
+    <meta name="author" content="Juan Mira">
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/detallesPelicula.css">
+</head>
+<body>
+    <header>
+        <iframe src="../components/header.html" title="header"></iframe>
+    </header>
+
+    <main>
+        <section id="section1-detallesPelicula">
+            <img src="../assets/img/peliculas/pelicula-elRascacielos-800x1200px.webp" alt="film rascacielos">
+            <section id="detalles">
+                <header>
+                    <h1>EL RASCACIELOS</h1>
+                </header>
+                <main>
+                    <p>Will Sawye es injustamente acusado de haber provocado un incendio en un rascacielos. Fugado, Sawyer tratará de limpiar su reputación mientras salva a su familia de morir calcinada en el edificio más alto del mundo.</p>
+                    <section>
+                        <h4>DIRECTOR: </h4>
+                        <p>Rawson Marshall Thurber</p>
+                        <h4>REPARTO: </h4>
+                        <p>Dwayne Johnson, Neve Campbell, Chin Han, Roland Moller, Pablo Schreiber, Byron mann, Hanah Quinlivan</p>
+                        <h4>DURACIÓN: </h4>
+                        <p>102 min</p>
+                        <h4>GÉNERO: </h4>
+                        <p>Ciencia ficción, suspense</p>
+                        <h4>PEGI: </h4>
+                        <p>18</p>
+                        <h4>DOBLAJE: </h4>
+                        <p>Jordi Boixederas, Cristina Mauri, Dani Albiac, Eduard Doncos, Luis García Márquez, José Javier Serrano, Iris Lago</p>
+                    </section>
+                </main>
+            </section>
+        </section>
+
+        <section id="section2-trailer">
+            <h2>TRÁILER</h2>
+            <iframe src="https://www.youtube.com/embed/b164WVnnRPc?si=r01EEb2fqVpqWKVh" title="Trailer Rascacielos" width="720" height="405"  autoplay loop></iframe>
+        </section>
+
+        <section id="session-container">
+            <h2>CINE ALICANTE</h2>
+            <section class="selection-container">
+                <header>
+                    <h3>SELECCIONA EL DÍA QUE QUIERES VERLA</h3>
+                </header>
+                <main>
+                    <form name="form-film-session" action="#" method="post">
+                        <section class="calendar-container">
+                            <section class="calendar-header">
+                                <button id="prev-month">&#10094;</button>
+                                <span id="month-name">Enero 2025</span>
+                                <button id="next-month">&#10095;</button>
+                            </section>
+                            <!-- Selección de dia -->
+                            <table class="calendar">
+                                <thead>
+                                    <tr id="row1">
+                                        <th>L</th>
+                                        <th>M</th>
+                                        <th>X</th>
+                                        <th>J</th>
+                                        <th>V</th>
+                                        <th>S</th>
+                                        <th>D</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="row2">
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="1" id="day1" />
+                                            <label for="day1">1</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="2" id="day2" />
+                                            <label for="day2">2</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="3" id="day3" />
+                                            <label for="day3">3</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="4" id="day4" />
+                                            <label for="day4">4</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="5" id="day5" />
+                                            <label for="day5">5</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="6" id="day6" />
+                                            <label for="day6">6</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="7" id="day7" />
+                                            <label for="day7">7</label>
+                                        </td>
+                                    </tr>
+                                    <tr id="row3">
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="8" id="day8" />
+                                            <label for="day8">8</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="9" id="day9" />
+                                            <label for="day9">9</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="10" id="day10" />
+                                            <label for="day10">10</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="11" id="day11" />
+                                            <label for="day11">11</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="12" id="day12" />
+                                            <label for="day12">12</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="13" id="day13" />
+                                            <label for="day13">13</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="14" id="day14" />
+                                            <label for="day14">14</label>
+                                        </td>
+                                    </tr>
+                                    <tr id="row4">
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="15" id="day15" />
+                                            <label for="day15">15</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="16" id="day16" />
+                                            <label for="day16">16</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="17" id="day17" />
+                                            <label for="day17">17</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="18" id="day18" />
+                                            <label for="day18">18</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="19" id="day19" />
+                                            <label for="day19">19</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="20" id="day20" />
+                                            <label for="day20">20</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="21" id="day21" />
+                                            <label for="day21">21</label>
+                                        </td>
+                                    </tr>
+                                    <tr id="row5">
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="22" id="day22" />
+                                            <label for="day22">22</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="23" id="day23" />
+                                            <label for="day23">23</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="24" id="day24" />
+                                            <label for="day24">24</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="25" id="day25" />
+                                            <label for="day25">25</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="26" id="day26" />
+                                            <label for="day26">26</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="27" id="day27" />
+                                            <label for="day27">27</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="28" id="day28" />
+                                            <label for="day28">28</label>
+                                        </td>
+                                    </tr>
+                                    <tr id="row6">
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="29" id="day29" />
+                                            <label for="day29">29</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="30" id="day30" />
+                                            <label for="day30">30</label>
+                                        </td>
+                                        <td class="day">
+                                            <input type="checkbox" class="day-checkbox" data-day="31" id="day31" />
+                                            <label for="day31">31</label>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>            
+                        <!-- Selección de hora -->
+                        <section class="time-container">
+                            <table class="time-table">
+                                <tr><td class="hour">
+                                    <input type="checkbox" class="hour-checkbox" data-hour="10:00" id="hour1" />
+                                    <label for="hour1">10:00</label>
+                                </td></tr>
+                                <tr><td class="hour">
+                                    <input type="checkbox" class="hour-checkbox" data-hour="12:00" id="hour2" />
+                                    <label for="hour2">12:00</label>
+                                </td></tr>
+                                <tr><td class="hour">
+                                    <input type="checkbox" class="hour-checkbox" data-hour="13:30" id="hour3" />
+                                    <label for="hour3">13:30</label>
+                                </td></tr>
+                                <tr><td class="hour">
+                                    <input type="checkbox" class="hour-checkbox" data-hour="19:45" id="hour4" />
+                                    <label for="hour4">19:45</label>
+                                </td></tr>
+                                <tr><td class="hour">
+                                    <input type="checkbox" class="hour-checkbox" data-hour="21:00" id="hour5" />
+                                    <label for="hour5">21:00</label>
+                                </td></tr>
+                            </table>
+                        </section>
+                        <button type="submit">COMPRAR ENTRADAS</button>
+                    </form>
+                </main>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <iframe src="../components/footer.html" title="footer"></iframe>
+    </footer>
+</body>
+</html>
