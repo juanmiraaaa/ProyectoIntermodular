@@ -1,0 +1,104 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    margin: 0;
+    display: block;
+}
+
+header iframe {
+    display: block;
+    vertical-align: bottom;
+}
+
+main {
+    margin: 0 auto;
+    padding: 0;
+}
+
+main section {
+    margin: 0 100px;
+    text-align: center;
+    padding: 60px;
+}
+
+.to-main-content {
+    display: none;
+}
+
+#scroll-to-top {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+
+    bottom: 20px;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--hero-h1-color);
+}
+
+main section {
+    margin: auto;
+    text-align: left;
+}
+
+section section {
+    margin: 10px auto;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#section-1 {
+    padding-bottom: 0px;
+}
+
+#section-2 {
+    padding-top: 20px;
+}
+
+h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2, h3 {
+    color: beige;
+}
+
+h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p, li {
+    font-size: 1rem;
+    font-family: Spectal;
+    color: white;
+    margin: 10px;
+}
