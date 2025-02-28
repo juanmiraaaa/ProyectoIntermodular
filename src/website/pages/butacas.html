@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=sectionice-width, initial-scale=1.0">
     <meta name="author" content="Andrés Pérez Guardiola">
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
@@ -13,9 +14,9 @@
     <title>Classic Cinema | Butacas</title>
 </head>
 <body>
-    <a href="#main-content" class="to-main-content">Al contenido principal</a>
+    <a href="#main-content" class="to-main-content" aria-label="Al contenido principal de la página">Al contenido principal</a>
 
-    <a href="#" id="scroll-to-top" class="scroll-to-top" >
+    <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="Al inicio de la página" title="">
         <span class="ri-arrow-up-s-line"></span>
     </a>
 
@@ -35,14 +36,14 @@
 
         </section>
 
-        <form action="#" method="post" id="seat-selection-form">
+        <form action="./areaCliente-entradas.html" method="post" id="seat-selection-form">
             <section id="seats">
                 <h2>Seleccione sus butacas</h2>
-                <article id="seats-legend">
+                <legend id="seats-legend">
                     <p>Butaca Libre: <span class="ri-sofa-fill available"></span></p>
                     <p>Butaca Ocupada: <span class="ri-sofa-fill unavailable"></span></p>
                     <p>Butaca Seleccionada: <span class="ri-sofa-fill checked"></span></p>
-                </article>
+                </legend>
                 
                 <article id="seats-container">
                     <section id="screen">
