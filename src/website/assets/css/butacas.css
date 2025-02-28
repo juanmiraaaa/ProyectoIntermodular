@@ -89,22 +89,20 @@ form article {
 
 #room {
     display: flex;
-    justify-content: space-between; 
-    gap: 20px; 
-    margin: 0 auto;
-    max-width: 80%; 
+    justify-content: space-around; 
+    gap: min(20px, 0.5%); 
+    max-width: 100%; 
 }
 
 .wing {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    gap: 10px; 
 }
 
 .seat input {
@@ -112,7 +110,7 @@ form article {
 }
 
 .seat span {
-    font-size: 2.2rem;
+    font-size: 2.2em;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s;
 }
@@ -270,3 +268,4 @@ button[type="submit"]:active {
         font-size: 1.0em;
     }
 }
+
