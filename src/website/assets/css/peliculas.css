@@ -280,37 +280,37 @@ article.film .film-content p {
 
 
 
-@media screen and (max-width: 480px) {
-    :root {
-        --width: 100%;
-    }    
-}
-
-
-@media screen and (max-width: 760px) {
-    :root {
-        --width: 100%;
-    }
-    
-}
-
-@media screen and (max-width: 1024px) {
-    :root {
-        --width: 760px;
-    }
-    
-}
-
-@media screen and (max-width: 1200px) {
-    :root {
-        --width: 1024px;
-    }
-    
-}
-
 @media screen and (max-width: 1440px) {
     :root {
         --width: 1200px;
     }
+  
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --width: 1000px;
+    }
+ 
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --width: min(100%, 1024px);
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    :root {
+        --width: min(100%, 760px);
+    }
     
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --width: min(100%, 480px);
+    }
+
 }
