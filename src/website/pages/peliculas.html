@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Andrés Pérez Guardiola">
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
     <link rel="stylesheet" href="../assets/css/root.css">
@@ -13,90 +14,77 @@
 </head>
 <body>
     <a href="#main-content" class="to-main-content">Ir al contenido principal</a>
+
     <header>
+        <h1>Películas</h1>
         <iframe src="../components/header-logged.html" title="header" id="header-frame"></iframe>
     </header>
 
-    <a href="#" id="scroll-to-top" class="scroll-to-top" >
+    <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="LLevame al inicio de la página" title="Al principio">
         <span class="ri-arrow-up-s-line"></span>
     </a>
     
 
     <main class="films" id="main-content">
-        <section id="hero">
-            <h1>Películas</h1>
-            <p>Infórmate de futuros <a href="#estrenos">estrenos</a>
-                <br>
-                Revisa nuestra <a href="#cartelera">cartelera</a>
-            </p>
-        </section>
 
         <section id="estrenos">
             <h2>Estrenos</h2>
 
-            <div class="slider-wrapper">
-                <div class="slider">
+            <article class="slider-wrapper">
+                <figure class="slider">
                     <img id="slider-1" src="../assets/img/peliculas/peliculas-estrenos-slider-1_small.webp" alt="Pelicula 1">
                     <img id="slider-2" src="../assets/img/peliculas/peliculas-estrenos-slider-2_small.webp" alt="Pelicula 2">
                     <img id="slider-3" src="../assets/img/peliculas/peliculas-estrenos-slider-3_small.webp" alt="Pelicula 3">
-                </div>
-            </div>
+                </figure>
+            </article>
 
         </section>
 
 
-        <section id="cartelera">
+        <section id="cartelera" >
             <h2>Cartelera</h2>
-            <form id="film-form" action="#">
+            <form id="film-form" action="#" method="get">
 
-                <div class="film-group">
-                    <label for="genre"></label>
-                    <select id="genre" name="genre">
-                        <option value="" disabled selected>Selecciona Género</option>
-                        <option value="action">Acción</option>
-                        <option value="comedy">Comedia</option>
-                        <option value="drama">Drama</option>
-                        <option value="horror">Horror</option>
-                        <option value="sci-fi">Ciencia Ficción</option>
-                        <option value="fantasy">Fantasía</option>
-                    </select>
-                </div>
+                <label for="genre" aria-label="Género"></label>
+                <select id="genre" name="genre">
+                    <option value="" disabled selected>Selecciona Género</option>
+                    <option value="action">Acción</option>
+                    <option value="comedy">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="horror">Horror</option>
+                    <option value="sci-fi">Ciencia Ficción</option>
+                    <option value="fantasy">Fantasía</option>
+                </select>
 
-                <div class="film-group">
-                    <label for="age"></label>
-                    <select id="age" name="age">
-                        <option value="" disabled selected>Selecciona Edad</option>
-                        <option value="3">Pegi 3</option>
-                        <option value="7">Pegi 7</option>
-                        <option value="12">Pegi 12</option>
-                        <option value="16">Pegi 16</option>
-                        <option value="18">Pegi 18</option>
-                    </select>
-                </div>
+                <label for="age" aria-label="Clasificación Edad"></label>
+                <select id="age" name="age">
+                    <option value="" disabled selected>Selecciona Edad</option>
+                    <option value="3">Pegi 3</option>
+                    <option value="7">Pegi 7</option>
+                    <option value="12">Pegi 12</option>
+                    <option value="16">Pegi 16</option>
+                    <option value="18">Pegi 18</option>
+                </select>
 
-                <div class="film-group">
-                    <label for="format"></label>
-                    <select id="format" name="format">
-                        <option value="" disabled selected>Selecciona Formato</option>
-                        <option value="2d">2D</option>
-                        <option value="3d">3D</option>
-                    </select>
-                </div>
+                <label for="format" aria-label="Formato"></label>
+                <select id="format" name="format">
+                    <option value="" disabled selected>Selecciona Formato</option>
+                    <option value="2d">2D</option>
+                    <option value="imax">IMAX</option>
+                </select>
 
-                <div class="form-group">
-                    <label for="film-name"></label>
-                    <input type="search" id="film-name" name="q" placeholder="Busca">
-                </div>
+                <label for="film-name" aria-label="Título película"></label>
+                <input type="search" id="film-name" name="q" placeholder="Busca">
 
-                <button type="submit"><span class="ri-search-line"></span></button>
-
-
+                <button type="submit" aria-label="Buscar">
+                    <p><span class="ri-search-line"></span></p>
+                </button>
             </form>
 
-            <div class="film-list">
+            <section class="film-list">
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-1_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-1_small.webp" alt="Cartel de la película Star Wars">
                     </figure>
                     <div class="film-content">
                         <h3>Star Wars</h3>
@@ -107,7 +95,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 45min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Star Wars">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -117,7 +105,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-2_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-2_small.webp" alt="Cartel de la película Rascacielos">
                     </figure>
                     <div class="film-content">
                         <h3>Rascacielos</h3>
@@ -128,7 +116,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 50min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Rascacielos">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -137,7 +125,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-3_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-3_small.webp" alt="Cartel de la película Novia por contrato">
                     </figure>
                     <div class="film-content">
                         <h3>Novia por contrato</h3>
@@ -148,7 +136,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 32min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Novia por contrato">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -157,7 +145,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-4_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-4_small.webp" alt="Cartel de la película Sonríe">
                     </figure>
                     <div class="film-content">
                         <h3>Sonríe</h3>
@@ -168,7 +156,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 55min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Sonríe">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -177,7 +165,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-5_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-5_small.webp" alt="Cartel de la película Uncharted">
                     </figure>
                     <div class="film-content">
                         <h3>Uncharted</h3>
@@ -188,7 +176,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 58min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Uncharted">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -197,7 +185,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-6_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-6_small.webp" alt="Cartel de la película La sociedad de la nieve">
                     </figure>
                     <div class="film-content">
                         <h3>La sociedad de la nieve</h3>
@@ -208,7 +196,7 @@
                             <div class="duration">
                                 <p>Duración: 2h 15min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula La sociedad de la nieve">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -217,7 +205,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-7_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-7_small.webp" alt="Cartel de la película Canta 2">
                     </figure>
                     <div class="film-content">
                         <h3>Canta 2</h3>
@@ -228,7 +216,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 30min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Canta 2">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -237,7 +225,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-8_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-8_small.webp" alt="Cartel de la película Venom">
                     </figure>
                     <div class="film-content">
                         <h3>Venom</h3>
@@ -248,7 +236,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 52min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Venom">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -257,7 +245,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-9_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-9_small.webp" alt="Cartel de la película La verdad duele">
                     </figure>
                     <div class="film-content">
                         <h3>La verdad duele</h3>
@@ -268,7 +256,7 @@
                             <div class="duration">
                                 <p>Duración: 1h 45min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula La verdad duele">
                                 <p>Ver más</p>
                             </a>
                         </div>
@@ -277,7 +265,7 @@
 
                 <article class="film">
                     <figure>
-                        <img src="../assets/img/peliculas/peliculas-cartelera-10_small.webp" alt="Foto Cartelera">
+                        <img src="../assets/img/peliculas/peliculas-cartelera-10_small.webp" alt="Cartel de la película Citizenfour">
                     </figure>
                     <div class="film-content">
                         <h3>Citizenfour</h3>
@@ -288,14 +276,13 @@
                             <div class="duration">
                                 <p>Duración: 1h 45min</p>
                             </div>
-                            <a class="see-more" href="./detallesPelicula.html">
+                            <a class="see-more" href="./detallesPelicula.html" aria-label="Ver más detalles sobre pelicula Citizenfour">
                                 <p>Ver más</p>
                             </a>
                         </div>
                     </div>
                 </article>
-            </div>
-
+            </section>
         </section>
     </main>
 
