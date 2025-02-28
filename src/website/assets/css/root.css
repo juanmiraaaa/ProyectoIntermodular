@@ -25,6 +25,7 @@
     --film-desc-color: #47473D;
     --film-button-bg-color: #3E1164;
     --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2)
 }
 
 * {
@@ -79,7 +80,6 @@ footer iframe {
 }
 
 body > main {
-    flex: 1;
     width: 1200px;
     background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
     box-shadow: 0 10px 15px 10px #333;
