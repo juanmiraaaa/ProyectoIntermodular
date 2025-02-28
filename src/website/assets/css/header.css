@@ -6,7 +6,7 @@ body {
 header {
     display: flex;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--width);
     margin: 0 auto;
     align-items: center;
     padding: 10px;

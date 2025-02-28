@@ -116,7 +116,10 @@ div.slider-wrapper {
 
 
 section#cartelera {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--cartelera-bg-color);
     padding: 65px; 
 }

@@ -13,7 +13,7 @@ footer{
 
 .footer-container {
     margin: 0 auto;
-    width: 1200px;
+    width: var(--width);
     display: flex;
     justify-content: space-between;
     gap: 20px;
