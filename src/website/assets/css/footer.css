@@ -56,7 +56,7 @@ footer{
 #information p a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 #information p a:hover {
@@ -65,7 +65,7 @@ footer{
 
 #social-media {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2em;
     color: white;
 }
 
@@ -99,6 +99,56 @@ footer{
     position: absolute;
     left: 0;
     top: 8px;
-    font-size: 1.4rem;
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --width: 1200px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --width: 1024px;
+    }
+
+    html {
+        font-size: 2vw;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    #contact ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --width: 760px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    :root {
+        --width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --width: 100%;
+    }
+   
 }
 /*#################### FOOOTER ####################*/

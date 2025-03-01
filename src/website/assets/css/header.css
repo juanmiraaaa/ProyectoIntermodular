@@ -5,12 +5,12 @@ body {
 /*--------------------HEADER/NAVBAR--------------------*/
 header {
     display: flex;
+    justify-content: space-between;
+    gap: 50px;
     width: 100%;
-    max-width: var(--width);
-    margin: 0 auto;
     align-items: center;
     padding: 10px;
-    height: 80px;
+    height: 3em;
     overflow: hidden;
 }
 
@@ -45,14 +45,28 @@ header > img {
 }
 
 .menus {
+    flex-grow: 1;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.menu1 {
-    display: inline-block;
-    margin-right: 40px;
+.burger-menu {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.menu1 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
 }
 
 .menu1 li {
@@ -83,6 +97,7 @@ header > img {
 .menu1 a:hover {
     border-radius: 3px 3px 0 0;
     color: black;
+    font-size: 1.2em;
 }
   
 .menu1 a:active {
@@ -128,7 +143,7 @@ header > img {
     background: transparent;
     cursor: text;
     color: white;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .search input::placeholder {
@@ -189,10 +204,141 @@ header > img {
     color: white;
 }
 
-@media (max-width:1173px) {
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --width: 1024px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu figure {
+        width: 50px;
+        height: 50px;
+        background-color: var(--nav-a-bg-color);
+        border-radius: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu1 {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --width: 760px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu figure {
+        width: 50px;
+        height: 50px;
+        background-color: var(--nav-a-bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menus {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu1 {
+        display: none;
+    }
+
     .menu2 {
+        width: 100%;
+    }
+
+    .menu2 ul {
+        width: 40%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .menu2 ul li:first-of-type {
+        width: 10%;
+
+        form {
+            width: 100%;
+            overflow: hidden;
+
+            input, #x {
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 760px) {
+    :root {
+        --width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu figure {
+        width: 50px;
+        height: 50px;
+        background-color: var(--nav-a-bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu1 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu figure {
+        width: 50px;
+        height: 50px;
+        background-color: var(--nav-a-bg-color);
+        border-radius: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .menu1 {
         display: none;
     }
 }
+
 
 /*--------------------HEADER/NAVBAR--------------------*/
