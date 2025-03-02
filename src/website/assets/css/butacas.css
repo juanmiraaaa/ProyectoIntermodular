@@ -259,7 +259,9 @@ button[type="submit"]:active {
     }
 
     .seat span {
+
         font-size: 1.0em;
+
         cursor: pointer;
         transition: color 0.3s, transform 0.3s;
     }
