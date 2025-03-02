@@ -7,11 +7,6 @@ header {
     display: block;
 }
 
-header iframe {
-    display: block;
-    vertical-align: bottom;
-}
-
 main {
     margin: 0 auto;
     padding: 0;
@@ -20,7 +15,7 @@ main {
 main section {
     margin: 0 100px;
     text-align: center;
-    padding: 60px;
+    padding: min(60px, 5%);
 }
 
 .to-main-content {
@@ -101,4 +96,41 @@ p, li {
     font-family: Spectal;
     color: white;
     margin: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+    :root {
+        --width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --width: 1024px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --width: 760px;
+    }
+
+}
+
+@media screen and (max-width: 760px) {
+    :root {
+        --width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --width: 100%;
+    }
+
+    html {
+        font-size: 0.8em;
+    }
 }
