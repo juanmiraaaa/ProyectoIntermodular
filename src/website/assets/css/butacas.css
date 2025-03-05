@@ -77,7 +77,7 @@ legend span {
 
 form article {
     background-color: gray;
-    padding: 40px;
+    padding: min(40px, 5%);
     border-radius: 20px;
 }
 
@@ -268,6 +268,16 @@ button[type="submit"]:active {
 
     legend span {
         font-size: 1.0em;
+    }
+
+    main > section, main > form > section {
+        width: 100%;
+    }
+
+    #room {
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
     }
 }
 
