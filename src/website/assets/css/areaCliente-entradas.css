@@ -10,20 +10,21 @@ body > main {
     gap: 20px;
 }
 
-/*Pendiente de actualización*/
+#redirection {
+    display: none;
+}
+
 #scroll-to-top img {
     position: fixed;
     bottom: 20px;
     right: 40px;
     padding: 10px 15px;
-    width: 60px;
+    width: 90px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
-/*Pendiente de actualización*/
 
 aside {
-    width: 35%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -33,48 +34,76 @@ aside {
     background-color: #fffdf3;
 }
 
-aside h2 {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #DEA508;
-    background-color: var(--nav-a-bg-color);
-}
-
 aside a {
     text-decoration: none;
 }
 
-aside h2:hover {
+aside a:nth-of-type(2) h2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--navbar-bg-color);
+}
+
+aside a:nth-of-type(1) h2, aside a:nth-of-type(3) h2 {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #DEA508;
+    background-color: #511111;
+}
+
+aside a h2:hover {
     color: var(--nav-a-bg-color);
     background-color: #DEA508;
 }
 
-aside h2:active {
+aside a h2:active {
     color: #fff;
     background-color: #511111;
 }
 
-aside h2:focus {
+aside a h2:focus {
     background-color: #511111;
 }
 
 #container-entradas {
     width: 56.5%;
     margin: 40px 0;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
-#container-entradas header h1 {
+.tickets header {
+    height: 20px;
+}
+
+.tickets header { /*Temporal por el root*/
+    min-height: 50px;
+    background-color: transparent;
+}
+
+header h1 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+h2 {
     color: white;
 }
 
-/*Selectores Grupales*/
-/*------------------------------*/
-/*Selectores Individuales*/
-/*------------------------------*/
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
 
 .tickets {
     width: 100%;
-    margin-top: 20px;
+    padding: 20px;
+    background-color: #511111;
+    border-radius: 10px;
 }
 
 .tickets > main {
@@ -87,6 +116,7 @@ aside h2:focus {
 .ticket-container {
     width: 100%;
     background-color: #fffdf3;
+    padding: 10px 10px 0 10px;
 }
 
 .ticket-film {
@@ -94,50 +124,70 @@ aside h2:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 10px 0 10px;
-    margin-top: 5px;
 }
 
-.film {
-    background-color: #DEA508;
+.film-information {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
 }
 
-.film img {
-    width: 100px;
+.film figure img {
+    width: 125px;
+    height: 187.5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), 
+                10px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .ticket-information {
-    width: 40%;
-    display: block;
+    position: relative;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 30px;
     padding: 10px;
 }
 
-.ticket-information p:nth-of-type(2) {
-    margin-top: 30px;
-}
-
-.ticket-information h2 {
+.ticket-information article h3 {
     display: inline-block;
+    font-size: 2em;
 }
 
-.ticket-information img {
-    float: right;
+.ticket-information article:nth-child(2) p:nth-of-type(2) {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.ticket-information figure img {
+    position: absolute;
     width: 40px;
-    margin-right: 70px;
+    bottom: 50px;
+    left: 150px;
 }
 
 .qr-film {
-    display: inline-block;
-    margin: auto 0;
-    margin-left: auto;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
 }
 
-.qr-film h2 {
-    display: inline-block;
+.qr-film p {
+    display: flex;
+    align-self: end;
+    font-size: 2em;
+    font-weight: 700;
 }
 
-.qr-film img {
+.qr-film figure img {
     width: 140px;
     vertical-align: text-bottom;
 }
@@ -150,12 +200,12 @@ button {
     background-color: transparent;
 }
 
-button img {
+button figure img {
     width: 30px;
     border: solid 5px transparent;/*evito desplazamiento al hover*/
 }
 
-button img:hover {
+button figure img:hover {
     width: 30px;
     /*mask-image: url('../img/icons/arrowDown.webp');*/
     border: 5px solid #000;

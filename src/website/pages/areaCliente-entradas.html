@@ -11,11 +11,12 @@
 </head>
 <body>
     <header>
+        <a id="redirection" href="#main-content">Al contenido principal</a>
         <iframe src="../components/header-logged.html" title="Cinema Classic | Header"></iframe>
     </header>
     <main>
-        <!--<a id="redirection" href="#main-content">Al contenido principal</a>-->
-        <a href="#" id="scroll-to-top"><img src="./assets/img/icons/icon-scrollUp.webp" alt="icon scroll up"></a>
+        <a href="#" id="scroll-to-top"><img src="../assets/img/icons/icon-scrollUp.webp" alt="icon scroll up"></a>
+        
         <aside>
             <a href="../pages/areaCliente-info.html"><h2>INFORMACIÓN USUARIO</h2></a>
             <a href="#"><h2>TUS ENTRADAS</h2></a>
@@ -23,80 +24,118 @@
         </aside>
         <section id="container-entradas">
             <header>
-                <h1>ENTRADAS</h1>
+                <h1 id="main-content">ENTRADAS</h1>
             </header>
             <main>
                 <section class="tickets">
                     <header>
-                        <h3>FECHA 01/02/2025</h3>
+                        <h2>FECHA 01/02/2025</h2>
                     </header>
                     <main>
                         <section class="ticket-container">
                             <section class="ticket-film">
-                                <section class="film">
-                                    <img src="../assets/img/peliculas/peliculas-cartelera-2.webp" alt="film rascacielos">
-                                </section>
-                                <section class="ticket-information">
-                                    <h4>EL RASCACIELOS</h4>
-                                    <p>1h 2min</p>
-                                    <p>HORA: 21:00</p>
-                                    <h2>SALA 10</h2>
+                                <section class="film-information">
+                                    <section class="film">
+                                        <figure>
+                                            <img src="../assets/img/peliculas/peliculas-cartelera-2_small.webp" alt="film rascacielos">
+                                        </figure>
+                                    </section>
+                                    <section class="ticket-information">
+                                        <article>
+                                            <h3>EL RASCACIELOS</h3>
+                                            <p>1h 2min</p>
+                                        </article>
+                                        <article>
+                                            <p>HORA: 21:00</p>
+                                            <p>SALA 10</p>
+                                        </article>
+                                    </section>
                                 </section>
                                 <section class="qr-film">
-                                    <h2>x3</h2>
-                                    <img src="../assets/img/otras/qr.png" alt="qr">
+                                    <p>x3</p>
+                                    <figure>
+                                        <img src="../assets/img/otras/qr.png" alt="qr">
+                                    </figure>
                                 </section>
                             </section>
                             <button type="button">
-                                <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                <figure>
+                                    <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                </figure>
                             </button>
                         </section>
                         <section class="ticket-container">
                             <section class="ticket-film">
-                                <section class="film">
-                                    <img src="../assets/img/peliculas/peliculas-cartelera-4.webp" alt="film sonrie">
-                                </section>
-                                <section class="ticket-information">
-                                    <h4>SONRÍE</h4>
-                                    <p>1h 14min</p>
-                                    <p>HORA: 22:00</p>
-                                    <h2>SALA 4</h2>
+                                <section class="film-information">
+                                    <section class="film">
+                                        <figure>
+                                            <img src="../assets/img/peliculas/peliculas-cartelera-4_small.webp" alt="film sonrie">
+                                        </figure>
+                                    </section>
+                                    <section class="ticket-information">
+                                        <article>
+                                            <h3>SONRÍE</h3>
+                                            <p>1h 14min</p>
+                                        </article>
+                                        <article>
+                                            <p>HORA: 22:00</p>
+                                            <p>SALA 4</p>
+                                        </article>
+                                    </section>
                                 </section>
                                 <section class="qr-film">
-                                    <h2>x2</h2>
-                                    <img src="../assets/img/otras/qr.png" alt="qr">
+                                    <p>x2</p>
+                                    <figure>
+                                        <img src="../assets/img/otras/qr.png" alt="qr">
+                                    </figure>
                                 </section>
                             </section>
                             <button type="button">
-                                <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                <figure>
+                                    <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                </figure>
                             </button>
                         </section>
                     </main>
                 </section>
                 <section class="tickets">
                     <header>
-                        <h3>FECHA 20/02/2025</h3>
+                        <h2>FECHA 20/02/2025</h2>
                     </header>
                     <main>
                         <section class="ticket-container">
                             <section class="ticket-film">
-                                <section class="film">
-                                    <img src="../assets/img/peliculas/peliculas-cartelera-5.webp" alt="film uncharted">
-                                </section>
-                                <section class="ticket-information">
-                                    <h4>UNCHARTED</h4>
-                                    <p>1h 45min</p>
-                                    <p>HORA: 19:00</p>
-                                    <h2>SALA 8</h2>
-                                    <img src="../assets/img/icons/3d-glasses.webp" alt="3d glasses">
+                                <section class="film-information">
+                                    <section class="film">
+                                        <figure>
+                                            <img src="../assets/img/peliculas/peliculas-cartelera-5_small.webp" alt="film uncharted">
+                                        </figure>
+                                    </section>
+                                    <section class="ticket-information">
+                                        <article>
+                                            <h3>UNCHARTED</h3>
+                                            <p>1h 45min</p>
+                                        </article>
+                                        <article>
+                                            <p>HORA: 19:00</p>
+                                            <p>SALA 8</p>
+                                        </article>
+                                        <figure>
+                                            <img src="../assets/img/icons/3d-glasses.webp" alt="3d glasses">
+                                        </figure>
+                                    </section>
                                 </section>
                                 <section class="qr-film">
-                                    <h2>x5</h2>
-                                    <img src="../assets/img/otras/qr.png" alt="qr">
+                                    <p>x5</p>
+                                    <figure>
+                                        <img src="../assets/img/otras/qr.png" alt="qr">
+                                    </figure>
                                 </section>
                             </section>
                             <button type="button">
-                                <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                <figure>
+                                    <img src="../assets/img/icons/arrowDown.webp" alt="arrow down">
+                                </figure>
                             </button>
                         </section>
                     </main>
