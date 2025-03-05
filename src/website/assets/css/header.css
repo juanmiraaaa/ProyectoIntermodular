@@ -104,9 +104,10 @@ header > img {
     color: black;
 }
 
-.menu2 {
-    display: inline-block;
-    width: 500px;
+.menu2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-bar {
@@ -320,6 +321,7 @@ header > img {
         --width: 100%;
     }
 
+
     .burger-menu {
         display: block;
     }
@@ -336,6 +338,10 @@ header > img {
 
 
     .menu1 {
+        display: none;
+    }
+
+    header > img {
         display: none;
     }
 }
