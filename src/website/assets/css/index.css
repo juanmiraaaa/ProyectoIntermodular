@@ -2,21 +2,22 @@
 body > main {
     margin: 0 100px;
     text-align: center;
-    padding: 80px 60px 60px 60px;
+    padding: 40px 60px 60px 60px;
     margin: 0 auto;
 }
 
-/*Pendiente de actualización*/
+#redirection {
+    display: none;
+}
+
 #scroll-to-top img {
     position: fixed;
     bottom: 20px;
     right: 40px;
     padding: 10px 15px;
-    width: 60px;
+    width: 90px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
-/*Pendiente de actualización*/
 
 #cartel {
     padding: 20px 0;
@@ -62,6 +63,7 @@ body > main {
 }
 
 .eleccion-container h3 {
+    font-size: 1.5em;
     color: var(--film-title-color);
     padding-top: 20px;
 }
