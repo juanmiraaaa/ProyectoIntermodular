@@ -26,24 +26,28 @@
                 <button class="btn-small">Cambiar 🔄</button>
             </div>
             <div class="details">
-                <label>Correo electrónico:</label>
-                <input type="text" value="johndoe1234@dominio.com" disabled>
-                <label>Nombre:</label>
-                <input type="text" value="John Doe" disabled>
-                <label>Fecha nacimiento:</label>
-                <input type="text" placeholder="dd-MM-yyyy">
-                <button class="btn-small">Cambiar</button>
+        <form action="#" method="post">
+                <label for="email">Correo electrónico:</label>
+                <input name="email" id="email" type="email" value="johndoe1234@dominio.com" disabled>
+                <label for="name" >Nombre:</label>
+                <input id="name" name="name" type="text" value="John Doe" disabled>
+                <label for="birthday">Fecha nacimiento:</label>
+                <input  id="birthday" name="birthday"
+            type="text" placeholder="dd-MM-yyyy">
+                <button type="submit" class="btn-small">Cambiar</button>
+            </form>
             </div>
+        
             <h3>Seguridad</h3>
             <div class="security">
-                <label>Contraseña:</label>
-                <input type="password" value="******">
-                <label>Nueva Contraseña:</label>
-                <input type="password" value="******">
-                <label>Repetir Contraseña:</label>
-                <input type="password" value="******">
-                <label>Autenticación dos pasos:</label>
-                <input type="text" value="******32" disabled>
+                <label for="Contraseña">Contraseña:</label>
+                <input name="Contraseña" id="Contraseña" type="password" value="******">
+                <label for="nueva Contraseña">Nueva Contraseña:</label>
+                <input id="nueva Contraseña" name="Contraseña" type="password" value="******">
+                <label for="Repetir Contraseña">Repetir Contraseña:</label>
+                <input id="Repetir Contraseña"  name="Repetir Contraseña" type="password" value="******">
+                <label for="Autenticación dos pasos">Autenticación dos pasos:</label>
+                <input id="Autenticación dos pasos " name="Autenticación dos pasos"  type="text" value="******32" disabled>
             </div>
             <a class="btn" href="./login.html">Cerrar Sesión</a>
         </section> 
