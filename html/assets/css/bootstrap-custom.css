@@ -12038,10 +12038,17 @@ textarea.form-control-lg {
 
 .navbar {
   background-color: #7C0D0D;
-  height: 100px;
+  height: auto;
 }
 .navbar .container-fluid .navbar-brand img, .navbar .container-sm .navbar-brand img, .navbar .container-md .navbar-brand img, .navbar .container-lg .navbar-brand img, .navbar .container-xl .navbar-brand img, .navbar .container-xxl .navbar-brand img {
-  height: 80px;
+  max-height: 80px;
+  height: auto;
+  width: auto;
+}
+@media (max-width: 480px) {
+  .navbar .container-fluid .navbar-brand img, .navbar .container-sm .navbar-brand img, .navbar .container-md .navbar-brand img, .navbar .container-lg .navbar-brand img, .navbar .container-xl .navbar-brand img, .navbar .container-xxl .navbar-brand img {
+    max-height: 50px;
+  }
 }
 .navbar .container-fluid .navbar-collapse, .navbar .container-sm .navbar-collapse, .navbar .container-md .navbar-collapse, .navbar .container-lg .navbar-collapse, .navbar .container-xl .navbar-collapse, .navbar .container-xxl .navbar-collapse {
   background-color: #7C0D0D;

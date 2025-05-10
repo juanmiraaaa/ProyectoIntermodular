@@ -1,14 +1,21 @@
 .navbar {
     background-color: #7C0D0D;
-    height: 100px;
+    height: auto;
 
     .container-fluid {
         .navbar-brand {
             
             
             img {
-                height: 80px;
+
+                max-height: 80px;
+                height: auto;
+                width: auto;
+
                 @extend .img-fluid;
+                @media (max-width: 480px) {
+                    max-height: 50px;
+                }
             }
         }
 
