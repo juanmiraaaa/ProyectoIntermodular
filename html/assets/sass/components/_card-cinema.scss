@@ -3,8 +3,27 @@
 .card-cinema {
     @extend .card;
     padding: 0;
+
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.5rem;
+    }
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.3rem;
+    }
     
     background-color: $card-cinema-bg-color;
+
+    .card-title {
+        text-align: inherit;
+        padding: inherit;
+        color: lighten($film-ftitle-color,  50%);
+
+        font-size: 100%;
+    }
 
 
     .card-body {
@@ -20,7 +39,7 @@
         @include media-breakpoint-up(md) {
             font-size: 1.3rem;
         }
-        
+
         .card-title {
             text-align: inherit;
             padding: inherit;
@@ -29,9 +48,10 @@
             font-size: 100%;
         }
     
+    
         .btn-cinema {
             text-align: inherit;
-            background-color: #6B621D;
+            background-color: $film-ftitle-color;
             color: $black;
             display: block;
             width: 60%;
@@ -51,7 +71,7 @@
         }
     
         .btn-cinema:active {
-            background-color: #6B621D;
+            background-color: $film-ftitle-color;
             transform: scale(0.9);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
