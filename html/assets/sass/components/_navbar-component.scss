@@ -1,0 +1,71 @@
+.navbar {
+    background-color: #7C0D0D;
+    height: 100px;
+
+    .container-fluid {
+        .navbar-brand {
+            
+            
+            img {
+                height: 80px;
+                @extend .img-fluid;
+            }
+        }
+
+        .navbar-collapse {
+            background-color: $secondary-bg-color;
+
+            .navbar-nav { 
+                            
+                .nav-item {
+                    background-color: $main-bg-color;
+                    color: lighten($film-ftitle-color, 30%);
+                    border-radius: 5px;
+                    @extend .mx-2;
+    
+                    .nav-link {
+                        color: inherit;
+                    }
+                }
+            }    
+        }
+
+        .search-bar {
+
+            input {
+                @extend .m-0;
+            }
+
+
+            button {
+
+                img {
+                    height: 25px;
+                    @extend .img-fluid;
+                }
+            }
+
+            .btn-reset {
+                img {
+                    height: 15px;
+                }
+            }
+
+            .btn-search {
+                
+            }
+            
+        }
+
+        .navbar-login {
+            @extend .ms-3;
+            
+            img {
+                height: 50px;
+                @extend .img-fluid;
+            }
+        }
+        
+    }
+}
+
