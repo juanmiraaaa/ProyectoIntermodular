@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Cinema</title>
+    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única.">
+    <meta name="author" content="Siham">
+    <link rel="stylesheet" href="../assets/css/root.css">
+    <link rel="stylesheet" href="../assets/css/areaCliente-info.css">
+</head>
+<body>
+    <header>
+        <iframe src="../components/header-logged.html" title="header"></iframe>
+    </header>
+    <main>
+        <aside>
+            <a class="btn" href="./areaCliente-info.html">INFORMACIÓN USUARIO</a>
+            <a class="btn" href="./areaCliente-entradas.html">TUS ENTRADAS</a>
+            <a class="btn" href="./areaCliente-facturas.html">FACTURAS</a>
+        </aside>
+        <section class="user-info">
+            <h2>INFORMACIÓN USUARIO</h2>
+            <div class="avatar-section">
+                <div class="avatar">👤</div>
+                <button class="btn-small">Cambiar 🔄</button>
+            </div>
+            <div class="details">
+        <form action="#" method="post">
+                <label for="email">Correo electrónico:</label>
+                <input name="email" id="email" type="email" value="johndoe1234@dominio.com" disabled>
+                <label for="name" >Nombre:</label>
+                <input id="name" name="name" type="text" value="John Doe" disabled>
+                <label for="birthday">Fecha nacimiento:</label>
+                <input  id="birthday" name="birthday"
+            type="text" placeholder="dd-MM-yyyy">
+                <button type="submit" class="btn-small">Cambiar</button>
+            </form>
+            </div>
+        
+            <h3>Seguridad</h3>
+            <div class="security">
+                <label for="Contraseña">Contraseña:</label>
+                <input name="Contraseña" id="Contraseña" type="password" value="******">
+                <label for="nueva Contraseña">Nueva Contraseña:</label>
+                <input id="nueva Contraseña" name="Contraseña" type="password" value="******">
+                <label for="Repetir Contraseña">Repetir Contraseña:</label>
+                <input id="Repetir Contraseña"  name="Repetir Contraseña" type="password" value="******">
+                <label for="Autenticación dos pasos">Autenticación dos pasos:</label>
+                <input id="Autenticación dos pasos " name="Autenticación dos pasos"  type="text" value="******32" disabled>
+            </div>
+            <a class="btn" href="./login.html">Cerrar Sesión</a>
+        </section> 
+    </main>
+    <footer>
+        <iframe src="../components/footer.html" title="footer"></iframe>
+    </footer>
+</body>
+</html>

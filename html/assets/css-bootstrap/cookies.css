@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body > main {
+    padding: 40px 100px;
+}
+
+#redirection {
+    display: none;
+}
+
+#scroll-to-top img {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    padding: 10px 15px;
+    width: 90px;
+    cursor: pointer;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--footer-h4-color);
+}
+
+section h3 {
+    margin-top: 30px;
+    color: white;
+}
+
+section p {
+    text-align: left;
+    margin-top: 10px;
+}
+
+section:nth-of-type(3) li {
+    margin-top: 10px;
+    margin-left: 30px;
+    list-style: square;
+    color: var(--footer-h4-color);
+}
+
+section:nth-of-type(3) a {
+    text-decoration: none;
+    color: var(--footer-h4-color);
+}
+
+section:nth-of-type(3) a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+

@@ -1,0 +1,91 @@
+main section {
+    margin: 0 100px;
+    text-align: center;
+    padding: 60px;
+}
+    
+        header {
+            background-color: var(--navbar-bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+
+    
+        .logo {
+            width: 200px;
+            height: auto;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            background-color: var(--nav-a-bg-color);
+            color: var(--nav-a-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        
+        .search-bar input {
+            padding: 5px;
+            margin-right: 5px;
+        }
+        .user-icon {
+            font-size: 20px;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+        }
+        aside {
+            width: 20%;
+            background: #c0b703;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .btn {
+            background: #9b4d3a;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+            text-align: left;
+        }
+        .user-info {
+            background: #931212;
+            color: white;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .avatar-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .avatar {
+            font-size: 100px;
+        }
+        .btn-small {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .details input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .security input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
