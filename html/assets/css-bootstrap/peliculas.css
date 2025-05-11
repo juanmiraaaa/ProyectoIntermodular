@@ -41,17 +41,10 @@ body {
 }
 
 
-h1 {
-    display: none;
-}
-
 html {
     scroll-behavior: smooth;
 }
 
-header {
-    position: static;
-}
 
 
 
@@ -103,18 +96,6 @@ section h2 {
 }
 
 
-
-#film-name {
-    flex-grow: 1; 
-    padding: 8px;
-    height: 100%;
-    font-size: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-}
-
-
-
 .film-list {
     margin: 0 auto;
     background-color: var(--list-film-color);
@@ -123,7 +104,17 @@ section h2 {
     border-radius: 8px;
 }
 
+footer{
+    background-color: var(--navbar-bg-color);
+}
 
 
+footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--footer-h4-color);
+}
 
-
+footer p {
+    color: var(--footer-p-color);
+}

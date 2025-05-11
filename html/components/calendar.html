@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendario Bootstrap Dinámico</title>
+  <link href="../assets/css/bootstrap-custom.css" rel="stylesheet">
+  <style>
+    .calendar {
+      max-width: 500px;
+      margin: auto;
+    }
+    .calendar th,
+    .calendar td {
+      width: 14.28%;
+      text-align: center;
+      height: 80px;
+      vertical-align: top;
+      cursor: pointer;
+    }
+    .calendar .today {
+      background-color: #d1e7dd;
+      font-weight: bold;
+    }
+    .calendar .selected {
+      background-color: #a2d2ff;
+      font-weight: bold;
+    }
+    .calendar-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .calendar-controls button {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="calendar border rounded shadow-sm">
+    <div class="text-center p-2 bg-light border-bottom">
+      <div class="calendar-controls">
+        <button id="prev-month" class="btn btn-light">&lt;</button>
+        <h5 id="calendar-month">Cargando...</h5>
+        <button id="next-month" class="btn btn-light">&gt;</button>
+      </div>
+    </div>
+    <table class="table table-bordered m-0">
+      <thead class="table-light">
+        <tr>
+          <th>Lun</th>
+          <th>Mar</th>
+          <th>Mié</th>
+          <th>Jue</th>
+          <th>Vie</th>
+          <th>Sáb</th>
+          <th>Dom</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body"></tbody>
+    </table>
+  </div>
+
+  <script>
+    let currentMonth = new Date().getMonth(); 
+    let currentYear = new Date().getFullYear(); 
+    let selectedDay = null; 
+
+    
+    function getDaysInMonth(month, year) {
+      return new Date(year, month + 1, 0).getDate();
+    }
+
+    
+    function getFirstDayOfMonth(month, year) {
+      return new Date(year, month, 1).getDay();
+    }
+
+    
+    function generateCalendar() {
+      const today = new Date();
+      
+      const firstDay = getFirstDayOfMonth(currentMonth, currentYear);
+      const daysInMonth = getDaysInMonth(currentMonth, currentYear);
+
+      
+      const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+      const monthName = monthNames[currentMonth];
+      document.getElementById('calendar-month').textContent = `${monthName} ${currentYear}`;
+
+      
+      const calendarBody = document.getElementById('calendar-body');
+      calendarBody.innerHTML = '';
+
+      
+      let row = document.createElement('tr');
+      let dayCount = 1;
+
+      
+      for (let i = 0; i < firstDay; i++) {
+        row.appendChild(document.createElement('td'));
+      }
+
+     
+      for (let i = firstDay; i < 7; i++) {
+        let cell = createDayCell(dayCount, today);
+        row.appendChild(cell);
+        dayCount++;
+      }
+      calendarBody.appendChild(row);
+
+     
+      while (dayCount <= daysInMonth) {
+        row = document.createElement('tr');
+        for (let i = 0; i < 7; i++) {
+          if (dayCount <= daysInMonth) {
+            let cell = createDayCell(dayCount, today);
+            row.appendChild(cell);
+            dayCount++;
+          } else {
+            row.appendChild(document.createElement('td'));
+          }
+        }
+        calendarBody.appendChild(row);
+      }
+    }
+
+    
+    function createDayCell(day, today) {
+      const cell = document.createElement('td');
+      cell.textContent = day;
+
+      
+      if (day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+        cell.classList.add('today');
+      }
+
+      
+      cell.addEventListener('click', function () {
+        if (selectedDay === day) {
+          
+          cell.classList.remove('selected');
+          selectedDay = null;
+        } else {
+          
+          if (selectedDay !== null) {
+            
+            document.querySelector('.selected')?.classList.remove('selected');
+          }
+          cell.classList.add('selected');
+          selectedDay = day;
+        }
+      });
+
+      return cell;
+    }
+
+    
+    function nextMonth() {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      generateCalendar();
+    }
+
+    
+    function prevMonth() {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      generateCalendar();
+    }
+
+    
+    document.getElementById('prev-month').addEventListener('click', prevMonth);
+    document.getElementById('next-month').addEventListener('click', nextMonth);
+
+   
+    generateCalendar();
+  </script>
+
+</body>
+</html>

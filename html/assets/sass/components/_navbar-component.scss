@@ -38,30 +38,51 @@
         }
 
         .search-bar {
+            margin-left: auto;
+            width: auto;
 
-            input {
-                @extend .m-0;
-            }
+            .custom-search-container {
+                background-color: #5a2f32;
+                border-radius: 30px;
+                padding: 5px 15px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .btn-icon {
+                    background: none;
+                    border: none;
+                    padding: 0 5px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        height: 20px;
+                        width: auto;
+                    }
+                }
+
+                .custom-search-input {
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    flex-grow: 1;
+                    padding: 0 10px;
+                    outline: none;
+                    box-shadow: none;
+                    &.form-control {
+                         padding: 0 10px;
+                         height: auto;
+                         box-shadow: none;
+                    }
 
 
-            button {
-
-                img {
-                    height: 25px;
-                    @extend .img-fluid;
+                    &::placeholder {
+                        color: rgba(255, 255, 255, 0.7);
+                    }
                 }
             }
-
-            .btn-reset {
-                img {
-                    height: 15px;
-                }
-            }
-
-            .btn-search {
-                
-            }
-            
         }
 
         .navbar-login {

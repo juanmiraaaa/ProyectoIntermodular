@@ -13,12 +13,12 @@
     <title>Classic Cinema | Películas</title>
 </head>
 <body>
-    <a href="#main-content" class="to-main-content d-none">Ir al contenido principal</a>
+    <a href="#main-content" class="to-main-content visually-hidden">Ir al contenido principal</a>
 
-    <div class="container">
+    <div class="container"> 
 
         <header class="row">
-            <h1>Películas</h1>
+            <h1 class="visually-hidden">Películas</h1>
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid d-flex">
                     <a class="navbar-brand" href="#">
@@ -47,13 +47,15 @@
                             </li>
                         </ul>
                         <form class="d-flex search-bar" role="search">
-                            <button id="x" class="btn btn-outline-warning btn-reset" type="reset">
-                                <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
-                            </button>
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-                            <button id="lupa" class="btn btn-outline-warning .btn-search" type="submit">
-                                <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
-                            </button>
+                            <div class="custom-search-container d-flex align-items-center">
+                                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                                    <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                                </button>
+                                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                                    <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -389,9 +391,38 @@
             </section>
         </main>
     
-        <footer class="row">
-            <iframe src="../components/footer.html" title="footer" id="footer-frame"></iframe>
+        <footer class="row text-center p-3">
+
+            <section class="col-md-4 col-12">
+                <h4>Sobre Nosotros</h4>
+                <p>En Classic Cinemo, fusionamos la elegancia del cine clásico con la innovación del entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
+                <p>Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están equipadas con tecnología de última generación.</p>
+                <p>Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se encuentran.</p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4>Información</h4>
+                <p><a class="text-white fs-4 text-decoration-none my-2" href="../pages/privacidad.html">Privacidad</a></p>
+                <p><a class="text-white fs-4 text-decoration-none my-2"href="../pages/cookies.html">Cockies</a></p>
+                <p><a class="text-white fs-4 text-decoration-none my-2" href="../pages/avisoLegal.html">Aviso Legal</a></p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4>Contacto</h4>
+                <p>Siguenos en redes sociales y mantente informado de novedades e promociones</p>
+                <p id="social-media">
+                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://www.facebook.com/" target="_blank"><span class="ri-facebook-line" aria-label="facebook"></span></a>
+                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span class="ri-twitter-x-line" aria-label="twitter"></span></a>
+                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://www.instagram.com/" target="_blank"><span class="ri-instagram-line" aria-label="instagram"></span></a>             
+                </p>
+                <p>Conoce nuestros cines</p>
+                <ul>
+                    <li class="list-unstyled text-start text-white"><span class="ri-map-pin-line"></span> TORREVIEJA, Av. me la invento <br> telf. +34 585 xxx xxx</li>
+                    <li class="list-unstyled text-start  text-white"><span class="ri-map-pin-line"></span> ALICANTE, Av. me la invento <br> telf. +34 876 xxx xxx</li>
+                    <li class="list-unstyled text-start  text-white"><span class="ri-map-pin-line"></span> DENIA, Av. me la invento <br> telf. +34 258 xxx xxx</li>
+                </ul>
+            </section>
+
         </footer>
+    
     </div>
 
     <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="LLevame al inicio de la página" title="Al principio">
