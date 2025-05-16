@@ -1,11 +1,9 @@
 /*------- PELICULAS FILM CARD ------- */
-.film-component {
+.film-component {  
 
     background-color: $film-bg-color;
     border-radius: 8px;
     padding: 4%;
-    
-    @extend .my-1;
 
     font-size: 0.9rem;
 

@@ -1,6 +1,7 @@
 .footer-component {
+    box-sizing: border-box;
     background-color: $secondary-bg-color;
-
+    
     @extend .row, .text-center, .p-3;
 
     h4 {

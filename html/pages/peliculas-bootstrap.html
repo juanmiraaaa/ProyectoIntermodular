@@ -15,6 +15,10 @@
 <body>
     <a href="#main-content" class="to-main-content visually-hidden">Ir al contenido principal</a>
 
+    <a href="#" id="scroll-to-top" class="btn btn-dark rounded-circle position-fixed bottom-0 end-0 m-3" aria-label="Llévame al inicio">
+        <span class="ri-arrow-up-s-line fs-3"></span>
+    </a>
+
     <div class="container"> 
 
         <header class="row">
@@ -64,9 +68,8 @@
 
         <main class="row films align-items-center" id="main-content">
 
-
-            <section id="estrenos" class="col-12">
-                <h2 class="text-center mt-2">Estrenos</h2>
+            <section id="estrenos" class="col-11 mx-auto">
+                <h2 class="fs-2 text-center mt-2">Estrenos</h2>
     
                 <div id="carouselExampleRide" class="carousel slide px-1 mb-4" data-bs-ride="true">
                     <div class="carousel-inner">
@@ -92,11 +95,11 @@
             </section>
     
     
-            <section id="cartelera" class="col-12">
-                <h2>Cartelera</h2>
+            <section id="cartelera" class="col-11 mx-auto">
+                <h2 class="fs-2">Cartelera</h2>
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
+                            <h2 class="accordion-header fs-2">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Filtros:
                             </button>
@@ -155,13 +158,13 @@
    
                 <section class="film-list">
                     <article class="film-component">
-                        <h3 class="film-title">Star Wars</h3>
+                        <h3 class="fs-3 film-title">Star Wars</h3>
                         <div class="film-body">
                             <div class="film-image">
                                 <img src="../assets/img/peliculas/peliculas-cartelera-1_small.webp" alt="Cartel de la película Star Wars">
                             </div>
                             <div class="film-content">
-                                <p class="film-desc">El futuro no es lo que esperábamos. En 2154, la humanidad descubrió que no estaba sola, pero no todos los encuentros son amistosos. Una rebelión intergaláctica está a punto de comenzar. Los héroes del Despertar de la Fuerza se unen a las leyendas galácticas en una aventura épica para desentrañar los antiguos misterios de la Fuerza y descubrir sorprendentes revelaciones del pasado.</p>
+                                <p class="film-desc fs-5">El futuro no es lo que esperábamos. En 2154, la humanidad descubrió que no estaba sola, pero no todos los encuentros son amistosos. Una rebelión intergaláctica está a punto de comenzar. Los héroes del Despertar de la Fuerza se unen a las leyendas galácticas en una aventura épica para desentrañar los antiguos misterios de la Fuerza y descubrir sorprendentes revelaciones del pasado.</p>
                             </div>
                             <div class="film-details">
                                 <div class="pegi">
@@ -391,44 +394,39 @@
             </section>
         </main>
     
-        <footer class="footer-component">
+        <footer class="footer-component row text-center p-3">
 
             <section class="col-md-4 col-12">
-                <h4>Sobre Nosotros</h4>
-                <p>En Classic Cinemo, fusionamos la elegancia del cine clásico con la innovación del entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
-                <p>Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están equipadas con tecnología de última generación.</p>
-                <p>Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se encuentran.</p>
+                <h4 class="fs-3">Sobre Nosotros</h4>
+                <p class="fs-5">En Classic Cinemo, fusionamos la elegancia del cine clásico con la innovación del entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
+                <p class="fs-5">Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están equipadas con tecnología de última generación.</p>
+                <p class="fs-5">Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se encuentran.</p>
             </section>
             <section class="col-md-4 col-12">
-                <h4>Información</h4>
-                <p><a class="text-white fs-4 text-decoration-none my-2" href="../pages/privacidad.html">Privacidad</a></p>
-                <p><a class="text-white fs-4 text-decoration-none my-2"href="../pages/cookies.html">Cockies</a></p>
-                <p><a class="text-white fs-4 text-decoration-none my-2" href="../pages/avisoLegal.html">Aviso Legal</a></p>
+                <h4 class="fs-3">Información</h4>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/privacidad.html">Privacidad</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"href="../pages/cookies.html">Cockies</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/avisoLegal.html">Aviso Legal</a></p>
             </section>
             <section class="col-md-4 col-12">
-                <h4>Contacto</h4>
-                <p>Siguenos en redes sociales y mantente informado de novedades e promociones</p>
-                <p id="social-media">
-                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://www.facebook.com/" target="_blank"><span class="ri-facebook-line" aria-label="facebook"></span></a>
-                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span class="ri-twitter-x-line" aria-label="twitter"></span></a>
-                    <a class="text-white fs-3 text-decoration-none mx-2" href="https://www.instagram.com/" target="_blank"><span class="ri-instagram-line" aria-label="instagram"></span></a>             
+                <h4 class="fs-3">Contacto</h4>
+                <p class="fs-5">Siguenos en redes sociales y mantente informado de novedades e promociones</p>
+                <p id="social-media" class="fs-5">
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.facebook.com/" target="_blank"><span class="ri-facebook-line" aria-label="facebook"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span class="ri-twitter-x-line" aria-label="twitter"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.instagram.com/" target="_blank"><span class="ri-instagram-line" aria-label="instagram"></span></a>             
                 </p>
-                <p>Conoce nuestros cines</p>
+                <p class="fs-5">Conoce nuestros cines</p>
                 <ul>
-                    <li class="list-unstyled text-start text-white"><span class="ri-map-pin-line"></span> TORREVIEJA, Av. me la invento <br> telf. +34 585 xxx xxx</li>
-                    <li class="list-unstyled text-start  text-white"><span class="ri-map-pin-line"></span> ALICANTE, Av. me la invento <br> telf. +34 876 xxx xxx</li>
-                    <li class="list-unstyled text-start  text-white"><span class="ri-map-pin-line"></span> DENIA, Av. me la invento <br> telf. +34 258 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> TORREVIEJA, Av. me la invento <br> telf. +34 585 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> ALICANTE, Av. me la invento <br> telf. +34 876 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> DENIA, Av. me la invento <br> telf. +34 258 xxx xxx</li>
                 </ul>
             </section>
 
         </footer>
     
     </div>
-
-    <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="LLevame al inicio de la página" title="Al principio">
-        <span class="ri-arrow-up-s-line"></span>
-    </a>
-    
 
     
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

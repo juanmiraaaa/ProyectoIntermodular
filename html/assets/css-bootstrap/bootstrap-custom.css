@@ -7871,7 +7871,7 @@ textarea.form-control-lg {
   margin-bottom: 0 !important;
 }
 
-.my-1, .film-component {
+.my-1 {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
 }
@@ -7913,7 +7913,7 @@ textarea.form-control-lg {
   margin-top: 0.5rem !important;
 }
 
-.mt-3 {
+.mt-3, .card-cinema .card-title {
   margin-top: 1rem !important;
 }
 
@@ -7969,7 +7969,7 @@ textarea.form-control-lg {
   margin-bottom: 0.5rem !important;
 }
 
-.mb-3 {
+.mb-3, .card-cinema .card-title {
   margin-bottom: 1rem !important;
 }
 
@@ -11899,9 +11899,16 @@ textarea.form-control-lg {
 }
 .card-cinema .card-title {
   text-align: inherit;
-  padding: inherit;
+  padding: 0 10px;
   color: rgb(229.625, 221.75, 161.375);
   font-size: 100%;
+}
+.card-cinema .card-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: rgb(229.625, 221.75, 161.375);
 }
 .card-cinema .card-body {
   padding: inherit;
@@ -12037,6 +12044,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
+  box-sizing: border-box;
   background-color: #7C0D0D;
   height: auto;
 }
@@ -12107,6 +12115,7 @@ textarea.form-control-lg {
 }
 
 .footer-component {
+  box-sizing: border-box;
   background-color: #7C0D0D;
 }
 .footer-component h4, .footer-component .h4 {
