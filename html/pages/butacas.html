@@ -8,1048 +8,1125 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
 
-    <link rel="stylesheet" href="../assets/css/root.css">
-    <link rel="stylesheet" href="../assets/css/butacas.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="../assets/css-bootstrap/butacas.css">
 
     <title>Classic Cinema | Butacas</title>
 </head>
 <body>
-    <a href="#main-content" class="to-main-content" aria-label="Al contenido principal de la página">Al contenido principal</a>
+    <a href="#main-content" class="to-main-content visually-hidden">Ir al contenido principal</a>
 
-    <a href="#" id="scroll-to-top" class="scroll-to-top" aria-label="Al inicio de la página" title="">
-        <span class="ri-arrow-up-s-line"></span>
+    <a href="#" id="scroll-to-top" class="btn btn-dark rounded-circle position-fixed bottom-0 end-0 m-3" aria-label="Llévame al inicio">
+        <span class="ri-arrow-up-s-line fs-3"></span>
     </a>
 
-    <header>
-        <iframe src="../components/header-logged.html"  title="header"></iframe>
-    </header>
+    <div class="container">
 
-    <main id="main-content">
-        <section id="info">
-            <h1>Compra Tu Entrada</h1>
-            <h2 id="film-title">Película: <span>Rascacielos</span></h2>
+        <header class="row">
+            <h1 class="visually-hidden">Películas</h1>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/img/logos/logo-classic-cinema.webp" alt="Logo Classic Cinema">
+                    </a>
 
-            <p id="film-cinema">Cine: <span>Alicante</span></p>
-            <p id="film-room">Sala: <span>2</span></p>
-            <p id="film-time">Horario: <span>21:45</span></p>
-            <P id="film-date">Fecha: <span>14/12</span></P>
+                    <div class="d-flex align-items-center ms-auto order-lg-1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-login ms-3" href="../pages/login.html">
+                            <img src="../assets/img/icons/icon-yellowUser.webp" alt="Icon User" height="50">
+                        </a>
+                    </div>
 
-        </section>
+                    <div class="collapse navbar-collapse order-lg-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#seleccion-cine">CINES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/peliculas-bootstrap.html" target="_parent">PELÍCULAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="../pages/contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex search-bar" role="search">
+                            <div class="custom-search-container d-flex align-items-center">
+                                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                                    <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                                </button>
+                                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                                    <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-        <form action="./areaCliente-entradas.html" method="post" id="seat-selection-form">
-            <section id="seats">
-                <h2>Seleccione sus butacas</h2>
-                <legend id="seats-legend">
-                    <p>Butaca Libre: <span class="ri-sofa-fill available"></span></p>
-                    <p>Butaca Ocupada: <span class="ri-sofa-fill unavailable"></span></p>
-                    <p>Butaca Seleccionada: <span class="ri-sofa-fill checked"></span></p>
-                </legend>
-                
-                <article id="seats-container">
-                    <section id="screen">
-                        <p>Pantalla</p>
-                    </section>
-                    <section id="room">
-                        <section id="left-side" class="wing">
-                            <div id="ls-row-a" class="row">
-                                <label class="seat" for="ls-A1">
-                                    <input type="checkbox" name="seat" value="ls-A1" id="ls-A1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A1</span>
-                                </label>
-                                <label class="seat" for="ls-A2">
-                                    <input type="checkbox" name="seat" value="ls-A2"  id="ls-A2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A2</span>
-                                </label>
-                                <label class="seat" for="ls-A3">
-                                    <input type="checkbox" name="seat" value="ls-A3" id="ls-A3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-b" class="row">
-                                <label class="seat" for="ls-B1">
-                                    <input type="checkbox" name="seat" value="ls-B1"  id="ls-B1" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">B1</span>
-                                </label>
-                                <label class="seat" for="ls-B2">
-                                    <input type="checkbox" name="seat" value="ls-B2"  id="ls-B2" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">B2</span>
-                                </label>
-                                <label class="seat" for="ls-B3">
-                                    <input type="checkbox" name="seat" value="ls-B3"  id="ls-B3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-c" class="row">
-                                <label class="seat" for="ls-C1">
-                                    <input type="checkbox" name="seat" value="ls-C1" id="ls-C1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C1</span>
-                                </label>
-                                <label class="seat" for="ls-C2">
-                                    <input type="checkbox" name="seat" value="ls-C2" id="ls-C2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C2</span>
-                                </label>
-                                <label class="seat" for="ls-C3">
-                                    <input type="checkbox" name="seat" value="ls-C3" id="ls-C3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-d" class="row">
-                                <label class="seat" for="ls-D1">
-                                    <input type="checkbox" name="seat" value="ls-D1" id="ls-D1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D1</span>
-                                </label>
-                                <label class="seat" for="ls-D2">
-                                    <input type="checkbox" name="seat" value="ls-D2" id="ls-D2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D2</span>
-                                </label>
-                                <label class="seat" for="ls-D3">
-                                    <input type="checkbox" name="seat" value="ls-D3" id="ls-D3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-e" class="row">
-                                <label class="seat" for="ls-E1">
-                                    <input type="checkbox" name="seat" value="ls-E1" id="ls-E1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E1</span>
-                                </label>
-                                <label class="seat" for="ls-E2">
-                                    <input type="checkbox" name="seat" value="ls-E2" id="ls-E2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E2</span>
-                                </label>
-                                <label class="seat" for="ls-E3">
-                                    <input type="checkbox" name="seat" value="ls-E3" id="ls-E3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E3</span>
-                                </label>                                 
-                            </div>
-                            <div id="ls-row-f" class="row">
-                                <label class="seat" for="ls-F1">
-                                    <input type="checkbox" name="seat" value="ls-F1" id="ls-F1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F1</span>
-                                </label>
-                                <label class="seat" for="ls-F2">
-                                    <input type="checkbox" name="seat" value="ls-F2" id="ls-F2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F2</span>
-                                </label>
-                                <label class="seat" for="ls-F3">
-                                    <input type="checkbox" name="seat" value="ls-F3" id="ls-F3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-g" class="row">
-                                <label class="seat" for="ls-G1">
-                                    <input type="checkbox" name="seat" value="ls-G1" id="ls-G1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G1</span>
-                                </label>
-                                <label class="seat" for="ls-G2">
-                                    <input type="checkbox" name="seat" value="ls-G2" id="ls-G2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G2</span>
-                                </label>
-                                <label class="seat" for="ls-G3">
-                                    <input type="checkbox" name="seat" value="ls-G3" id="ls-G3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-h" class="row">
-                                <label class="seat" for="ls-H1">
-                                    <input type="checkbox" name="seat" value="ls-H1" id="ls-H1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H1</span>
-                                </label>
-                                <label class="seat" for="ls-H2">
-                                    <input type="checkbox" name="seat" value="ls-H2" id="ls-H2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H2</span>
-                                </label>
-                                <label class="seat" for="ls-H3">
-                                    <input type="checkbox" name="seat" value="ls-H3" id="ls-H3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-i" class="row">
-                                <label class="seat" for="ls-I1">
-                                    <input type="checkbox" name="seat" value="ls-I1" id="ls-I1" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">I1</span>
-                                </label>
-                                <label class="seat" for="ls-I2">
-                                    <input type="checkbox" name="seat" value="ls-I2" id="ls-I2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I2</span>
-                                </label>
-                                <label class="seat" for="ls-I3">
-                                    <input type="checkbox" name="seat" value="ls-I3" id="ls-I3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I3</span>
-                                </label> 
-                            </div>
-                            <div id="ls-row-j" class="row">
-                                <label class="seat" for="ls-J1">
-                                    <input type="checkbox" name="seat" value="ls-J1" id="ls-J1">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J1</span>
-                                </label>
-                                <label class="seat" for="ls-J2">
-                                    <input type="checkbox" name="seat" value="ls-J2" id="ls-J2">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J2</span>
-                                </label>
-                                <label class="seat" for="ls-J3">
-                                    <input type="checkbox" name="seat" value="ls-J3" id="ls-J3">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J3</span>
-                                </label>                                 
-                            </div>  
-                        </section>
+        <main id="main-content" class="row align-items-center justify-content-center">
+            <section id="info" class="col-11 my-3 text-center p-3">
+                <h1 class="fs-1">Compra Tu Entrada</h1>
+                <h2 id="film-title" class="fs-2">Película: <span>Rascacielos</span></h2>
 
-                        <section id="middle-side" class="wing">
-                            <div id="ms-row-a" class="row">
-                                <label class="seat" for="ms-A4">
-                                    <input type="checkbox" name="seat" value="ms-A4" id="ms-A4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A4</span>
-                                </label>
-                                <label class="seat" for="ms-A5">
-                                    <input type="checkbox" name="seat" value="ms-A5" id="ms-A5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A5</span>
-                                </label>
-                                <label class="seat" for="ms-A6">
-                                    <input type="checkbox" name="seat" value="ms-A6" id="ms-A6" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">A6</span>
-                                </label>
-                                <label class="seat" for="ms-A7">
-                                    <input type="checkbox" name="seat" value="ms-A7" id="ms-A7" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">A7</span>
-                                </label>
-                                <label class="seat" for="ms-A8">
-                                    <input type="checkbox" name="seat" value="ms-A8" id="ms-A8" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">A8</span>
-                                </label>
-                                <label class="seat" for="ms-A9">
-                                    <input type="checkbox" name="seat" value="ms-A9" id="ms-A9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A9</span>
-                                </label>
-                                <label class="seat" for="ms-A10">
-                                    <input type="checkbox" name="seat" value="ms-A10" id="ms-A10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A10</span>
-                                </label>
-                                <label class="seat" for="ms-A11">
-                                    <input type="checkbox" name="seat" value="ms-A11" id="ms-A11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A11</span>
-                                </label>
-                                <label class="seat" for="ms-A12">
-                                    <input type="checkbox" name="seat" value="ms-A12" id="ms-A12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A12</span>
-                                </label>
-                                <label class="seat" for="ms-A13">
-                                    <input type="checkbox" name="seat" value="ms-A13" id="ms-A13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A13</span>
-                                </label>
-                                <label class="seat" for="ms-A14">
-                                    <input type="checkbox" name="seat" value="ms-A14" id="ms-A14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A14</span>
-                                </label>
-                                <label class="seat" for="ms-A15">
-                                    <input type="checkbox" name="seat" value="ms-A15" id="ms-A15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A15</span>
-                                </label>
-                            </div>
-                            <div id="ms-row-b" class="row">
-                                <label class="seat" for="ms-B4">
-                                    <input type="checkbox" name="seat" value="ms-B4" id="ms-B4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B4</span>
-                                </label>
-                                <label class="seat" for="ms-B5">
-                                    <input type="checkbox" name="seat" value="ms-B5" id="ms-B5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B5</span>
-                                </label>
-                                <label class="seat" for="ms-B6">
-                                    <input type="checkbox" name="seat" value="ms-B6" id="ms-B6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B6</span>
-                                </label>
-                                <label class="seat" for="ms-B7">
-                                    <input type="checkbox" name="seat" value="ms-B7" id="ms-B7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B7</span>
-                                </label>
-                                <label class="seat" for="ms-B8">
-                                    <input type="checkbox" name="seat" value="ms-B8" id="ms-B8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B8</span>
-                                </label>
-                                <label class="seat" for="ms-B9">
-                                    <input type="checkbox" name="seat" value="ms-B9" id="ms-B9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B9</span>
-                                </label>
-                                <label class="seat" for="ms-B10">
-                                    <input type="checkbox" name="seat" value="ms-B10" id="ms-B10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B10</span>
-                                </label>
-                                <label class="seat" for="ms-B11">
-                                    <input type="checkbox" name="seat" value="ms-B11" id="ms-B11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B11</span>
-                                </label>
-                                <label class="seat" for="ms-B12">
-                                    <input type="checkbox" name="seat" value="ms-B12" id="ms-B12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B12</span>
-                                </label>
-                                <label class="seat" for="ms-B13">
-                                    <input type="checkbox" name="seat" value="ms-B13" id="ms-B13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B13</span>
-                                </label>
-                                <label class="seat" for="ms-B14">
-                                    <input type="checkbox" name="seat" value="ms-B14" id="ms-B14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B14</span>
-                                </label>
-                                <label class="seat" for="ms-B15">
-                                    <input type="checkbox" name="seat" value="ms-B15" id="ms-B15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B15</span>
-                                </label>
-                            </div>
+                <p id="film-cinema" class="fs-5">Cine: <span>Alicante</span></p>
+                <p id="film-room" class="fs-5">Sala: <span>2</span></p>
+                <p id="film-time" class="fs-5">Horario: <span>21:45</span></p>
+                <P id="film-date" class="fs-5">Fecha: <span>14/12</span></P>
 
-                            <div id="ms-row-c" class="row">
-                                <label class="seat" for="ms-C4">
-                                    <input type="checkbox" name="seat" value="ms-C4" id="ms-C4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C4</span>
-                                </label>
-                                <label class="seat" for="ms-C5">
-                                    <input type="checkbox" name="seat" value="ms-C5" id="ms-C5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C5</span>
-                                </label>
-                                <label class="seat" for="ms-C6">
-                                    <input type="checkbox" name="seat" value="ms-C6" id="ms-C6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C6</span>
-                                </label>
-                                <label class="seat" for="ms-C7">
-                                    <input type="checkbox" name="seat" value="ms-C7" id="ms-C7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C7</span>
-                                </label>
-                                <label class="seat" for="ms-C8">
-                                    <input type="checkbox" name="seat" value="ms-C8" id="ms-C8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C8</span>
-                                </label>
-                                <label class="seat" for="ms-C9">
-                                    <input type="checkbox" name="seat" value="ms-C9" id="ms-C9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C9</span>
-                                </label>
-                                <label class="seat" for="ms-C10">
-                                    <input type="checkbox" name="seat" value="ms-C10" id="ms-C10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C10</span>
-                                </label>
-                                <label class="seat" for="ms-C11">
-                                    <input type="checkbox" name="seat" value="ms-C11" id="ms-C11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C11</span>
-                                </label>
-                                <label class="seat" for="ms-C12">
-                                    <input type="checkbox" name="seat" value="ms-C12" id="ms-C12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C12</span>
-                                </label>
-                                <label class="seat" for="ms-C13">
-                                    <input type="checkbox" name="seat" value="ms-C13" id="ms-C13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C13</span>
-                                </label>
-                                <label class="seat" for="ms-C14">
-                                    <input type="checkbox" name="seat" value="ms-C14" id="ms-C14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C14</span>
-                                </label>
-                                <label class="seat" for="ms-C15">
-                                    <input type="checkbox" name="seat" value="ms-C15" id="ms-C15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C15</span>
-                                </label>
-                            </div>
-                            <div id="ms-row-d" class="row">
-                                <label class="seat" for="ms-D4">
-                                    <input type="checkbox" name="seat" value="ms-D4" id="ms-D4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D4</span>
-                                </label>
-                                <label class="seat" for="ms-D5">
-                                    <input type="checkbox" name="seat" value="ms-D5" id="ms-D5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D5</span>
-                                </label>
-                                <label class="seat" for="ms-D6">
-                                    <input type="checkbox" name="seat" value="ms-D6" id="ms-D6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D6</span>
-                                </label>
-                                <label class="seat" for="ms-D7">
-                                    <input type="checkbox" name="seat" value="ms-D7" id="ms-D7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D7</span>
-                                </label>
-                                <label class="seat" for="ms-D8">
-                                    <input type="checkbox" name="seat" value="ms-D8" id="ms-D8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D8</span>
-                                </label>
-                                <label class="seat" for="ms-D9">
-                                    <input type="checkbox" name="seat" value="ms-D9" id="ms-D9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D9</span>
-                                </label>
-                                <label class="seat" for="ms-D10">
-                                    <input type="checkbox" name="seat" value="ms-D10" id="ms-D10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D10</span>
-                                </label>
-                                <label class="seat" for="ms-D11">
-                                    <input type="checkbox" name="seat" value="ms-D11" id="ms-D11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D11</span>
-                                </label>
-                                <label class="seat" for="ms-D12">
-                                    <input type="checkbox" name="seat" value="ms-D12" id="ms-D12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D12</span>
-                                </label>
-                                <label class="seat" for="ms-D13">
-                                    <input type="checkbox" name="seat" value="ms-D13" id="ms-D13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D13</span>
-                                </label>
-                                <label class="seat" for="ms-D14">
-                                    <input type="checkbox" name="seat" value="ms-D14" id="ms-D14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D14</span>
-                                </label>
-                                <label class="seat" for="ms-D15">
-                                    <input type="checkbox" name="seat" value="ms-D15" id="ms-D15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D15</span>
-                                </label>
-                            </div>
-                            
-                            <div id="ms-row-e" class="row">
-                                <label class="seat" for="ms-E4">
-                                    <input type="checkbox" name="seat" value="ms-E4" id="ms-E4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E4</span>
-                                </label>
-                                <label class="seat" for="ms-E5">
-                                    <input type="checkbox" name="seat" value="ms-E5" id="ms-E5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E5</span>
-                                </label>
-                                <label class="seat" for="ms-E6">
-                                    <input type="checkbox" name="seat" value="ms-E6" id="ms-E6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E6</span>
-                                </label>
-                                <label class="seat" for="ms-E7">
-                                    <input type="checkbox" name="seat" value="ms-E7" id="ms-E7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E7</span>
-                                </label>
-                                <label class="seat" for="ms-E8">
-                                    <input type="checkbox" name="seat" value="ms-E8" id="ms-E8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E8</span>
-                                </label>
-                                <label class="seat" for="ms-E9">
-                                    <input type="checkbox" name="seat" value="ms-E9" id="ms-E9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E9</span>
-                                </label>
-                                <label class="seat" for="ms-E10">
-                                    <input type="checkbox" name="seat" value="ms-E10" id="ms-E10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E10</span>
-                                </label>
-                                <label class="seat" for="ms-E11">
-                                    <input type="checkbox" name="seat" value="ms-E11" id="ms-E11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E11</span>
-                                </label>
-                                <label class="seat" for="ms-E12">
-                                    <input type="checkbox" name="seat" value="ms-E12" id="ms-E12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E12</span>
-                                </label>
-                                <label class="seat" for="ms-E13">
-                                    <input type="checkbox" name="seat" value="ms-E13" id="ms-E13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E13</span>
-                                </label>
-                                <label class="seat" for="ms-E14">
-                                    <input type="checkbox" name="seat" value="ms-E14" id="ms-E14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E14</span>
-                                </label>
-                                <label class="seat" for="ms-E15">
-                                    <input type="checkbox" name="seat" value="ms-E15" id="ms-E15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E15</span>
-                                </label>
-                            </div>
-                            <div id="ms-row-f" class="row">
-                                <label class="seat" for="ms-F4">
-                                    <input type="checkbox" name="seat" value="ms-F4" id="ms-F4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F4</span>
-                                </label>
-                                <label class="seat" for="ms-F5">
-                                    <input type="checkbox" name="seat" value="ms-F5" id="ms-F5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F5</span>
-                                </label>
-                                <label class="seat" for="ms-F6">
-                                    <input type="checkbox" name="seat" value="ms-F6" id="ms-F6" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">F6</span>
-                                </label>
-                                <label class="seat" for="ms-F7">
-                                    <input type="checkbox" name="seat" value="ms-F7" id="ms-F7" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">F7</span>
-                                </label>
-                                <label class="seat" for="ms-F8">
-                                    <input type="checkbox" name="seat" value="ms-F8" id="ms-F8" disabled>
-                                    <span class="ri-sofa-fill unavailable"></span>
-                                    <span class="input-text">F8</span>
-                                </label>
-                                <label class="seat" for="ms-F9">
-                                    <input type="checkbox" name="seat" value="ms-F9" id="ms-F9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F9</span>
-                                </label>
-                                <label class="seat" for="ms-F10">
-                                    <input type="checkbox" name="seat" value="ms-F10" id="ms-F10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F10</span>
-                                </label>
-                                <label class="seat" for="ms-F11">
-                                    <input type="checkbox" name="seat" value="ms-F11" id="ms-F11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F11</span>
-                                </label>
-                                <label class="seat" for="ms-F12">
-                                    <input type="checkbox" name="seat" value="ms-F12" id="ms-F12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F12</span>
-                                </label>
-                                <label class="seat" for="ms-F13">
-                                    <input type="checkbox" name="seat" value="ms-F13" id="ms-F13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F13</span>
-                                </label>
-                                <label class="seat" for="ms-F14">
-                                    <input type="checkbox" name="seat" value="ms-F14" id="ms-F14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F14</span>
-                                </label>
-                                <label class="seat" for="ms-F15">
-                                    <input type="checkbox" name="seat" value="ms-F15" id="ms-F15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F15</span>
-                                </label>
-                            </div>
-                            
-                            <div id="ms-row-g" class="row">
-                                <label class="seat" for="ms-G4">
-                                    <input type="checkbox" name="seat" value="ms-G4" id="ms-G4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G4</span>
-                                </label>
-                                <label class="seat" for="ms-G5">
-                                    <input type="checkbox" name="seat" value="ms-G5" id="ms-G5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G5</span>
-                                </label>
-                                <label class="seat" for="ms-G6">
-                                    <input type="checkbox" name="seat" value="ms-G6" id="ms-G6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G6</span>
-                                </label>
-                                <label class="seat" for="ms-G7">
-                                    <input type="checkbox" name="seat" value="ms-G7" id="ms-G7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G7</span>
-                                </label>
-                                <label class="seat" for="ms-G8">
-                                    <input type="checkbox" name="seat" value="ms-G8" id="ms-G8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G8</span>
-                                </label>
-                                <label class="seat" for="ms-G9">
-                                    <input type="checkbox" name="seat" value="ms-G9" id="ms-G9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G9</span>
-                                </label>
-                                <label class="seat" for="ms-G10">
-                                    <input type="checkbox" name="seat" value="ms-G10" id="ms-G10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G10</span>
-                                </label>
-                                <label class="seat" for="ms-G11">
-                                    <input type="checkbox" name="seat" value="ms-G11" id="ms-G11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G11</span>
-                                </label>
-                                <label class="seat" for="ms-G12">
-                                    <input type="checkbox" name="seat" value="ms-G12" id="ms-G12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G12</span>
-                                </label>
-                                <label class="seat" for="ms-G13">
-                                    <input type="checkbox" name="seat" value="ms-G13" id="ms-G13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G13</span>
-                                </label>
-                                <label class="seat" for="ms-G14">
-                                    <input type="checkbox" name="seat" value="ms-G14" id="ms-G14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G14</span>
-                                </label>
-                                <label class="seat" for="ms-G15">
-                                    <input type="checkbox" name="seat" value="ms-G15" id="ms-G15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G15</span>
-                                </label>
-                            </div>
-                            
-                            <div id="ms-row-h" class="row">
-                                <label class="seat" for="ms-H4">
-                                    <input type="checkbox" name="seat" value="ms-H4" id="ms-H4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H4</span>
-                                </label>
-                                <label class="seat" for="ms-H5">
-                                    <input type="checkbox" name="seat" value="ms-H5" id="ms-H5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H5</span>
-                                </label>
-                                <label class="seat" for="ms-H6">
-                                    <input type="checkbox" name="seat" value="ms-H6" id="ms-H6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H6</span>
-                                </label>
-                                <label class="seat" for="ms-H7">
-                                    <input type="checkbox" name="seat" value="ms-H7" id="ms-H7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H7</span>
-                                </label>
-                                <label class="seat" for="ms-H8">
-                                    <input type="checkbox" name="seat" value="ms-H8" id="ms-H8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H8</span>
-                                </label>
-                                <label class="seat" for="ms-H9">
-                                    <input type="checkbox" name="seat" value="ms-H9" id="ms-H9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H9</span>
-                                </label>
-                                <label class="seat" for="ms-H10">
-                                    <input type="checkbox" name="seat" value="ms-H10" id="ms-H10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H10</span>
-                                </label>
-                                <label class="seat" for="ms-H11">
-                                    <input type="checkbox" name="seat" value="ms-H11" id="ms-H11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H11</span>
-                                </label>
-                                <label class="seat" for="ms-H12">
-                                    <input type="checkbox" name="seat" value="ms-H12" id="ms-H12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H12</span>
-                                </label>
-                                <label class="seat" for="ms-H13">
-                                    <input type="checkbox" name="seat" value="ms-H13" id="ms-H13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H13</span>
-                                </label>
-                                <label class="seat" for="ms-H14">
-                                    <input type="checkbox" name="seat" value="ms-H14" id="ms-H14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H14</span>
-                                </label>
-                                <label class="seat" for="ms-H15">
-                                    <input type="checkbox" name="seat" value="ms-H15" id="ms-H15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H15</span>
-                                </label>
-                            </div>
-                            
-                            <div id="ms-row-i" class="row">
-                                <label class="seat" for="ms-I4">
-                                    <input type="checkbox" name="seat" value="ms-I4" id="ms-I4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I4</span>
-                                </label>
-                                <label class="seat" for="ms-I5">
-                                    <input type="checkbox" name="seat" value="ms-I5" id="ms-I5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I5</span>
-                                </label>
-                                <label class="seat" for="ms-I6">
-                                    <input type="checkbox" name="seat" value="ms-I6" id="ms-I6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I6</span>
-                                </label>
-                                <label class="seat" for="ms-I7">
-                                    <input type="checkbox" name="seat" value="ms-I7" id="ms-I7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I7</span>
-                                </label>
-                                <label class="seat" for="ms-I8">
-                                    <input type="checkbox" name="seat" value="ms-I8" id="ms-I8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I8</span>
-                                </label>
-                                <label class="seat" for="ms-I9">
-                                    <input type="checkbox" name="seat" value="ms-I9" id="ms-I9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I9</span>
-                                </label>
-                                <label class="seat" for="ms-I10">
-                                    <input type="checkbox" name="seat" value="ms-I10" id="ms-I10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I10</span>
-                                </label>
-                                <label class="seat" for="ms-I11">
-                                    <input type="checkbox" name="seat" value="ms-I11" id="ms-I11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I11</span>
-                                </label>
-                                <label class="seat" for="ms-I12">
-                                    <input type="checkbox" name="seat" value="ms-I12" id="ms-I12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I12</span>
-                                </label>
-                                <label class="seat" for="ms-I13">
-                                    <input type="checkbox" name="seat" value="ms-I13" id="ms-I13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I13</span>
-                                </label>
-                                <label class="seat" for="ms-I14">
-                                    <input type="checkbox" name="seat" value="ms-I14" id="ms-I14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I14</span>
-                                </label>
-                                <label class="seat" for="ms-I15">
-                                    <input type="checkbox" name="seat" value="ms-I15" id="ms-I15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I15</span>
-                                </label>
-                            </div>
-                            <div id="ms-row-j" class="row">
-                                <label class="seat" for="ms-J4">
-                                    <input type="checkbox" name="seat" value="ms-J4" id="ms-J4">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J4</span>
-                                </label>
-                                <label class="seat" for="ms-J5">
-                                    <input type="checkbox" name="seat" value="ms-J5" id="ms-J5">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J5</span>
-                                </label>
-                                <label class="seat" for="ms-J6">
-                                    <input type="checkbox" name="seat" value="ms-J6" id="ms-J6">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J6</span>
-                                </label>
-                                <label class="seat" for="ms-J7">
-                                    <input type="checkbox" name="seat" value="ms-J7" id="ms-J7">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J7</span>
-                                </label>
-                                <label class="seat" for="ms-J8">
-                                    <input type="checkbox" name="seat" value="ms-J8" id="ms-J8">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J8</span>
-                                </label>
-                                <label class="seat" for="ms-J9">
-                                    <input type="checkbox" name="seat" value="ms-J9" id="ms-J9">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J9</span>
-                                </label>
-                                <label class="seat" for="ms-J10">
-                                    <input type="checkbox" name="seat" value="ms-J10" id="ms-J10">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J10</span>
-                                </label>
-                                <label class="seat" for="ms-J11">
-                                    <input type="checkbox" name="seat" value="ms-J11" id="ms-J11">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J11</span>
-                                </label>
-                                <label class="seat" for="ms-J12">
-                                    <input type="checkbox" name="seat" value="ms-J12" id="ms-J12">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J12</span>
-                                </label>
-                                <label class="seat" for="ms-J13">
-                                    <input type="checkbox" name="seat" value="ms-J13" id="ms-J13">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J13</span>
-                                </label>
-                                <label class="seat" for="ms-J14">
-                                    <input type="checkbox" name="seat" value="ms-J14" id="ms-J14">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J14</span>
-                                </label>
-                                <label class="seat" for="ms-J15">
-                                    <input type="checkbox" name="seat" value="ms-J15" id="ms-J15">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J15</span>
-                                </label>
-                            </div>                                                          
-                        </section>
+            </section>
 
-                        <section id="right-side"  class="wing">
-                            <div id="rs-row-a" class="row">
-                                <label class="seat" for="rs-A16">
-                                    <input type="checkbox" name="seat" value="rs-A16" id="rs-A16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A16</span>
-                                </label>
-                                <label class="seat" for="rs-A17">
-                                    <input type="checkbox" name="seat" value="rs-A17" id="rs-A17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A17</span>
-                                </label>
-                                <label class="seat" for="rs-A18">
-                                    <input type="checkbox" name="seat" value="rs-A18" id="rs-A18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">A18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-b" class="row">
-                                <label class="seat" for="rs-B16">
-                                    <input type="checkbox" name="seat" value="rs-B16" id="rs-B16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B16</span>
-                                </label>
-                                <label class="seat" for="rs-B17">
-                                    <input type="checkbox" name="seat" value="rs-B17" id="rs-B17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B17</span>
-                                </label>
-                                <label class="seat" for="rs-B18">
-                                    <input type="checkbox" name="seat" value="rs-B18" id="rs-B18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">B18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-c" class="row">
-                                <label class="seat" for="rs-C16">
-                                    <input type="checkbox" name="seat" value="rs-C16" id="rs-C16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C16</span>
-                                </label>
-                                <label class="seat" for="rs-C17">
-                                    <input type="checkbox" name="seat" value="rs-C17" id="rs-C17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C17</span>
-                                </label>
-                                <label class="seat" for="rs-C18">
-                                    <input type="checkbox" name="seat" value="rs-C18" id="rs-C18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">C18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-d" class="row">
-                                <label class="seat" for="rs-D16">
-                                    <input type="checkbox" name="seat" value="rs-D16" id="rs-D16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D16</span>
-                                </label>
-                                <label class="seat" for="rs-D17">
-                                    <input type="checkbox" name="seat" value="rs-D17" id="rs-D17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D17</span>
-                                </label>
-                                <label class="seat" for="rs-D18">
-                                    <input type="checkbox" name="seat" value="rs-D18" id="rs-D18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">D18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-e" class="row">
-                                <label class="seat" for="rs-E16">
-                                    <input type="checkbox" name="seat" value="rs-E16" id="rs-E16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E16</span>
-                                </label>
-                                <label class="seat" for="rs-E17">
-                                    <input type="checkbox" name="seat" value="rs-E17" id="rs-E17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E17</span>
-                                </label>
-                                <label class="seat" for="rs-E18">
-                                    <input type="checkbox" name="seat" value="rs-E18" id="rs-E18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">E18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-f" class="row">
-                                <label class="seat" for="rs-F16">
-                                    <input type="checkbox" name="seat" value="rs-F16" id="rs-F16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F16</span>
-                                </label>
-                                <label class="seat" for="rs-F17">
-                                    <input type="checkbox" name="seat" value="rs-F17" id="rs-F17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F17</span>
-                                </label>
-                                <label class="seat" for="rs-F18">
-                                    <input type="checkbox" name="seat" value="rs-F18" id="rs-F18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">F18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-g" class="row">
-                                <label class="seat" for="rs-G16">
-                                    <input type="checkbox" name="seat" value="rs-G16" id="rs-G16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G16</span>
-                                </label>
-                                <label class="seat" for="rs-G17">
-                                    <input type="checkbox" name="seat" value="rs-G17" id="rs-G17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G17</span>
-                                </label>
-                                <label class="seat" for="rs-G18">
-                                    <input type="checkbox" name="seat" value="rs-G18" id="rs-G18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">G18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-h" class="row">
-                                <label class="seat" for="rs-H16">
-                                    <input type="checkbox" name="seat" value="rs-H16" id="rs-H16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H16</span>
-                                </label>
-                                <label class="seat" for="rs-H17">
-                                    <input type="checkbox" name="seat" value="rs-H17" id="rs-H17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H17</span>
-                                </label>
-                                <label class="seat" for="rs-H18">
-                                    <input type="checkbox" name="seat" value="rs-H18" id="rs-H18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">H18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-i" class="row">
-                                <label class="seat" for="rs-I16">
-                                    <input type="checkbox" name="seat" value="rs-I16" id="rs-I16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I16</span>
-                                </label>
-                                <label class="seat" for="rs-I17">
-                                    <input type="checkbox" name="seat" value="rs-I17" id="rs-I17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I17</span>
-                                </label>
-                                <label class="seat" for="rs-I18">
-                                    <input type="checkbox" name="seat" value="rs-I18" id="rs-I18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">I18</span>
-                                </label>
-                            </div>
-                            <div id="rs-row-j" class="row">
-                                <label class="seat" for="rs-J16">
-                                    <input type="checkbox" name="seat" value="rs-J16" id="rs-J16">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J16</span>
-                                </label>
-                                <label class="seat" for="rs-J17">
-                                    <input type="checkbox" name="seat" value="rs-J17" id="rs-J17">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J17</span>
-                                </label>
-                                <label class="seat" for="rs-J18">
-                                    <input type="checkbox" name="seat" value="rs-J18" id="rs-J18">
-                                    <span class="ri-sofa-fill available"></span>
-                                    <span class="input-text">J18</span>
-                                </label>
-                            </div>
-                        </section>
-                    </section>
-                </article>
+            <form action="./areaCliente-entradas.html" method="post" id="seat-selection-form" class="col-11 p-0">
+                <section id="seats" class="p-3 text-center my-3">
+                    <h2 class="fs-2">Seleccione sus butacas</h2>
+                    <legend id="seats-legend" class="row text-center align-items-center justify-content-center mx-auto p-2">
+                        <p class="fs-5 col-12 col-md-4">Libre: <span class="ri-sofa-fill available d-block d-lg-inline fs-3"></span></p>
+                        <p class="fs-5 col-12 col-md-4">Ocupada: <span class="ri-sofa-fill unavailable d-block d-lg-inline fs-3"></span></p>
+                        <p class="fs-5 col-12 col-md-4">Seleccionada: <span class="ri-sofa-fill checked d-block d-lg-inline fs-3"></span></p>
+                    </legend>
                     
-            </section>
+                    <article id="seats-container">
+                        <section id="screen">
+                            <p class="fs-5">Pantalla</p>
+                        </section>
+                        <section id="room">
+                            <section id="left-side" class="wing">
+                                <div id="ls-row-a" class="seat-row">
+                                    <label class="seat" for="ls-A1">
+                                        <input type="checkbox" name="seat" value="ls-A1" id="ls-A1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A1</span>
+                                    </label>
+                                    <label class="seat" for="ls-A2">
+                                        <input type="checkbox" name="seat" value="ls-A2"  id="ls-A2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A2</span>
+                                    </label>
+                                    <label class="seat" for="ls-A3">
+                                        <input type="checkbox" name="seat" value="ls-A3" id="ls-A3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-b" class="seat-row">
+                                    <label class="seat" for="ls-B1">
+                                        <input type="checkbox" name="seat" value="ls-B1"  id="ls-B1" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">B1</span>
+                                    </label>
+                                    <label class="seat" for="ls-B2">
+                                        <input type="checkbox" name="seat" value="ls-B2"  id="ls-B2" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">B2</span>
+                                    </label>
+                                    <label class="seat" for="ls-B3">
+                                        <input type="checkbox" name="seat" value="ls-B3"  id="ls-B3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-c" class="seat-row">
+                                    <label class="seat" for="ls-C1">
+                                        <input type="checkbox" name="seat" value="ls-C1" id="ls-C1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C1</span>
+                                    </label>
+                                    <label class="seat" for="ls-C2">
+                                        <input type="checkbox" name="seat" value="ls-C2" id="ls-C2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C2</span>
+                                    </label>
+                                    <label class="seat" for="ls-C3">
+                                        <input type="checkbox" name="seat" value="ls-C3" id="ls-C3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-d" class="seat-row">
+                                    <label class="seat" for="ls-D1">
+                                        <input type="checkbox" name="seat" value="ls-D1" id="ls-D1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D1</span>
+                                    </label>
+                                    <label class="seat" for="ls-D2">
+                                        <input type="checkbox" name="seat" value="ls-D2" id="ls-D2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D2</span>
+                                    </label>
+                                    <label class="seat" for="ls-D3">
+                                        <input type="checkbox" name="seat" value="ls-D3" id="ls-D3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-e" class="seat-row">
+                                    <label class="seat" for="ls-E1">
+                                        <input type="checkbox" name="seat" value="ls-E1" id="ls-E1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E1</span>
+                                    </label>
+                                    <label class="seat" for="ls-E2">
+                                        <input type="checkbox" name="seat" value="ls-E2" id="ls-E2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E2</span>
+                                    </label>
+                                    <label class="seat" for="ls-E3">
+                                        <input type="checkbox" name="seat" value="ls-E3" id="ls-E3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E3</span>
+                                    </label>                                 
+                                </div>
+                                <div id="ls-row-f" class="seat-row">
+                                    <label class="seat" for="ls-F1">
+                                        <input type="checkbox" name="seat" value="ls-F1" id="ls-F1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F1</span>
+                                    </label>
+                                    <label class="seat" for="ls-F2">
+                                        <input type="checkbox" name="seat" value="ls-F2" id="ls-F2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F2</span>
+                                    </label>
+                                    <label class="seat" for="ls-F3">
+                                        <input type="checkbox" name="seat" value="ls-F3" id="ls-F3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-g" class="seat-row">
+                                    <label class="seat" for="ls-G1">
+                                        <input type="checkbox" name="seat" value="ls-G1" id="ls-G1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G1</span>
+                                    </label>
+                                    <label class="seat" for="ls-G2">
+                                        <input type="checkbox" name="seat" value="ls-G2" id="ls-G2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G2</span>
+                                    </label>
+                                    <label class="seat" for="ls-G3">
+                                        <input type="checkbox" name="seat" value="ls-G3" id="ls-G3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-h" class="seat-row">
+                                    <label class="seat" for="ls-H1">
+                                        <input type="checkbox" name="seat" value="ls-H1" id="ls-H1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H1</span>
+                                    </label>
+                                    <label class="seat" for="ls-H2">
+                                        <input type="checkbox" name="seat" value="ls-H2" id="ls-H2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H2</span>
+                                    </label>
+                                    <label class="seat" for="ls-H3">
+                                        <input type="checkbox" name="seat" value="ls-H3" id="ls-H3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-i" class="seat-row">
+                                    <label class="seat" for="ls-I1">
+                                        <input type="checkbox" name="seat" value="ls-I1" id="ls-I1" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">I1</span>
+                                    </label>
+                                    <label class="seat" for="ls-I2">
+                                        <input type="checkbox" name="seat" value="ls-I2" id="ls-I2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I2</span>
+                                    </label>
+                                    <label class="seat" for="ls-I3">
+                                        <input type="checkbox" name="seat" value="ls-I3" id="ls-I3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I3</span>
+                                    </label> 
+                                </div>
+                                <div id="ls-row-j" class="seat-row">
+                                    <label class="seat" for="ls-J1">
+                                        <input type="checkbox" name="seat" value="ls-J1" id="ls-J1">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J1</span>
+                                    </label>
+                                    <label class="seat" for="ls-J2">
+                                        <input type="checkbox" name="seat" value="ls-J2" id="ls-J2">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J2</span>
+                                    </label>
+                                    <label class="seat" for="ls-J3">
+                                        <input type="checkbox" name="seat" value="ls-J3" id="ls-J3">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J3</span>
+                                    </label>                                 
+                                </div>  
+                            </section>
 
-            <section id="details">
-                <h2>Detalles de Compra</h2>
-                <p id="detail-seats">Número de Entradas: <span>4</span></p>
-                <p>Bucatas:</p>
+                            <section id="middle-side" class="wing">
+                                <div id="ms-row-a" class="seat-row">
+                                    <label class="seat" for="ms-A4">
+                                        <input type="checkbox" name="seat" value="ms-A4" id="ms-A4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A4</span>
+                                    </label>
+                                    <label class="seat" for="ms-A5">
+                                        <input type="checkbox" name="seat" value="ms-A5" id="ms-A5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A5</span>
+                                    </label>
+                                    <label class="seat" for="ms-A6">
+                                        <input type="checkbox" name="seat" value="ms-A6" id="ms-A6" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">A6</span>
+                                    </label>
+                                    <label class="seat" for="ms-A7">
+                                        <input type="checkbox" name="seat" value="ms-A7" id="ms-A7" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">A7</span>
+                                    </label>
+                                    <label class="seat" for="ms-A8">
+                                        <input type="checkbox" name="seat" value="ms-A8" id="ms-A8" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">A8</span>
+                                    </label>
+                                    <label class="seat" for="ms-A9">
+                                        <input type="checkbox" name="seat" value="ms-A9" id="ms-A9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A9</span>
+                                    </label>
+                                    <label class="seat" for="ms-A10">
+                                        <input type="checkbox" name="seat" value="ms-A10" id="ms-A10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A10</span>
+                                    </label>
+                                    <label class="seat" for="ms-A11">
+                                        <input type="checkbox" name="seat" value="ms-A11" id="ms-A11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A11</span>
+                                    </label>
+                                    <label class="seat" for="ms-A12">
+                                        <input type="checkbox" name="seat" value="ms-A12" id="ms-A12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A12</span>
+                                    </label>
+                                    <label class="seat" for="ms-A13">
+                                        <input type="checkbox" name="seat" value="ms-A13" id="ms-A13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A13</span>
+                                    </label>
+                                    <label class="seat" for="ms-A14">
+                                        <input type="checkbox" name="seat" value="ms-A14" id="ms-A14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A14</span>
+                                    </label>
+                                    <label class="seat" for="ms-A15">
+                                        <input type="checkbox" name="seat" value="ms-A15" id="ms-A15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A15</span>
+                                    </label>
+                                </div>
+                                <div id="ms-row-b" class="seat-row">
+                                    <label class="seat" for="ms-B4">
+                                        <input type="checkbox" name="seat" value="ms-B4" id="ms-B4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B4</span>
+                                    </label>
+                                    <label class="seat" for="ms-B5">
+                                        <input type="checkbox" name="seat" value="ms-B5" id="ms-B5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B5</span>
+                                    </label>
+                                    <label class="seat" for="ms-B6">
+                                        <input type="checkbox" name="seat" value="ms-B6" id="ms-B6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B6</span>
+                                    </label>
+                                    <label class="seat" for="ms-B7">
+                                        <input type="checkbox" name="seat" value="ms-B7" id="ms-B7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B7</span>
+                                    </label>
+                                    <label class="seat" for="ms-B8">
+                                        <input type="checkbox" name="seat" value="ms-B8" id="ms-B8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B8</span>
+                                    </label>
+                                    <label class="seat" for="ms-B9">
+                                        <input type="checkbox" name="seat" value="ms-B9" id="ms-B9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B9</span>
+                                    </label>
+                                    <label class="seat" for="ms-B10">
+                                        <input type="checkbox" name="seat" value="ms-B10" id="ms-B10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B10</span>
+                                    </label>
+                                    <label class="seat" for="ms-B11">
+                                        <input type="checkbox" name="seat" value="ms-B11" id="ms-B11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B11</span>
+                                    </label>
+                                    <label class="seat" for="ms-B12">
+                                        <input type="checkbox" name="seat" value="ms-B12" id="ms-B12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B12</span>
+                                    </label>
+                                    <label class="seat" for="ms-B13">
+                                        <input type="checkbox" name="seat" value="ms-B13" id="ms-B13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B13</span>
+                                    </label>
+                                    <label class="seat" for="ms-B14">
+                                        <input type="checkbox" name="seat" value="ms-B14" id="ms-B14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B14</span>
+                                    </label>
+                                    <label class="seat" for="ms-B15">
+                                        <input type="checkbox" name="seat" value="ms-B15" id="ms-B15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B15</span>
+                                    </label>
+                                </div>
+
+                                <div id="ms-row-c" class="seat-row">
+                                    <label class="seat" for="ms-C4">
+                                        <input type="checkbox" name="seat" value="ms-C4" id="ms-C4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C4</span>
+                                    </label>
+                                    <label class="seat" for="ms-C5">
+                                        <input type="checkbox" name="seat" value="ms-C5" id="ms-C5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C5</span>
+                                    </label>
+                                    <label class="seat" for="ms-C6">
+                                        <input type="checkbox" name="seat" value="ms-C6" id="ms-C6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C6</span>
+                                    </label>
+                                    <label class="seat" for="ms-C7">
+                                        <input type="checkbox" name="seat" value="ms-C7" id="ms-C7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C7</span>
+                                    </label>
+                                    <label class="seat" for="ms-C8">
+                                        <input type="checkbox" name="seat" value="ms-C8" id="ms-C8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C8</span>
+                                    </label>
+                                    <label class="seat" for="ms-C9">
+                                        <input type="checkbox" name="seat" value="ms-C9" id="ms-C9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C9</span>
+                                    </label>
+                                    <label class="seat" for="ms-C10">
+                                        <input type="checkbox" name="seat" value="ms-C10" id="ms-C10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C10</span>
+                                    </label>
+                                    <label class="seat" for="ms-C11">
+                                        <input type="checkbox" name="seat" value="ms-C11" id="ms-C11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C11</span>
+                                    </label>
+                                    <label class="seat" for="ms-C12">
+                                        <input type="checkbox" name="seat" value="ms-C12" id="ms-C12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C12</span>
+                                    </label>
+                                    <label class="seat" for="ms-C13">
+                                        <input type="checkbox" name="seat" value="ms-C13" id="ms-C13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C13</span>
+                                    </label>
+                                    <label class="seat" for="ms-C14">
+                                        <input type="checkbox" name="seat" value="ms-C14" id="ms-C14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C14</span>
+                                    </label>
+                                    <label class="seat" for="ms-C15">
+                                        <input type="checkbox" name="seat" value="ms-C15" id="ms-C15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C15</span>
+                                    </label>
+                                </div>
+                                <div id="ms-row-d" class="seat-row">
+                                    <label class="seat" for="ms-D4">
+                                        <input type="checkbox" name="seat" value="ms-D4" id="ms-D4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D4</span>
+                                    </label>
+                                    <label class="seat" for="ms-D5">
+                                        <input type="checkbox" name="seat" value="ms-D5" id="ms-D5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D5</span>
+                                    </label>
+                                    <label class="seat" for="ms-D6">
+                                        <input type="checkbox" name="seat" value="ms-D6" id="ms-D6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D6</span>
+                                    </label>
+                                    <label class="seat" for="ms-D7">
+                                        <input type="checkbox" name="seat" value="ms-D7" id="ms-D7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D7</span>
+                                    </label>
+                                    <label class="seat" for="ms-D8">
+                                        <input type="checkbox" name="seat" value="ms-D8" id="ms-D8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D8</span>
+                                    </label>
+                                    <label class="seat" for="ms-D9">
+                                        <input type="checkbox" name="seat" value="ms-D9" id="ms-D9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D9</span>
+                                    </label>
+                                    <label class="seat" for="ms-D10">
+                                        <input type="checkbox" name="seat" value="ms-D10" id="ms-D10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D10</span>
+                                    </label>
+                                    <label class="seat" for="ms-D11">
+                                        <input type="checkbox" name="seat" value="ms-D11" id="ms-D11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D11</span>
+                                    </label>
+                                    <label class="seat" for="ms-D12">
+                                        <input type="checkbox" name="seat" value="ms-D12" id="ms-D12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D12</span>
+                                    </label>
+                                    <label class="seat" for="ms-D13">
+                                        <input type="checkbox" name="seat" value="ms-D13" id="ms-D13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D13</span>
+                                    </label>
+                                    <label class="seat" for="ms-D14">
+                                        <input type="checkbox" name="seat" value="ms-D14" id="ms-D14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D14</span>
+                                    </label>
+                                    <label class="seat" for="ms-D15">
+                                        <input type="checkbox" name="seat" value="ms-D15" id="ms-D15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D15</span>
+                                    </label>
+                                </div>
+                                
+                                <div id="ms-row-e" class="seat-row">
+                                    <label class="seat" for="ms-E4">
+                                        <input type="checkbox" name="seat" value="ms-E4" id="ms-E4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E4</span>
+                                    </label>
+                                    <label class="seat" for="ms-E5">
+                                        <input type="checkbox" name="seat" value="ms-E5" id="ms-E5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E5</span>
+                                    </label>
+                                    <label class="seat" for="ms-E6">
+                                        <input type="checkbox" name="seat" value="ms-E6" id="ms-E6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E6</span>
+                                    </label>
+                                    <label class="seat" for="ms-E7">
+                                        <input type="checkbox" name="seat" value="ms-E7" id="ms-E7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E7</span>
+                                    </label>
+                                    <label class="seat" for="ms-E8">
+                                        <input type="checkbox" name="seat" value="ms-E8" id="ms-E8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E8</span>
+                                    </label>
+                                    <label class="seat" for="ms-E9">
+                                        <input type="checkbox" name="seat" value="ms-E9" id="ms-E9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E9</span>
+                                    </label>
+                                    <label class="seat" for="ms-E10">
+                                        <input type="checkbox" name="seat" value="ms-E10" id="ms-E10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E10</span>
+                                    </label>
+                                    <label class="seat" for="ms-E11">
+                                        <input type="checkbox" name="seat" value="ms-E11" id="ms-E11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E11</span>
+                                    </label>
+                                    <label class="seat" for="ms-E12">
+                                        <input type="checkbox" name="seat" value="ms-E12" id="ms-E12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E12</span>
+                                    </label>
+                                    <label class="seat" for="ms-E13">
+                                        <input type="checkbox" name="seat" value="ms-E13" id="ms-E13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E13</span>
+                                    </label>
+                                    <label class="seat" for="ms-E14">
+                                        <input type="checkbox" name="seat" value="ms-E14" id="ms-E14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E14</span>
+                                    </label>
+                                    <label class="seat" for="ms-E15">
+                                        <input type="checkbox" name="seat" value="ms-E15" id="ms-E15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E15</span>
+                                    </label>
+                                </div>
+                                <div id="ms-row-f" class="seat-row">
+                                    <label class="seat" for="ms-F4">
+                                        <input type="checkbox" name="seat" value="ms-F4" id="ms-F4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F4</span>
+                                    </label>
+                                    <label class="seat" for="ms-F5">
+                                        <input type="checkbox" name="seat" value="ms-F5" id="ms-F5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F5</span>
+                                    </label>
+                                    <label class="seat" for="ms-F6">
+                                        <input type="checkbox" name="seat" value="ms-F6" id="ms-F6" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">F6</span>
+                                    </label>
+                                    <label class="seat" for="ms-F7">
+                                        <input type="checkbox" name="seat" value="ms-F7" id="ms-F7" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">F7</span>
+                                    </label>
+                                    <label class="seat" for="ms-F8">
+                                        <input type="checkbox" name="seat" value="ms-F8" id="ms-F8" disabled>
+                                        <span class="ri-sofa-fill unavailable"></span>
+                                        <span class="visually-hidden">F8</span>
+                                    </label>
+                                    <label class="seat" for="ms-F9">
+                                        <input type="checkbox" name="seat" value="ms-F9" id="ms-F9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F9</span>
+                                    </label>
+                                    <label class="seat" for="ms-F10">
+                                        <input type="checkbox" name="seat" value="ms-F10" id="ms-F10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F10</span>
+                                    </label>
+                                    <label class="seat" for="ms-F11">
+                                        <input type="checkbox" name="seat" value="ms-F11" id="ms-F11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F11</span>
+                                    </label>
+                                    <label class="seat" for="ms-F12">
+                                        <input type="checkbox" name="seat" value="ms-F12" id="ms-F12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F12</span>
+                                    </label>
+                                    <label class="seat" for="ms-F13">
+                                        <input type="checkbox" name="seat" value="ms-F13" id="ms-F13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F13</span>
+                                    </label>
+                                    <label class="seat" for="ms-F14">
+                                        <input type="checkbox" name="seat" value="ms-F14" id="ms-F14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F14</span>
+                                    </label>
+                                    <label class="seat" for="ms-F15">
+                                        <input type="checkbox" name="seat" value="ms-F15" id="ms-F15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F15</span>
+                                    </label>
+                                </div>
+                                
+                                <div id="ms-row-g" class="seat-row">
+                                    <label class="seat" for="ms-G4">
+                                        <input type="checkbox" name="seat" value="ms-G4" id="ms-G4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G4</span>
+                                    </label>
+                                    <label class="seat" for="ms-G5">
+                                        <input type="checkbox" name="seat" value="ms-G5" id="ms-G5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G5</span>
+                                    </label>
+                                    <label class="seat" for="ms-G6">
+                                        <input type="checkbox" name="seat" value="ms-G6" id="ms-G6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G6</span>
+                                    </label>
+                                    <label class="seat" for="ms-G7">
+                                        <input type="checkbox" name="seat" value="ms-G7" id="ms-G7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G7</span>
+                                    </label>
+                                    <label class="seat" for="ms-G8">
+                                        <input type="checkbox" name="seat" value="ms-G8" id="ms-G8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G8</span>
+                                    </label>
+                                    <label class="seat" for="ms-G9">
+                                        <input type="checkbox" name="seat" value="ms-G9" id="ms-G9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G9</span>
+                                    </label>
+                                    <label class="seat" for="ms-G10">
+                                        <input type="checkbox" name="seat" value="ms-G10" id="ms-G10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G10</span>
+                                    </label>
+                                    <label class="seat" for="ms-G11">
+                                        <input type="checkbox" name="seat" value="ms-G11" id="ms-G11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G11</span>
+                                    </label>
+                                    <label class="seat" for="ms-G12">
+                                        <input type="checkbox" name="seat" value="ms-G12" id="ms-G12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G12</span>
+                                    </label>
+                                    <label class="seat" for="ms-G13">
+                                        <input type="checkbox" name="seat" value="ms-G13" id="ms-G13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G13</span>
+                                    </label>
+                                    <label class="seat" for="ms-G14">
+                                        <input type="checkbox" name="seat" value="ms-G14" id="ms-G14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G14</span>
+                                    </label>
+                                    <label class="seat" for="ms-G15">
+                                        <input type="checkbox" name="seat" value="ms-G15" id="ms-G15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G15</span>
+                                    </label>
+                                </div>
+                                
+                                <div id="ms-row-h" class="seat-row">
+                                    <label class="seat" for="ms-H4">
+                                        <input type="checkbox" name="seat" value="ms-H4" id="ms-H4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H4</span>
+                                    </label>
+                                    <label class="seat" for="ms-H5">
+                                        <input type="checkbox" name="seat" value="ms-H5" id="ms-H5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H5</span>
+                                    </label>
+                                    <label class="seat" for="ms-H6">
+                                        <input type="checkbox" name="seat" value="ms-H6" id="ms-H6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H6</span>
+                                    </label>
+                                    <label class="seat" for="ms-H7">
+                                        <input type="checkbox" name="seat" value="ms-H7" id="ms-H7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H7</span>
+                                    </label>
+                                    <label class="seat" for="ms-H8">
+                                        <input type="checkbox" name="seat" value="ms-H8" id="ms-H8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H8</span>
+                                    </label>
+                                    <label class="seat" for="ms-H9">
+                                        <input type="checkbox" name="seat" value="ms-H9" id="ms-H9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H9</span>
+                                    </label>
+                                    <label class="seat" for="ms-H10">
+                                        <input type="checkbox" name="seat" value="ms-H10" id="ms-H10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H10</span>
+                                    </label>
+                                    <label class="seat" for="ms-H11">
+                                        <input type="checkbox" name="seat" value="ms-H11" id="ms-H11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H11</span>
+                                    </label>
+                                    <label class="seat" for="ms-H12">
+                                        <input type="checkbox" name="seat" value="ms-H12" id="ms-H12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H12</span>
+                                    </label>
+                                    <label class="seat" for="ms-H13">
+                                        <input type="checkbox" name="seat" value="ms-H13" id="ms-H13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H13</span>
+                                    </label>
+                                    <label class="seat" for="ms-H14">
+                                        <input type="checkbox" name="seat" value="ms-H14" id="ms-H14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H14</span>
+                                    </label>
+                                    <label class="seat" for="ms-H15">
+                                        <input type="checkbox" name="seat" value="ms-H15" id="ms-H15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H15</span>
+                                    </label>
+                                </div>
+                                
+                                <div id="ms-row-i" class="seat-row">
+                                    <label class="seat" for="ms-I4">
+                                        <input type="checkbox" name="seat" value="ms-I4" id="ms-I4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I4</span>
+                                    </label>
+                                    <label class="seat" for="ms-I5">
+                                        <input type="checkbox" name="seat" value="ms-I5" id="ms-I5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I5</span>
+                                    </label>
+                                    <label class="seat" for="ms-I6">
+                                        <input type="checkbox" name="seat" value="ms-I6" id="ms-I6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I6</span>
+                                    </label>
+                                    <label class="seat" for="ms-I7">
+                                        <input type="checkbox" name="seat" value="ms-I7" id="ms-I7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I7</span>
+                                    </label>
+                                    <label class="seat" for="ms-I8">
+                                        <input type="checkbox" name="seat" value="ms-I8" id="ms-I8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I8</span>
+                                    </label>
+                                    <label class="seat" for="ms-I9">
+                                        <input type="checkbox" name="seat" value="ms-I9" id="ms-I9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I9</span>
+                                    </label>
+                                    <label class="seat" for="ms-I10">
+                                        <input type="checkbox" name="seat" value="ms-I10" id="ms-I10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I10</span>
+                                    </label>
+                                    <label class="seat" for="ms-I11">
+                                        <input type="checkbox" name="seat" value="ms-I11" id="ms-I11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I11</span>
+                                    </label>
+                                    <label class="seat" for="ms-I12">
+                                        <input type="checkbox" name="seat" value="ms-I12" id="ms-I12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I12</span>
+                                    </label>
+                                    <label class="seat" for="ms-I13">
+                                        <input type="checkbox" name="seat" value="ms-I13" id="ms-I13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I13</span>
+                                    </label>
+                                    <label class="seat" for="ms-I14">
+                                        <input type="checkbox" name="seat" value="ms-I14" id="ms-I14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I14</span>
+                                    </label>
+                                    <label class="seat" for="ms-I15">
+                                        <input type="checkbox" name="seat" value="ms-I15" id="ms-I15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I15</span>
+                                    </label>
+                                </div>
+                                <div id="ms-row-j" class="seat-row">
+                                    <label class="seat" for="ms-J4">
+                                        <input type="checkbox" name="seat" value="ms-J4" id="ms-J4">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J4</span>
+                                    </label>
+                                    <label class="seat" for="ms-J5">
+                                        <input type="checkbox" name="seat" value="ms-J5" id="ms-J5">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J5</span>
+                                    </label>
+                                    <label class="seat" for="ms-J6">
+                                        <input type="checkbox" name="seat" value="ms-J6" id="ms-J6">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J6</span>
+                                    </label>
+                                    <label class="seat" for="ms-J7">
+                                        <input type="checkbox" name="seat" value="ms-J7" id="ms-J7">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J7</span>
+                                    </label>
+                                    <label class="seat" for="ms-J8">
+                                        <input type="checkbox" name="seat" value="ms-J8" id="ms-J8">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J8</span>
+                                    </label>
+                                    <label class="seat" for="ms-J9">
+                                        <input type="checkbox" name="seat" value="ms-J9" id="ms-J9">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J9</span>
+                                    </label>
+                                    <label class="seat" for="ms-J10">
+                                        <input type="checkbox" name="seat" value="ms-J10" id="ms-J10">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J10</span>
+                                    </label>
+                                    <label class="seat" for="ms-J11">
+                                        <input type="checkbox" name="seat" value="ms-J11" id="ms-J11">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J11</span>
+                                    </label>
+                                    <label class="seat" for="ms-J12">
+                                        <input type="checkbox" name="seat" value="ms-J12" id="ms-J12">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J12</span>
+                                    </label>
+                                    <label class="seat" for="ms-J13">
+                                        <input type="checkbox" name="seat" value="ms-J13" id="ms-J13">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J13</span>
+                                    </label>
+                                    <label class="seat" for="ms-J14">
+                                        <input type="checkbox" name="seat" value="ms-J14" id="ms-J14">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J14</span>
+                                    </label>
+                                    <label class="seat" for="ms-J15">
+                                        <input type="checkbox" name="seat" value="ms-J15" id="ms-J15">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J15</span>
+                                    </label>
+                                </div>                                                          
+                            </section>
+
+                            <section id="right-side"  class="wing">
+                                <div id="rs-row-a" class="seat-row">
+                                    <label class="seat" for="rs-A16">
+                                        <input type="checkbox" name="seat" value="rs-A16" id="rs-A16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A16</span>
+                                    </label>
+                                    <label class="seat" for="rs-A17">
+                                        <input type="checkbox" name="seat" value="rs-A17" id="rs-A17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A17</span>
+                                    </label>
+                                    <label class="seat" for="rs-A18">
+                                        <input type="checkbox" name="seat" value="rs-A18" id="rs-A18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">A18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-b" class="seat-row">
+                                    <label class="seat" for="rs-B16">
+                                        <input type="checkbox" name="seat" value="rs-B16" id="rs-B16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B16</span>
+                                    </label>
+                                    <label class="seat" for="rs-B17">
+                                        <input type="checkbox" name="seat" value="rs-B17" id="rs-B17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B17</span>
+                                    </label>
+                                    <label class="seat" for="rs-B18">
+                                        <input type="checkbox" name="seat" value="rs-B18" id="rs-B18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">B18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-c" class="seat-row">
+                                    <label class="seat" for="rs-C16">
+                                        <input type="checkbox" name="seat" value="rs-C16" id="rs-C16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C16</span>
+                                    </label>
+                                    <label class="seat" for="rs-C17">
+                                        <input type="checkbox" name="seat" value="rs-C17" id="rs-C17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C17</span>
+                                    </label>
+                                    <label class="seat" for="rs-C18">
+                                        <input type="checkbox" name="seat" value="rs-C18" id="rs-C18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">C18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-d" class="seat-row">
+                                    <label class="seat" for="rs-D16">
+                                        <input type="checkbox" name="seat" value="rs-D16" id="rs-D16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D16</span>
+                                    </label>
+                                    <label class="seat" for="rs-D17">
+                                        <input type="checkbox" name="seat" value="rs-D17" id="rs-D17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D17</span>
+                                    </label>
+                                    <label class="seat" for="rs-D18">
+                                        <input type="checkbox" name="seat" value="rs-D18" id="rs-D18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">D18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-e" class="seat-row">
+                                    <label class="seat" for="rs-E16">
+                                        <input type="checkbox" name="seat" value="rs-E16" id="rs-E16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E16</span>
+                                    </label>
+                                    <label class="seat" for="rs-E17">
+                                        <input type="checkbox" name="seat" value="rs-E17" id="rs-E17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E17</span>
+                                    </label>
+                                    <label class="seat" for="rs-E18">
+                                        <input type="checkbox" name="seat" value="rs-E18" id="rs-E18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">E18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-f" class="seat-row">
+                                    <label class="seat" for="rs-F16">
+                                        <input type="checkbox" name="seat" value="rs-F16" id="rs-F16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F16</span>
+                                    </label>
+                                    <label class="seat" for="rs-F17">
+                                        <input type="checkbox" name="seat" value="rs-F17" id="rs-F17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F17</span>
+                                    </label>
+                                    <label class="seat" for="rs-F18">
+                                        <input type="checkbox" name="seat" value="rs-F18" id="rs-F18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">F18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-g" class="seat-row">
+                                    <label class="seat" for="rs-G16">
+                                        <input type="checkbox" name="seat" value="rs-G16" id="rs-G16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G16</span>
+                                    </label>
+                                    <label class="seat" for="rs-G17">
+                                        <input type="checkbox" name="seat" value="rs-G17" id="rs-G17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G17</span>
+                                    </label>
+                                    <label class="seat" for="rs-G18">
+                                        <input type="checkbox" name="seat" value="rs-G18" id="rs-G18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">G18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-h" class="seat-row">
+                                    <label class="seat" for="rs-H16">
+                                        <input type="checkbox" name="seat" value="rs-H16" id="rs-H16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H16</span>
+                                    </label>
+                                    <label class="seat" for="rs-H17">
+                                        <input type="checkbox" name="seat" value="rs-H17" id="rs-H17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H17</span>
+                                    </label>
+                                    <label class="seat" for="rs-H18">
+                                        <input type="checkbox" name="seat" value="rs-H18" id="rs-H18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">H18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-i" class="seat-row">
+                                    <label class="seat" for="rs-I16">
+                                        <input type="checkbox" name="seat" value="rs-I16" id="rs-I16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I16</span>
+                                    </label>
+                                    <label class="seat" for="rs-I17">
+                                        <input type="checkbox" name="seat" value="rs-I17" id="rs-I17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I17</span>
+                                    </label>
+                                    <label class="seat" for="rs-I18">
+                                        <input type="checkbox" name="seat" value="rs-I18" id="rs-I18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">I18</span>
+                                    </label>
+                                </div>
+                                <div id="rs-row-j" class="seat-row">
+                                    <label class="seat" for="rs-J16">
+                                        <input type="checkbox" name="seat" value="rs-J16" id="rs-J16">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J16</span>
+                                    </label>
+                                    <label class="seat" for="rs-J17">
+                                        <input type="checkbox" name="seat" value="rs-J17" id="rs-J17">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J17</span>
+                                    </label>
+                                    <label class="seat" for="rs-J18">
+                                        <input type="checkbox" name="seat" value="rs-J18" id="rs-J18">
+                                        <span class="ri-sofa-fill available"></span>
+                                        <span class="visually-hidden">J18</span>
+                                    </label>
+                                </div>
+                            </section>
+                        </section>
+                    </article>
+                        
+                </section>
+
+                <section id="details" class="p-3 text-center">
+                    <h2 class="fs-2">Detalles de Compra</h2>
+                    <p id="detail-seats" class="fs-3">Número de Entradas: <span>4</span></p>
+                    <p class="fs-3">Bucatas:</p>
+                    <ul>
+                        <li class="fs-3">Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">6</span></li>
+                        <li class="fs-3">Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">7</span></li>
+                        <li class="fs-3">Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">8</span></li>
+                        <li class="fs-3">Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">9</span></li>
+                    </ul>
+                    <p id="detail-seat-price" class="fs-3">Precio estándar: <span>7,00</span> € / butaca (iva incluido)</p>
+                    <p id="detail-descuento" class="fs-3">Descuento aplicable: <span>--</span></p>
+                    <p id="detail-iva" class="fs-3">IVA: <span>21</span>%</p>
+                    <p id="detail-price-total" class="fs-3">Precio Total: <span>28,00</span> €</p>
+                    <button type="submit" class="fs-3">Comprar Entradas</button>
+                </section>
+            </form>
+        </main>
+
+        <footer class="footer-component row text-center p-3">
+
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Sobre Nosotros</h4>
+                <p class="fs-5">En Classic Cinemo, fusionamos la elegancia del cine clásico con la innovación del entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
+                <p class="fs-5">Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están equipadas con tecnología de última generación.</p>
+                <p class="fs-5">Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se encuentran.</p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Información</h4>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/privacidad.html">Privacidad</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"href="../pages/cookies.html">Cockies</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/avisoLegal.html">Aviso Legal</a></p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Contacto</h4>
+                <p class="fs-5">Siguenos en redes sociales y mantente informado de novedades e promociones</p>
+                <p id="social-media" class="fs-5">
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.facebook.com/" target="_blank"><span class="ri-facebook-line" aria-label="facebook"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span class="ri-twitter-x-line" aria-label="twitter"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.instagram.com/" target="_blank"><span class="ri-instagram-line" aria-label="instagram"></span></a>             
+                </p>
+                <p class="fs-5">Conoce nuestros cines</p>
                 <ul>
-                    <li>Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">6</span></li>
-                    <li>Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">7</span></li>
-                    <li>Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">8</span></li>
-                    <li>Fila <span class="detail-seat-row">D</span> Número <span class="detail-seat-num">9</span></li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> TORREVIEJA, Av. me la invento <br> telf. +34 585 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> ALICANTE, Av. me la invento <br> telf. +34 876 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> DENIA, Av. me la invento <br> telf. +34 258 xxx xxx</li>
                 </ul>
-                <p id="detail-seat-price">Precio estándar: <span>7,00</span> € / butaca (iva incluido)</p>
-                <p id="detail-descuento">Descuento aplicable: <span>--</span></p>
-                <p id="detail-iva">IVA: <span>21</span>%</p>
-                <p id="detail-price-total">Precio Total: <span>28,00</span> €</p>
-                <button type="submit">Comprar Entradas</button>
             </section>
-        </form>
-    </main>
 
-    <footer>
-        <iframe src="../components/footer.html"  title="footer"></iframe>
-    </footer>
+        </footer>
+
+    </div>
+
+    
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
 </body>
 </html>
