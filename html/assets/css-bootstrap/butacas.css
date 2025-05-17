@@ -192,25 +192,29 @@ p#detail-price-total {
 
 
 #room span.ri-sofa-fill {
-    font-size: 12px !important;
+    font-size: 0.7em;
+
+    @media (min-width: 400px) {
+        font-size: 1em;
+    }
 
     @media (min-width: 576px) {
-        font-size: 16px !important;
+        font-size: 1em;
     }
 
     @media (min-width: 768px) {
-        font-size: 18px !important;
+        font-size: 1.3em;
     }
 
     @media (min-width: 992px) {
-        font-size: 22px !important;
+        font-size: 1.6em;
     }
 
     @media (min-width: 1200px) {
-        font-size: 26px !important;
+        font-size: 1.9em;
     }
 
     @media (min-width: 1400px) {
-        font-size: 30px !important;
+        font-size: 2.2em;
     }
 }
