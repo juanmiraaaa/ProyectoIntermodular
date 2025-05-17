@@ -1,104 +1,95 @@
+/* === Estilos generales === */
 
-main section {
-  margin: 0 ;
-  justify-content: center;
-  text-align: center;
-  padding: 20px 40px 40px;
-  margin-left: 50px;
-
-
-}
-  
-
-      .search-bar input {
-          padding: 5px;
-          margin-right: 5px;
-      }
-      .user-icon {
-          font-size: 20px;
-      }
-      main {
-          display: flex;
-          padding: 20px;
-      }
-      aside {
-          width: 20%;
-          background: #c0b703;
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-      }
-      .btn {
-          background: #9b4d3a;
-          color: white;
-          border: none;
-          padding: 10px;
-          margin: 10px 0;
-          cursor: pointer;
-          text-align: left;
-      }
-     
-        .main-container {
-            display: flex;
-            justify-content: center;
-            
-          }
-          .fa{
-            text-align: center;color:yellow;
-            padding: 10px 0;
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-          }
-          .factura {
-            background-color: #fdf0c2;
-            padding: 30px;
-            border: 2px solid #750000;
-            width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          }
-        
-          .lg {
-            display: block;
-            margin: 0 auto 20px auto;
-          }
-      
-          .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-          }
-          
-          .table th, .table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-          }
-          
-          .table th {
-            background-color: #f9f9a3;
-            font-weight: bold;
-          }
-          
-          .table tr:nth-child(even) {
-            background-color: #f9f9f9;
-          }
-       
-          .total-row td {
-            font-weight: bold;
-            font-size: 18px;
-          }
-          
-   
- 
-
-.factura > div {
-  display: flex; justify-content: space-between;
-}
-.factura > div> div:last-of-type{
-  text-align: right;
+.lg {
+  max-width: 100%;
+  height: auto;
 }
 
+.table th,
+.table td {
+  vertical-align: middle;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+}
+
+/* Responsive columnas */
+@media (min-width: 768px) {
+  section,
+  aside {
+    width: auto;
+    display: block;
+  }
+}
+
+/* === Paleta clásica modo claro === */
+:root[data-bs-theme='light'] {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #4a1c1c;
+  --bs-primary: #7C0D0D;
+  --bs-secondary-bg: #f5f5f5;
+  --bs-link-color: #C1B65F;
+}
+
+/* === Botones personalizados (menú lateral) === */
+.custom-btn {
+  border-color: #C1B65F;
+  color: #C1B65F;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #B11212;
+  color: #ffffff;
+}
+
+/* === Botón de tema === */
+#themeToggleBtn {
+  border-color: #C1B65F;
+  color: #C1B65F;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+#themeToggleBtn:hover {
+  background-color: rgba(193, 182, 95, 0.1);
+  box-shadow: 0 0 8px rgba(193, 182, 95, 0.5);
+}
+
+/* Modo oscuro del botón de tema */
+[data-bs-theme="dark"] #themeToggleBtn {
+  border-color: #fbeec1;
+  color: #fbeec1;
+}
+
+[data-bs-theme="dark"] #themeToggleBtn:hover {
+  background-color: rgba(251, 238, 193, 0.1);
+  box-shadow: 0 0 8px rgba(251, 238, 193, 0.4);
+}
+
+/* === Estilos para impresión === */
+@media print {
+  aside,
+  footer,
+  header,
+  #themeToggleBtn {
+    display: none !important;
+  }
+
+  section {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
 
