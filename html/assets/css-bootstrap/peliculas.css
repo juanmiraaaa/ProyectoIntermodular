@@ -72,12 +72,7 @@ section h2 {
 }
 
 #cartelera {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: var(--cartelera-bg-color);
-    padding: 5%; 
 }
 
 
@@ -92,5 +87,3 @@ section h2 {
 li {
     margin-bottom: 10px;
 }
-
-

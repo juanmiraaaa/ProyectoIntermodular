@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../assets/css/root.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-custom.css">
     <title>Film Component</title>
@@ -38,13 +39,15 @@
                             </li>
                         </ul>
                         <form class="d-flex search-bar" role="search">
-                            <button id="x" class="btn btn-outline-warning btn-reset" type="reset">
-                                <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
-                            </button>
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
-                            <button id="lupa" class="btn btn-outline-warning .btn-search" type="submit">
-                                <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
-                            </button>
+                            <div class="custom-search-container d-flex align-items-center">
+                                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                                    <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                                </button>
+                                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                                    <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
