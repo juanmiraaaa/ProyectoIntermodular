@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Classic Cinema</title>
+  <title>Área Cliente - Información | Classic Cinema</title>
   <meta name="description" content="Información de usuario - Classic Cinema">
   <meta name="author" content="Siham">
 
-  <!-- Bootstrap y animate.css -->
+  <!-- Iconos Remix -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Bootstrap y Animate.css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
-  <!-- Estilos -->
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../assets/css/root.css" />
   <link rel="stylesheet" href="../assets/css/areaCliente-info.css" />
 </head>
@@ -22,12 +25,15 @@
   <span id="themeIcon">🌙</span> Tema
 </button>
 
+<!-- Encabezado -->
 <header class="mb-4">
-  <iframe src="../components/header-logged.html" title="header" class="w-100 border-0" style="min-height: 100px;"></iframe>
+  <iframe src="../components/header-logged.html" title="Encabezado" class="w-100 border-0" style="min-height: 100px;"></iframe>
 </header>
 
+<!-- Contenido principal -->
 <main class="container">
   <div class="row gx-4 align-items-start">
+
     <!-- Menú lateral -->
     <div class="col-12 col-md-3 mb-4 mb-md-0">
       <aside class="p-4 rounded shadow-sm h-100 text-light" style="background-color: #7C0D0D;">
@@ -39,7 +45,7 @@
       </aside>
     </div>
 
-    <!-- Contenido -->
+    <!-- Área de usuario -->
     <div class="col-12 col-md-9">
       <section class="bg-body-secondary p-4 px-3 px-md-4 rounded shadow-sm h-100 my-4 animate__animated animate__fadeIn">
         <h2 class="text-info">INFORMACIÓN USUARIO</h2>
@@ -49,20 +55,18 @@
           <button class="btn btn-sm btn-secondary">Cambiar 🔄</button>
         </div>
 
-        <div class="details mb-4">
-          <form action="#" method="post">
-            <label for="email">Correo electrónico:</label>
-            <input class="form-control mb-2" name="email" id="email" type="email" value="johndoe1234@dominio.com" disabled>
+        <form action="#" method="post" class="details mb-4">
+          <label for="email">Correo electrónico:</label>
+          <input class="form-control mb-2" name="email" id="email" type="email" value="johndoe1234@dominio.com" disabled>
 
-            <label for="name">Nombre:</label>
-            <input class="form-control mb-2" id="name" name="name" type="text" value="John Doe" disabled>
+          <label for="name">Nombre:</label>
+          <input class="form-control mb-2" id="name" name="name" type="text" value="John Doe" disabled>
 
-            <label for="birthday">Fecha nacimiento:</label>
-            <input class="form-control mb-3" id="birthday" name="birthday" type="text" placeholder="dd-MM-yyyy">
+          <label for="birthday">Fecha nacimiento:</label>
+          <input class="form-control mb-3" id="birthday" name="birthday" type="text" placeholder="dd-MM-yyyy">
 
-            <button type="submit" class="btn btn-outline-dark">Guardar</button>
-          </form>
-        </div>
+          <button type="submit" class="btn btn-outline-dark">Guardar</button>
+        </form>
 
         <h3>Seguridad</h3>
         <div class="security">
@@ -85,32 +89,48 @@
   </div>
 </main>
 
-<footer class="text-light py-4 mt-5" style="background-color: #7C0D0D;">
+<footer style="background-color: #7C0D0D;" class="text-white py-5 mt-5">
   <div class="container">
     <div class="row text-center text-md-start">
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <h5>Classic Cinema</h5>
-        <p>Calidad, tradición y tecnología en tus salas favoritas.</p>
+      
+      <!-- Sobre Nosotros -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-warning">Sobre Nosotros</h5>
+        <p>En <strong>Classic Cinema</strong>, fusionamos la elegancia del cine clásico con tecnología de última generación para ofrecer una experiencia única en Alicante.</p>
+        <p>Descubre la magia del cine como nunca antes, donde lo clásico y lo moderno se encuentran.</p>
       </div>
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <h5>Contacto</h5>
+
+      <!-- Información -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-warning">Información</h5>
         <ul class="list-unstyled">
-          <li>Tel: 912 765 523</li>
-          <li>Email: info@classiccinema.es</li>
-          <li>Dirección: AV. Juana Elorra, Alicante</li>
+          <li><a href="../pages/privacidad.html" class="text-white text-decoration-none">Política de Privacidad</a></li>
+          <li><a href="../pages/cookies.html" class="text-white text-decoration-none">Política de Cookies</a></li>
+          <li><a href="../pages/avisoLegal.html" class="text-white text-decoration-none">Aviso Legal</a></li>
         </ul>
       </div>
-      <div class="col-12 col-md-4">
-        <h5>Síguenos</h5>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="#" class="link-light">Facebook</a></li>
-          <li class="list-inline-item"><a href="#" class="link-light">Instagram</a></li>
-          <li class="list-inline-item"><a href="#" class="link-light">Twitter</a></li>
+
+      <!-- Contacto -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-warning">Contacto</h5>
+        <p>Síguenos en redes sociales:</p>
+        <div class="mb-3">
+          <a href="https://www.facebook.com/" class="text-white fs-4 me-3" target="_blank"><i class="ri-facebook-line"></i></a>
+          <a href="https://x.com/" class="text-white fs-4 me-3" target="_blank"><i class="ri-twitter-x-line"></i></a>
+          <a href="https://www.instagram.com/" class="text-white fs-4" target="_blank"><i class="ri-instagram-line"></i></a>
+        </div>
+        <p class="fw-bold mb-2">Nuestros cines:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="ri-map-pin-line me-2"></i>TORREVIEJA – Av. me la invento<br><small>+34 585 xxx xxx</small></li>
+          <li class="mb-2"><i class="ri-map-pin-line me-2"></i>ALICANTE – Av. me la invento<br><small>+34 876 xxx xxx</small></li>
+          <li><i class="ri-map-pin-line me-2"></i>DENIA – Av. me la invento<br><small>+34 258 xxx xxx</small></li>
         </ul>
       </div>
+
     </div>
   </div>
 </footer>
+
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -135,4 +155,7 @@
 </script>
 </body>
 </html>
+
+
+
 
