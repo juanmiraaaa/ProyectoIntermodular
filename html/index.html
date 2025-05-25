@@ -1,62 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classic Cinema</title>
-    <meta name="description" content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única">
+    <meta name="description"
+        content="Classic Cinema es la cadena de cines española destacada por abarcar una arquitectura y ambientación clásica, pero implementando la mejor tecnología en calidad de imagen y sonido para abarcar una experiencia de usuario única">
     <meta name="author" content="Juan Mira">
-    <link rel="stylesheet" href="./assets/css/root.css">
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-custom.css">
+    <link rel="stylesheet" href="./assets/css-bootstrap/index.css">
 </head>
-<body>
-    <header>
-        <a id="redirection" href="#main-content">Al contenido principal</a>
-        <iframe src="./components/header.html" title="Cinema Classic | Header"></iframe>
-    </header>
-    <main>
-        <a href="#" id="scroll-to-top"><img src="./assets/img/icons/icon-scrollUp.webp" alt="icon scroll up"></a>
-        <figure id="cartel">
-            <img src="./assets/img/banners/banner-classicCinema.webp" alt="Cartel">
-        </figure>
 
-        <section class="cines">
-            <header id="seleccion-cine">
-                <h2 id="main-content">ELIGE DÓNDE QUIERES VER LA PELÍCULA</h2>
-            </header>
-            <main class="eleccion-container">
-                <section class="recuadro-cine-eleccion">
-                    <h3>CINE TORREVIEJA</h3>
-                    <hr>
-                    <figure>
-                        <img src="./assets/img/otras/cine1.webp" alt="img cine torrevieja">
-                    </figure>
-                    <a href="./pages/peliculas.html" title="Cartelera Torrevieja" target="_self">Ver Cartelera</a>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12578.00782829854!2d-0.6952785759084668!3d37.98875075278178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a9f0429ccfbd%3A0xb82fb14ebb990efe!2sCines%20IMF!5e0!3m2!1ses!2ses!4v1738484701078!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="Mapa Cine Torrevieja" title="Mapa Cine Torrevieja"></iframe>
-                </section>
-                <section class="recuadro-cine-eleccion">
-                    <h3>CINE ALICANTE</h3>
-                    <hr>
-                    <figure>
-                        <img src="assets/img/otras/cine2.webp" alt="img cine alicante">
-                    </figure>
-                    <a href="./pages/peliculas.html" title="Cartelera Alicante" target="_self">Ver Cartelera</a>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12515.088262135097!2d-0.48313117565250296!3d38.35425735139322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129e1cba861c19bf%3A0xfb3efad1166ba1d0!2sPlaza%20Mar%202!5e0!3m2!1ses!2ses!4v1738484483736!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="Mapa Cine Alicante" title="Mapa Cine Alicante"></iframe>
-                </section>
-                <section class="recuadro-cine-eleccion">
-                    <h3>CINE DENIA</h3>
-                    <hr>
-                    <figure>
-                        <img src="assets/img/otras/cine3.webp" alt="img cine denia">
-                    </figure>
-                    <a href="./pages/peliculas.html" title="Cartelera Denia" target="_self">Ver Cartelera</a>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1599292.7951672554!2d-1.5682776224046135!3d38.47336239331015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129e02cb7cd859dd%3A0x541b150086c10272!2sCines%20Imf%20Ondara!5e0!3m2!1ses!2ses!4v1738484807458!5m2!1ses!2ses" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="Mapa Cine Denia" title="Mapa Cine Denia"></iframe>
-                </section>
-            </main>
-        </section>
-    </main>
-    <footer>
-        <iframe src="./components/footer.html" title="Cinema Classic | Footer"></iframe>
-    </footer>
+<body>
+    <div class="container">
+
+        <a id="redirection" class="visually-hidden" href="#main-content">Al contenido principal</a>
+        <header class="row">
+            <nav class="navbar navbar-expand-lg p-3">
+                <div class="container-fluid d-flex">
+                    <a class="navbar-brand" href="#" target="_parent">
+                        <img src="./assets/img/logos/logo-classic-cinema.webp" alt="Logo Classic Cinema">
+                    </a>
+
+                    <div class="d-flex align-items-center ms-auto order-lg-1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-login ms-3" href="./pages/login.html">
+                            <img src="./assets/img/icons/icon-yellowUser.webp" alt="Icon User" height="50">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse order-lg-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav d-flex gap-3 me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html#seleccion-cine" target="_parent">CINES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/peliculas.html" target="_parent">PELÍCULAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html" target="_parent">CONTACTO</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex search-bar" role="search">
+                            <div class="custom-search-container d-flex align-items-center">
+                                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                                    <img src="./assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                                </button>
+                                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar"
+                                    aria-label="Search" />
+                                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                                    <img src="./assets/img/icons/icon-x.webp" alt="Icon x">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="row bg-main">
+            <a href="#" id="scroll-to-top">
+                <img src="./assets/img/icons/icon-scrollUp.webp" alt="icon scroll up">
+            </a>
+
+            <section class="cines">
+                <figure id="cartel" class="row col-12 p-sm-5 p-0 mx-auto">
+                    <img class="custom-shadow rounded-5 p-0" src="./assets/img/banners/banner-classicCinema.webp"
+                        alt="Cartel">
+                </figure>
+                <h2 id="main-content" class="text-center fs-1 fw-bolder pb-5">ELIGE DÓNDE QUIERES VER LA PELÍCULA
+                </h2>
+                <div class="row d-flex justify-content-center gap-4 pb-5">
+                    <section class="card-cinema col-lg-3 col-md-4 col-11 p-4">
+                        <h3 class="card-title mb-3 mt-2">CINE TORREVIEJA</h3>
+                        <img class="card-img-top" src="./assets/img/otras/cine1.webp" alt="img cine torrevieja">
+                        <div class="card-body my-3">
+                            <a class="btn btn-cinema" href="./pages/peliculas.html" title="Cartelera Torrevieja"
+                                target="_self">VER CARTELERA</a>
+                        </div>
+                        <div class="card-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12578.00782829854!2d-0.6952785759084668!3d37.98875075278178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63a9f0429ccfbd%3A0xb82fb14ebb990efe!2sCines%20IMF!5e0!3m2!1ses!2ses!4v1738484701078!5m2!1ses!2ses"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                name="Mapa Cine Torrevieja" title="Mapa Cine Torrevieja">
+                            </iframe>
+                        </div>
+                    </section>
+                    <section class="card-cinema col-lg-3 col-md-4 col-11 p-4">
+                        <h3 class="card-title mb-3 mt-2">CINE ALICANTE</h3>
+                        <img class="card-img-top" src="./assets/img/otras/cine2.webp" alt="img cine torrevieja">
+                        <div class="card-body my-3">
+                            <a class="btn btn-cinema" href="./pages/peliculas.html" title="Cartelera Torrevieja"
+                                target="_self">VER CARTELERA</a>
+                        </div>
+                        <div class="card-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12515.088262135097!2d-0.48313117565250296!3d38.35425735139322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129e1cba861c19bf%3A0xfb3efad1166ba1d0!2sPlaza%20Mar%202!5e0!3m2!1ses!2ses!4v1738484483736!5m2!1ses!2ses"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                name="Mapa Cine Torrevieja" title="Mapa Cine Torrevieja">
+                            </iframe>
+                        </div>
+                    </section>
+                    <section class="card-cinema col-lg-3 col-md-4 col-11 p-4">
+                        <h3 class="card-title mb-3 mt-2">CINE DÉNIA</h3>
+                        <img class="card-img-top" src="./assets/img/otras/cine3.webp" alt="img cine torrevieja">
+                        <div class="card-body my-3">
+                            <a class="btn btn-cinema" href="./pages/peliculas.html" title="Cartelera Torrevieja"
+                                target="_self">VER CARTELERA</a>
+                        </div>
+                        <div class="card-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1599292.7951672554!2d-1.5682776224046135!3d38.47336239331015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129e02cb7cd859dd%3A0x541b150086c10272!2sCines%20Imf%20Ondara!5e0!3m2!1ses!2ses!4v1738484807458!5m2!1ses!2ses"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                name="Mapa Cine Torrevieja" title="Mapa Cine Torrevieja">
+                            </iframe>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-component row text-center p-3">
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Sobre Nosotros</h4>
+                <p class="fs-5">En Classic Cinemo, fusionamos la elegancia del cine clásico con la innovación del
+                    entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
+                <p class="fs-5">Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están
+                    equipadas con tecnología de última generación.</p>
+                <p class="fs-5">Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se
+                    encuentran.</p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Información</h4>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"
+                        href="./pages/privacidad.html">Privacidad</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"
+                        href="./pages/cookies.html">Cockies</a></p>
+                <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"
+                        href="./pages/avisoLegal.html">Aviso Legal</a></p>
+            </section>
+            <section class="col-md-4 col-12">
+                <h4 class="fs-3">Contacto</h4>
+                <p class="fs-5">Siguenos en redes sociales y mantente informado de novedades e promociones</p>
+                <p id="social-media" class="fs-5">
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.facebook.com/"
+                        target="_blank"><span class="ri-facebook-line" aria-label="facebook"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span
+                            class="ri-twitter-x-line" aria-label="twitter"></span></a>
+                    <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.instagram.com/"
+                        target="_blank"><span class="ri-instagram-line" aria-label="instagram"></span></a>
+                </p>
+                <p class="fs-5">Conoce nuestros cines</p>
+                <ul>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span>
+                        TORREVIEJA, Av. me la invento <br> telf. +34 585 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> ALICANTE,
+                        Av. me la invento <br> telf. +34 876 xxx xxx</li>
+                    <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> DENIA,
+                        Av. me la invento <br> telf. +34 258 xxx xxx</li>
+                </ul>
+            </section>
+
+        </footer>
+
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

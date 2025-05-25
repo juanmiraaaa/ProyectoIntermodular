@@ -10,10 +10,55 @@
     <link rel="stylesheet" href="../assets/css/areaCliente-entradas.css">
 </head>
 <body>
-    <header>
-        <a id="redirection" href="#main-content">Al contenido principal</a>
-        <iframe src="../components/header-logged.html" title="Cinema Classic | Header"></iframe>
-    </header>
+    <div class="container">
+        <header class="row">
+
+            <a id="redirection" class="visually-hidden" href="#main-content">Al contenido principal</a>
+
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/img/logos/logo-classic-cinema.webp" alt="Logo Classic Cinema" target="_parent">
+                    </a>
+
+                    <div class="d-flex align-items-center ms-auto order-lg-1">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-login ms-3" href="../pages/login.html">
+                            <img src="../assets/img/icons/icon-yellowUser.webp" alt="Icon User" height="50">
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse order-lg-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html#seleccion-cine" target="_parent">CINES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/peliculas.html" target="_parent">PELÍCULAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a  class="nav-link" href="../pages/contacto.html" target="_parent">CONTACTO</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex search-bar" role="search">
+                            <div class="custom-search-container d-flex align-items-center">
+                                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                                    <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                                </button>
+                                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                                    <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        
+        </header>
+    </div>
     <main>
         <a href="#" id="scroll-to-top"><img src="../assets/img/icons/icon-scrollUp.webp" alt="icon scroll up"></a>
         
