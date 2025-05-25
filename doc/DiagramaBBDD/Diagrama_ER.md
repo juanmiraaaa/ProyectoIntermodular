@@ -1,6 +1,6 @@
 # Diseño BBDD
-- [Requisitos Funcionales](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Dise%C3%B1o_BBDD.md#requisitos-funcionales)
-- [Diseño Conceptual](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Dise%C3%B1o_BBDD.md#dise%C3%B1o-conceptual)
+- [Requisitos Funcionales](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/DiagramaBBDD/Diagrama_ER.md#requisitos-funcionales)
+- [Diseño Conceptual](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/DiagramaBBDD/Diagrama_ER.md#dise%C3%B1o-conceptual)
 
 ## Requisitos Funcionales
 
@@ -132,3 +132,11 @@ Un cliente puede comprar muchas butacas para la misma sesion, una misma butaca p
 ### Diagrama Entidad-Relacion:
 
 ![Diagrama ER](images/BBDD-Conceptual.webp)
+
+### Diseño Lógico:
+
+Se han tomado distintas decisiones, como incluir información sobre permisos, grupos y entidades administradas en usuario. Ahora los usuarios tipo comercial o administrativos pertenecen a un grupo con una serie de permisos que les permite modificar, leer, borrar o insertar elementos en distintas tablas.
+
+En el tema de películas, la pelicula-versión es en verdad lo que se emite. Una película-versión contiene, a parte de la película que se emite, detalles com el idioma de la emisión, la presencia de subtítulos y detalles de la sala como por ejemplo, si la película es en 3D, etc.
+
+![Diseño Lógico](images/Diagrama-LOGICO.png)

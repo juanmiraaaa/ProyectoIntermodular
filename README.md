@@ -56,19 +56,19 @@ Los usuarios se pueden registrar. Si quieres comprar tienes que estar registrado
 [Al Índice](https://github.com/juanmiraaaa/ProyectoIntermodular?tab=readme-ov-file#indice)
 
 ### Memoria Proyecto
-- [Memoria de Proyecto](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/MemoriaProyecto.pdf)
+- [Memoria de Proyecto](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/MemoriaProyecto.pdf)
 
 ### Organizacion Temporal y de Equipo
-- [Diagrama de Gantt](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/DiagramaGantt/Hito2.pdf)
+- [Diagrama de Gantt](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/DiagramaGantt/DiagramaGantt.pdf)
 
 ### Analisis Requisitos
-- [Analisis de Requisitos](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/AnalisisRequisitos/AnalisisRequisitos.pdf)
+- [Analisis de Requisitos](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/AnalisisRequisitos/AnalisisRequisitos.pdf)
 
 
 ### Diseño BBDD
-- [Diseño Conceptual BBDD PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/DisenyoBBDD.pdf)
-- [Diseño Conceptual BBDD](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/Diagrama-ER/Diagrama_ER.md)
+- [Diseño Conceptual BBDD PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/DiagramaBBDD/DisenyoBBDD.pdf)
+- [Diseño Conceptual BBDD](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/DiagramaBBDD/Diagrama_ER.md)
 
 ### MockUp
-- [MockUp Proyecto PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/Documentos/MockUp/Taquilla%20Classic%20Cinema.pdf)
+- [MockUp Proyecto PDF](https://github.com/juanmiraaaa/ProyectoIntermodular/blob/main/doc/MockUp/Taquilla%20Classic%20Cinema.pdf)
 - [MockUp Prototipo Interactivo](https://www.figma.com/proto/6kiFsAjmcK0EmUDCrRRTd4/Taquilla-Classic-Cinema?node-id=1-2&t=K0zTk4VRqulNikyh-1)
