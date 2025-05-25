@@ -37,8 +37,15 @@
 
 }
 
+html body {
+    background-color: var(--body-bg-color);
+}
+
 .bg-custom {
     background: linear-gradient(to bottom, #b80f0a, #670000);
+}
+
+.borde-titulo {
     border-radius: 10px;
 }
 
@@ -73,23 +80,6 @@
     font-size: 0.9rem;
 }
 
-.gold-side {
-    background-color: #a59f60;
-    min-height: 100vh;
-}
-
 .skip-link {
     display: none;
-}
-.container {
-    background-color: #dbd4c5;
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 25px;
 }
