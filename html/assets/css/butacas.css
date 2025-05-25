@@ -1,16 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #b32f2f;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
+
+    --cinemaSelection-bg-color: #3F3939;
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0 ;
+    font-family: "Spectral SC", sans-serif;
+    box-sizing: border-box !important;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
+#main-content {
+    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%); 
+}
+
 main > section, main > form > section {
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
     background-color: var(--details-section-bg-color);
-    margin: 30px auto;
-    margin-bottom: 30px;
     border-radius: 15px;
-    padding: 40px;
 }
 
 header {
@@ -18,35 +63,6 @@ header {
     display: block;
 }
 
-header iframe {
-    vertical-align: bottom;
-}
-
-.to-main-content {
-    display: none;
-}
-
-#scroll-to-top {
-    position: fixed;
-    width: 75px;
-    height: 75px;
-
-    bottom: 20px;
-    right: 5%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    font-size: 3rem;
-    cursor: pointer;
-    z-index: 100;
-    transition: opacity 0.3s ease;
-}
-
-#scroll-to-top:hover {
-    background-color: rgba(0, 0, 0, 1);
-}
 
 h1 {
     color: var(--hero-h1-color);
@@ -62,12 +78,6 @@ h2 {
 legend {
     background-color: gray;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    gap: 30px;
 }
 
 legend span {
@@ -75,7 +85,7 @@ legend span {
 }
 
 
-form article {
+#seats-container {
     background-color: gray;
     padding: min(40px, 5%);
     border-radius: 20px;
@@ -94,22 +104,22 @@ form article {
     max-width: 100%; 
 }
 
-.wing {
+#room .wing {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.row {
+#room .seat-row {
     display: flex;
     justify-content: center;
 }
 
-.seat input {
+#room .seat input {
     display: none;
 }
 
-.seat span {
+#room .seat span {
     font-size: 2.2em;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s;
@@ -124,7 +134,7 @@ span.unavailable {
 }
 
 span.checked {
-    color: yellow; /*solo para la leyenda*/
+    color: yellow; 
 }
 
 .seat input:checked + span {
@@ -152,7 +162,7 @@ ul > li {
     margin-bottom: 60px;
 }
 
-button[type="submit"] {
+#details button[type="submit"] {
     display: inline-block;
     padding: 20px;
     text-align: center;
@@ -170,114 +180,41 @@ p#detail-price-total {
     color: white;
 }
 
-button[type="submit"]:hover {
+#details button[type="submit"]:hover {
     cursor: pointer;
     color: white;
     background-color: purple;
 }
 
-button[type="submit"]:active {
+#details button[type="submit"]:active {
     transform: scale(90%);
 }
 
 
-@media screen and (max-width: 1440px) {
-    :root {
-        --width: 1200px;
+#room span.ri-sofa-fill {
+    font-size: 0.7em;
+
+    @media (min-width: 400px) {
+        font-size: 1em;
     }
 
-    .seat span {
-        font-size: 2.0em;
-        cursor: pointer;
-        transition: color 0.3s, transform 0.3s;
+    @media (min-width: 576px) {
+        font-size: 1em;
     }
 
-    legend span {
-        font-size: 2.0em;
-    }
-    
-}
-
-@media screen and (max-width: 1200px) {
-    :root {
-        --width: 1000px;
+    @media (min-width: 768px) {
+        font-size: 1.3em;
     }
 
-    .seat span {
-        font-size: 1.8em;
-        cursor: pointer;
-        transition: color 0.3s, transform 0.3s;
+    @media (min-width: 992px) {
+        font-size: 1.6em;
     }
 
-    legend span {
-        font-size: 1.8em;
-    }
-    
-}
-
-@media screen and (max-width: 1024px) {
-    :root {
-        --width: min(100%, 1024px);
+    @media (min-width: 1200px) {
+        font-size: 1.9em;
     }
 
-    .seat span {
-        font-size: 1.5em;
-        cursor: pointer;
-        transition: color 0.3s, transform 0.3s;
-    }
-
-    legend span {
-        font-size: 1.5em;
-    }
-    
-}
-
-@media screen and (max-width: 760px) {
-    :root {
-        --width: min(100%, 760px);
-    }
-
-    html {
-        font-size: 2.5vw;
-    }
-
-    .seat span {
-        font-size: 1.0em;
-        cursor: pointer;
-        transition: color 0.3s, transform 0.3s;
-    }
-
-    legend span {
-        font-size: 1.0em;
-    }
-    
-}
-
-@media screen and (max-width: 480px) {
-    :root {
-        --width: min(100%, 480px);
-    }
-
-    .seat span {
-
-        font-size: 1.0em;
-
-        cursor: pointer;
-        transition: color 0.3s, transform 0.3s;
-    }
-
-    legend span {
-        font-size: 1.0em;
-    }
-
-    main > section, main > form > section {
-        width: 100%;
-    }
-
-    #room {
-        display: flex;
-        justify-content: space-between;
-        gap: 0px;
+    @media (min-width: 1400px) {
+        font-size: 2.2em;
     }
 }
-

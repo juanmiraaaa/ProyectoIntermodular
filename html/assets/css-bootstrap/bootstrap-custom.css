@@ -699,7 +699,7 @@ progress {
   content: "— ";
 }
 
-.img-fluid, .header-custom .navbar .container-fluid .navbar-login img, .header-custom .navbar .container-sm .navbar-login img, .header-custom .navbar .container-md .navbar-login img, .header-custom .navbar .container-lg .navbar-login img, .header-custom .navbar .container-xl .navbar-login img, .header-custom .navbar .container-xxl .navbar-login img, .header-custom .navbar .container-fluid .navbar-brand img, .header-custom .navbar .container-sm .navbar-brand img, .header-custom .navbar .container-md .navbar-brand img, .header-custom .navbar .container-lg .navbar-brand img, .header-custom .navbar .container-xl .navbar-brand img, .header-custom .navbar .container-xxl .navbar-brand img, .film-component .film-body .film-image img {
+.img-fluid, .navbar .container-fluid .navbar-login img, .navbar .container-sm .navbar-login img, .navbar .container-md .navbar-login img, .navbar .container-lg .navbar-login img, .navbar .container-xl .navbar-login img, .navbar .container-xxl .navbar-login img, .navbar .container-fluid .navbar-brand img, .navbar .container-sm .navbar-brand img, .navbar .container-md .navbar-brand img, .navbar .container-lg .navbar-brand img, .navbar .container-xl .navbar-brand img, .navbar .container-xxl .navbar-brand img, .film-component .film-body .film-image img {
   max-width: 100%;
   height: auto;
 }
@@ -7841,7 +7841,7 @@ textarea.form-control-lg {
   margin-left: 0.25rem !important;
 }
 
-.mx-2, .header-custom .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-sm .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-md .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-lg .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-xl .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item {
+.mx-2, .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item, .navbar .container-sm .navbar-collapse .navbar-nav .nav-item, .navbar .container-md .navbar-collapse .navbar-nav .nav-item, .navbar .container-lg .navbar-collapse .navbar-nav .nav-item, .navbar .container-xl .navbar-collapse .navbar-nav .nav-item, .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item {
   margin-right: 0.5rem !important;
   margin-left: 0.5rem !important;
 }
@@ -7997,7 +7997,7 @@ textarea.form-control-lg {
   margin-left: 0.5rem !important;
 }
 
-.ms-3, .header-custom .navbar .container-fluid .navbar-login, .header-custom .navbar .container-sm .navbar-login, .header-custom .navbar .container-md .navbar-login, .header-custom .navbar .container-lg .navbar-login, .header-custom .navbar .container-xl .navbar-login, .header-custom .navbar .container-xxl .navbar-login {
+.ms-3, .navbar .container-fluid .navbar-login, .navbar .container-sm .navbar-login, .navbar .container-md .navbar-login, .navbar .container-lg .navbar-login, .navbar .container-xl .navbar-login, .navbar .container-xxl .navbar-login {
   margin-left: 1rem !important;
 }
 
@@ -12043,37 +12043,37 @@ textarea.form-control-lg {
   background-color: #A020F0;
 }
 
-.header-custom .navbar {
+.navbar {
   box-sizing: border-box;
   background-color: #7C0D0D;
   height: auto;
 }
-.header-custom .navbar .container-fluid .navbar-brand img, .header-custom .navbar .container-sm .navbar-brand img, .header-custom .navbar .container-md .navbar-brand img, .header-custom .navbar .container-lg .navbar-brand img, .header-custom .navbar .container-xl .navbar-brand img, .header-custom .navbar .container-xxl .navbar-brand img {
+.navbar .container-fluid .navbar-brand img, .navbar .container-sm .navbar-brand img, .navbar .container-md .navbar-brand img, .navbar .container-lg .navbar-brand img, .navbar .container-xl .navbar-brand img, .navbar .container-xxl .navbar-brand img {
   max-height: 80px;
   height: auto;
   width: auto;
 }
 @media (max-width: 480px) {
-  .header-custom .navbar .container-fluid .navbar-brand img, .header-custom .navbar .container-sm .navbar-brand img, .header-custom .navbar .container-md .navbar-brand img, .header-custom .navbar .container-lg .navbar-brand img, .header-custom .navbar .container-xl .navbar-brand img, .header-custom .navbar .container-xxl .navbar-brand img {
+  .navbar .container-fluid .navbar-brand img, .navbar .container-sm .navbar-brand img, .navbar .container-md .navbar-brand img, .navbar .container-lg .navbar-brand img, .navbar .container-xl .navbar-brand img, .navbar .container-xxl .navbar-brand img {
     max-height: 50px;
   }
 }
-.header-custom .navbar .container-fluid .navbar-collapse, .header-custom .navbar .container-sm .navbar-collapse, .header-custom .navbar .container-md .navbar-collapse, .header-custom .navbar .container-lg .navbar-collapse, .header-custom .navbar .container-xl .navbar-collapse, .header-custom .navbar .container-xxl .navbar-collapse {
+.navbar .container-fluid .navbar-collapse, .navbar .container-sm .navbar-collapse, .navbar .container-md .navbar-collapse, .navbar .container-lg .navbar-collapse, .navbar .container-xl .navbar-collapse, .navbar .container-xxl .navbar-collapse {
   background-color: #7C0D0D;
 }
-.header-custom .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-sm .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-md .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-lg .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-xl .navbar-collapse .navbar-nav .nav-item, .header-custom .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item {
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item, .navbar .container-sm .navbar-collapse .navbar-nav .nav-item, .navbar .container-md .navbar-collapse .navbar-nav .nav-item, .navbar .container-lg .navbar-collapse .navbar-nav .nav-item, .navbar .container-xl .navbar-collapse .navbar-nav .nav-item, .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item {
   background-color: #b32f2f;
   color: rgb(207.875, 193.25, 81.125);
   border-radius: 5px;
 }
-.header-custom .navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link, .header-custom .navbar .container-sm .navbar-collapse .navbar-nav .nav-item .nav-link, .header-custom .navbar .container-md .navbar-collapse .navbar-nav .nav-item .nav-link, .header-custom .navbar .container-lg .navbar-collapse .navbar-nav .nav-item .nav-link, .header-custom .navbar .container-xl .navbar-collapse .navbar-nav .nav-item .nav-link, .header-custom .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item .nav-link {
+.navbar .container-fluid .navbar-collapse .navbar-nav .nav-item .nav-link, .navbar .container-sm .navbar-collapse .navbar-nav .nav-item .nav-link, .navbar .container-md .navbar-collapse .navbar-nav .nav-item .nav-link, .navbar .container-lg .navbar-collapse .navbar-nav .nav-item .nav-link, .navbar .container-xl .navbar-collapse .navbar-nav .nav-item .nav-link, .navbar .container-xxl .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: inherit;
 }
-.header-custom .navbar .container-fluid .search-bar, .header-custom .navbar .container-sm .search-bar, .header-custom .navbar .container-md .search-bar, .header-custom .navbar .container-lg .search-bar, .header-custom .navbar .container-xl .search-bar, .header-custom .navbar .container-xxl .search-bar {
+.navbar .container-fluid .search-bar, .navbar .container-sm .search-bar, .navbar .container-md .search-bar, .navbar .container-lg .search-bar, .navbar .container-xl .search-bar, .navbar .container-xxl .search-bar {
   margin-left: auto;
   width: auto;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container, .header-custom .navbar .container-sm .search-bar .custom-search-container, .header-custom .navbar .container-md .search-bar .custom-search-container, .header-custom .navbar .container-lg .search-bar .custom-search-container, .header-custom .navbar .container-xl .search-bar .custom-search-container, .header-custom .navbar .container-xxl .search-bar .custom-search-container {
+.navbar .container-fluid .search-bar .custom-search-container, .navbar .container-sm .search-bar .custom-search-container, .navbar .container-md .search-bar .custom-search-container, .navbar .container-lg .search-bar .custom-search-container, .navbar .container-xl .search-bar .custom-search-container, .navbar .container-xxl .search-bar .custom-search-container {
   background-color: #5a2f32;
   border-radius: 30px;
   padding: 5px 15px;
@@ -12081,7 +12081,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container .btn-icon, .header-custom .navbar .container-sm .search-bar .custom-search-container .btn-icon, .header-custom .navbar .container-md .search-bar .custom-search-container .btn-icon, .header-custom .navbar .container-lg .search-bar .custom-search-container .btn-icon, .header-custom .navbar .container-xl .search-bar .custom-search-container .btn-icon, .header-custom .navbar .container-xxl .search-bar .custom-search-container .btn-icon {
+.navbar .container-fluid .search-bar .custom-search-container .btn-icon, .navbar .container-sm .search-bar .custom-search-container .btn-icon, .navbar .container-md .search-bar .custom-search-container .btn-icon, .navbar .container-lg .search-bar .custom-search-container .btn-icon, .navbar .container-xl .search-bar .custom-search-container .btn-icon, .navbar .container-xxl .search-bar .custom-search-container .btn-icon {
   background: none;
   border: none;
   padding: 0 5px;
@@ -12089,11 +12089,11 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container .btn-icon img, .header-custom .navbar .container-sm .search-bar .custom-search-container .btn-icon img, .header-custom .navbar .container-md .search-bar .custom-search-container .btn-icon img, .header-custom .navbar .container-lg .search-bar .custom-search-container .btn-icon img, .header-custom .navbar .container-xl .search-bar .custom-search-container .btn-icon img, .header-custom .navbar .container-xxl .search-bar .custom-search-container .btn-icon img {
+.navbar .container-fluid .search-bar .custom-search-container .btn-icon img, .navbar .container-sm .search-bar .custom-search-container .btn-icon img, .navbar .container-md .search-bar .custom-search-container .btn-icon img, .navbar .container-lg .search-bar .custom-search-container .btn-icon img, .navbar .container-xl .search-bar .custom-search-container .btn-icon img, .navbar .container-xxl .search-bar .custom-search-container .btn-icon img {
   height: 20px;
   width: auto;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container .custom-search-input, .header-custom .navbar .container-sm .search-bar .custom-search-container .custom-search-input, .header-custom .navbar .container-md .search-bar .custom-search-container .custom-search-input, .header-custom .navbar .container-lg .search-bar .custom-search-container .custom-search-input, .header-custom .navbar .container-xl .search-bar .custom-search-container .custom-search-input, .header-custom .navbar .container-xxl .search-bar .custom-search-container .custom-search-input {
+.navbar .container-fluid .search-bar .custom-search-container .custom-search-input, .navbar .container-sm .search-bar .custom-search-container .custom-search-input, .navbar .container-md .search-bar .custom-search-container .custom-search-input, .navbar .container-lg .search-bar .custom-search-container .custom-search-input, .navbar .container-xl .search-bar .custom-search-container .custom-search-input, .navbar .container-xxl .search-bar .custom-search-container .custom-search-input {
   background: none;
   border: none;
   color: #fff;
@@ -12102,15 +12102,15 @@ textarea.form-control-lg {
   outline: none;
   box-shadow: none;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container .custom-search-input.form-control, .header-custom .navbar .container-sm .search-bar .custom-search-container .custom-search-input.form-control, .header-custom .navbar .container-md .search-bar .custom-search-container .custom-search-input.form-control, .header-custom .navbar .container-lg .search-bar .custom-search-container .custom-search-input.form-control, .header-custom .navbar .container-xl .search-bar .custom-search-container .custom-search-input.form-control, .header-custom .navbar .container-xxl .search-bar .custom-search-container .custom-search-input.form-control {
+.navbar .container-fluid .search-bar .custom-search-container .custom-search-input.form-control, .navbar .container-sm .search-bar .custom-search-container .custom-search-input.form-control, .navbar .container-md .search-bar .custom-search-container .custom-search-input.form-control, .navbar .container-lg .search-bar .custom-search-container .custom-search-input.form-control, .navbar .container-xl .search-bar .custom-search-container .custom-search-input.form-control, .navbar .container-xxl .search-bar .custom-search-container .custom-search-input.form-control {
   padding: 0 10px;
   height: auto;
   box-shadow: none;
 }
-.header-custom .navbar .container-fluid .search-bar .custom-search-container .custom-search-input::placeholder, .header-custom .navbar .container-sm .search-bar .custom-search-container .custom-search-input::placeholder, .header-custom .navbar .container-md .search-bar .custom-search-container .custom-search-input::placeholder, .header-custom .navbar .container-lg .search-bar .custom-search-container .custom-search-input::placeholder, .header-custom .navbar .container-xl .search-bar .custom-search-container .custom-search-input::placeholder, .header-custom .navbar .container-xxl .search-bar .custom-search-container .custom-search-input::placeholder {
+.navbar .container-fluid .search-bar .custom-search-container .custom-search-input::placeholder, .navbar .container-sm .search-bar .custom-search-container .custom-search-input::placeholder, .navbar .container-md .search-bar .custom-search-container .custom-search-input::placeholder, .navbar .container-lg .search-bar .custom-search-container .custom-search-input::placeholder, .navbar .container-xl .search-bar .custom-search-container .custom-search-input::placeholder, .navbar .container-xxl .search-bar .custom-search-container .custom-search-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-.header-custom .navbar .container-fluid .navbar-login img, .header-custom .navbar .container-sm .navbar-login img, .header-custom .navbar .container-md .navbar-login img, .header-custom .navbar .container-lg .navbar-login img, .header-custom .navbar .container-xl .navbar-login img, .header-custom .navbar .container-xxl .navbar-login img {
+.navbar .container-fluid .navbar-login img, .navbar .container-sm .navbar-login img, .navbar .container-md .navbar-login img, .navbar .container-lg .navbar-login img, .navbar .container-xl .navbar-login img, .navbar .container-xxl .navbar-login img {
   height: 50px;
 }
 

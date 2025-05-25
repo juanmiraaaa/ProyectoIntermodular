@@ -1,47 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #b32f2f;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
+
+    --cinemaSelection-bg-color: #3F3939;
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Spectral SC", sans-serif;
+    box-sizing: border-box !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-header {
-    margin: 0;
-    display: block;
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-main {
-    margin: 0 auto;
-    padding: 0;
-}
-
-main section {
-    margin: 0 100px;
-    text-align: center;
-    padding: min(60px, 5%);
-}
-
-.to-main-content {
-    display: none;
-}
-
-#scroll-to-top {
-    position: fixed;
-    width: 75px;
-    height: 75px;
-
-    bottom: 20px;
-    right: 5%;
-    background-color: rgba(0, 0, 0, 0.7); 
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    font-size: 3rem;
-    cursor: pointer;
-    z-index: 100;
-    transition: opacity 0.3s ease;
-}
-
-#scroll-to-top:hover {
-    background-color: rgba(0, 0, 0, 1);
+.container > main {
+    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
+    box-shadow: 0 10px 15px 10px #333;
 }
 
 h1 {
@@ -49,6 +59,10 @@ h1 {
     font-size: 3rem;
     font-weight: 700;
     color: var(--hero-h1-color);
+}
+
+main {
+    padding: 5px;
 }
 
 main section {
@@ -95,42 +109,17 @@ p, li {
     font-size: 1rem;
     font-family: Spectal;
     color: white;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1440px) {
-    :root {
-        --width: 1200px;
-    }
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
 }
 
-@media screen and (max-width: 1200px) {
-    :root {
-        --width: 1024px;
-    }
-
-}
-
-@media screen and (max-width: 1024px) {
-    :root {
-        --width: 760px;
-    }
-
-}
-
-@media screen and (max-width: 760px) {
-    :root {
-        --width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-    :root {
-        --width: 100%;
-    }
-
-    html {
-        font-size: 0.8em;
-    }
+@media (max-width: 400px) {
+  html {
+    font-size: 65%;
+  }
 }
