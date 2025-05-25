@@ -1,71 +1,85 @@
-/* style.css */
-body {
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    border-top: 2px solid black;
+    font-family: "Spectral SC", sans-serif;
+    box-sizing: border-box !important;
+}
+
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #b32f2f;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
+
+    --cinemaSelection-bg-color: #3F3939;
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2);
+
+}
+
+html body {
+    background-color: var(--body-bg-color);
+}
+
+.bg-custom {
+    background: linear-gradient(to bottom, #b80f0a, #670000);
+}
+
+.borde-titulo {
+    border-radius: 10px;
+}
+
+.form-box {
+    background-color: #e4d8c3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cinema {
+    background-color: #8a1810;
+    color: white;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.btn-google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+.highlight-title {
+    color: #b2c20e;
+    font-weight: bold;
+}
+
+.text-small {
+    font-size: 0.9rem;
 }
 
 .skip-link {
     display: none;
-}
-
-h1 {
-    text-align: center;
-    color: var(--hero-h1-color);
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.container {
-    background-color: #dbd4c5;
-    display: flex;
-    width: 70%;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin-bottom: 25px;
-}
-
-.login, .register {
-    background: #dbd4c5;
-    padding: 50px;
-    border-radius: 10px;
-    flex: 1;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin: auto;
-}
-
-.login button:hover {
-    background-color: #5D1510;
-}
-
-.register button:hover {
-    background-color: #5D1510;
-}
-
-input, button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-button {
-    background: #A5251B;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button.facebook {
-    background: #3b5998;
-}
-
-button.google {
-    background: #db4437;
-
 }
