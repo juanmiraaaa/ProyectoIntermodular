@@ -1,10 +1,59 @@
-/* === Tema claro personalizado === */
-:root[data-bs-theme='light'] {
-  --bs-body-bg: #ffffff;
-  --bs-body-color: #4a1c1c;
-  --bs-primary: #7C0D0D;
-  --bs-link-color: #C1B65F;
-  --bs-secondary-bg: #f5f5f5;
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #b32f2f;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
+
+    --cinemaSelection-bg-color: #3F3939;
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2);
+
+    --width: 1440px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Spectral SC", sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Spectral SC", sans-serif;
+    box-sizing: border-box;
+}
+
+html body {
+  background-color: var(--body-bg-color);
+}
+
+.container main {
+    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%); 
+}
+
+li {
+  margin-bottom: 10px;
 }
 
 /* Encabezado de sección */
@@ -105,23 +154,3 @@ h1 {
   color: #fff;
   border-color: #555;
 }
-
-/* Impresión */
-@media print {
-  header,
-  footer,
-  #themeToggleBtn {
-    display: none !important;
-  }
-
-  body {
-    background: white !important;
-    color: black !important;
-  }
-
-  .contact-form {
-    box-shadow: none !important;
-    border: none !important;
-  }
-}
-
