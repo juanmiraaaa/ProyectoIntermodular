@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="light">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,151 +12,197 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 
   <!-- Bootstrap y Animate.css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css-bootstrap/bootstrap-custom.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="../assets/css/root.css" />
   <link rel="stylesheet" href="../assets/css/areaCliente-info.css" />
 </head>
+
 <body>
 
-<!-- Botón de tema -->
-<button id="themeToggleBtn" class="btn btn-outline-light position-fixed bottom-0 end-0 m-3 z-3">
-  <span id="themeIcon">🌙</span> Tema
-</button>
+  <!-- Botón de tema -->
+  <button id="themeToggleBtn" class="btn btn-outline-light position-fixed bottom-0 end-0 m-3 z-3">
+    <span id="themeIcon">🌙</span> Tema
+  </button>
 
-<!-- Encabezado -->
-<header class="mb-4">
-  <iframe src="../components/header-logged.html" title="Encabezado" class="w-100 border-0" style="min-height: 100px;"></iframe>
-</header>
-
-<!-- Contenido principal -->
-<main class="container">
-  <div class="row gx-4 align-items-start">
-
-    <!-- Menú lateral -->
-    <div class="col-12 col-md-3 mb-4 mb-md-0">
-      <aside class="p-4 rounded shadow-sm h-100 text-light" style="background-color: #7C0D0D;">
-        <div class="d-grid gap-3">
-          <a class="btn btn-outline-light custom-btn" href="./areaCliente-info.html">INFORMACIÓN USUARIO</a>
-          <a class="btn btn-outline-light custom-btn" href="./areaCliente-entradas.html">TUS ENTRADAS</a>
-          <a class="btn btn-outline-light custom-btn" href="./areaCliente-facturas.html">FACTURAS</a>
-        </div>
-      </aside>
-    </div>
-
-    <!-- Área de usuario -->
-    <div class="col-12 col-md-9">
-      <section class="bg-body-secondary p-4 px-3 px-md-4 rounded shadow-sm h-100 my-4 animate__animated animate__fadeIn">
-        <h2 class="text-info">INFORMACIÓN USUARIO</h2>
-
-        <div class="text-center mb-4">
-          <div class="avatar display-1">👤</div>
-          <button class="btn btn-sm btn-secondary">Cambiar 🔄</button>
-        </div>
-
-        <form action="#" method="post" class="details mb-4">
-          <label for="email">Correo electrónico:</label>
-          <input class="form-control mb-2" name="email" id="email" type="email" value="johndoe1234@dominio.com" disabled>
-
-          <label for="name">Nombre:</label>
-          <input class="form-control mb-2" id="name" name="name" type="text" value="John Doe" disabled>
-
-          <label for="birthday">Fecha nacimiento:</label>
-          <input class="form-control mb-3" id="birthday" name="birthday" type="text" placeholder="dd-MM-yyyy">
-
-          <button type="submit" class="btn btn-outline-dark">Guardar</button>
-        </form>
-
-        <h3>Seguridad</h3>
-        <div class="security">
-          <label for="password">Contraseña:</label>
-          <input class="form-control mb-2" id="password" type="password" value="******">
-
-          <label for="newPassword">Nueva Contraseña:</label>
-          <input class="form-control mb-2" id="newPassword" type="password" value="******">
-
-          <label for="repeatPassword">Repetir Contraseña:</label>
-          <input class="form-control mb-2" id="repeatPassword" type="password" value="******">
-
-          <label for="2fa">Autenticación dos pasos:</label>
-          <input class="form-control mb-3" id="2fa" type="text" value="******32" disabled>
-        </div>
-
-        <a class="btn btn-outline-danger mt-3" href="./login.html">Cerrar Sesión</a>
-      </section>
-    </div>
-  </div>
-</main>
-
-<footer style="background-color: #7C0D0D;" class="text-white py-5 mt-5">
+  <!-- Encabezado -->
   <div class="container">
-    <div class="row text-center text-md-start">
-      
-      <!-- Sobre Nosotros -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Sobre Nosotros</h5>
-        <p>En <strong>Classic Cinema</strong>, fusionamos la elegancia del cine clásico con tecnología de última generación para ofrecer una experiencia única en Alicante.</p>
-        <p>Descubre la magia del cine como nunca antes, donde lo clásico y lo moderno se encuentran.</p>
-      </div>
+    <header class="row">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid d-flex">
+          <a class="navbar-brand" href="#">
+            <img src="../assets/img/logos/logo-classic-cinema.webp" alt="Logo Classic Cinema" target="_parent">
+          </a>
 
-      <!-- Información -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Información</h5>
-        <ul class="list-unstyled">
-          <li><a href="../pages/privacidad.html" class="text-white text-decoration-none">Política de Privacidad</a></li>
-          <li><a href="../pages/cookies.html" class="text-white text-decoration-none">Política de Cookies</a></li>
-          <li><a href="../pages/avisoLegal.html" class="text-white text-decoration-none">Aviso Legal</a></li>
-        </ul>
-      </div>
+          <div class="d-flex align-items-center ms-auto order-lg-1">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-login ms-3" href="../pages/login.html">
+              <img src="../assets/img/icons/icon-yellowUser.webp" alt="Icon User" height="50">
+            </a>
+          </div>
 
-      <!-- Contacto -->
-      <div class="col-md-4 mb-4">
-        <h5 class="text-warning">Contacto</h5>
-        <p>Síguenos en redes sociales:</p>
-        <div class="mb-3">
-          <a href="https://www.facebook.com/" class="text-white fs-4 me-3" target="_blank"><i class="ri-facebook-line"></i></a>
-          <a href="https://x.com/" class="text-white fs-4 me-3" target="_blank"><i class="ri-twitter-x-line"></i></a>
-          <a href="https://www.instagram.com/" class="text-white fs-4" target="_blank"><i class="ri-instagram-line"></i></a>
+          <div class="collapse navbar-collapse order-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html#seleccion-cine" target="_parent">CINES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/peliculas.html" target="_parent">PELÍCULAS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/contacto.html" target="_parent">CONTACTO</a>
+              </li>
+            </ul>
+            <form class="d-flex search-bar" role="search">
+              <div class="custom-search-container d-flex align-items-center">
+                <button id="lupa" class="btn-icon" type="submit" aria-label="Enviar búsqueda">
+                  <img src="../assets/img/icons/icon-lupa.webp" alt="Icono busqueda">
+                </button>
+                <input class="custom-search-input form-control me-2" type="search" placeholder="Buscar"
+                  aria-label="Search" />
+                <button id="x" class="btn-icon" type="reset" aria-label="Borra búsqueda">
+                  <img src="../assets/img/icons/icon-x.webp" alt="Icon x">
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <p class="fw-bold mb-2">Nuestros cines:</p>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="ri-map-pin-line me-2"></i>TORREVIEJA – Av. me la invento<br><small>+34 585 xxx xxx</small></li>
-          <li class="mb-2"><i class="ri-map-pin-line me-2"></i>ALICANTE – Av. me la invento<br><small>+34 876 xxx xxx</small></li>
-          <li><i class="ri-map-pin-line me-2"></i>DENIA – Av. me la invento<br><small>+34 258 xxx xxx</small></li>
+      </nav>
+
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="row gx-4 align-items-stretch justify-content-center py-5">
+        <!-- Menú lateral -->
+        <div class="col-12 col-md-3 mb-4 mb-md-0">
+          <aside class="p-1 rounded shadow-sm h-100 text-light" style="background-color: #7C0D0D;">
+            <div class="d-flex flex-column gap-2 align-items-stretch">
+              <a class="btn btn-outline-light custom-btn" href="./areaCliente-info.html">INFORMACIÓN USUARIO</a>
+              <a class="btn btn-outline-light custom-btn" href="./areaCliente-entradas.html">TUS ENTRADAS</a>
+              <a class="btn btn-outline-light custom-btn" href="./areaCliente-facturas.html">FACTURAS</a>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Área de usuario -->
+        <div class="col-12 col-md-9 mx-auto">
+          <section
+            class="bg-body-secondary p-4 px-3 px-md-4 rounded shadow-sm h-100 my-4 animate__animated animate__fadeIn">
+            <h2 class="text-info">INFORMACIÓN USUARIO</h2>
+
+            <div class="text-center mb-4">
+              <div class="avatar display-1">👤</div>
+              <button class="btn btn-sm btn-secondary">Cambiar 🔄</button>
+            </div>
+
+            <form action="#" method="post" class="details mb-4">
+              <label for="email">Correo electrónico:</label>
+              <input class="form-control mb-2" name="email" id="email" type="email" value="johndoe1234@dominio.com"
+                disabled>
+
+              <label for="name">Nombre:</label>
+              <input class="form-control mb-2" id="name" name="name" type="text" value="John Doe" disabled>
+
+              <label for="birthday">Fecha nacimiento:</label>
+              <input class="form-control mb-3" id="birthday" name="birthday" type="text" placeholder="dd-MM-yyyy">
+
+              <button type="submit" class="btn btn-outline-dark">Guardar</button>
+            </form>
+
+            <h3>Seguridad</h3>
+            <div class="security">
+              <label for="password">Contraseña:</label>
+              <input class="form-control mb-2" id="password" type="password" value="******">
+
+              <label for="newPassword">Nueva Contraseña:</label>
+              <input class="form-control mb-2" id="newPassword" type="password" value="******">
+
+              <label for="repeatPassword">Repetir Contraseña:</label>
+              <input class="form-control mb-2" id="repeatPassword" type="password" value="******">
+
+              <label for="2fa">Autenticación dos pasos:</label>
+              <input class="form-control mb-3" id="2fa" type="text" value="******32" disabled>
+            </div>
+
+            <a class="btn btn-outline-danger mt-3" href="./login.html">Cerrar Sesión</a>
+          </section>
+        </div>
+    </main>
+
+    <footer class="footer-component row text-center p-3">
+
+      <section class="col-md-4 col-12">
+        <h4 class="fs-3">Sobre Nosotros</h4>
+        <p class="fs-5">En Classic Cinema, fusionamos la elegancia del cine clásico con la innovación del
+          entretenimiento mderno para ofrecer una experiencia única en la zona de Alicante.</p>
+        <p class="fs-5">Nuestras salas, diseñadas para capturar el espíritu del cine tradicional, están equipadas con
+          tecnología de última generación.</p>
+        <p class="fs-5">Descure la magia del cine como nunca antes, en un lugar donde lo clásico y lo moderno se
+          encuentran.</p>
+      </section>
+      <section class="col-md-4 col-12">
+        <h4 class="fs-3">Información</h4>
+        <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2"
+            href="../pages/privacidad.html">Privacidad</a></p>
+        <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/cookies.html">Coockies</a>
+        </p>
+        <p class="fs-5"><a class="text-white fs-4 text-decoration-none my-2" href="../pages/avisoLegal.html">Aviso
+            Legal</a></p>
+      </section>
+      <section class="col-md-4 col-12">
+        <h4 class="fs-3">Contacto</h4>
+        <p class="fs-5">Siguenos en redes sociales y mantente informado de novedades e promociones</p>
+        <p id="social-media" class="fs-5">
+          <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.facebook.com/" target="_blank"><span
+              class="ri-facebook-line" aria-label="facebook"></span></a>
+          <a class="text-white fs-5 text-decoration-none mx-2" href="https://x.com/" target="_blank"><span
+              class="ri-twitter-x-line" aria-label="twitter"></span></a>
+          <a class="text-white fs-5 text-decoration-none mx-2" href="https://www.instagram.com/" target="_blank"><span
+              class="ri-instagram-line" aria-label="instagram"></span></a>
+        </p>
+        <p class="fs-5">Conoce nuestros cines</p>
+        <ul>
+          <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> TORREVIEJA, Av. me
+            la invento <br> telf. +34 585 xxx xxx</li>
+          <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> ALICANTE, Av. me la
+            invento <br> telf. +34 876 xxx xxx</li>
+          <li class="list-unstyled text-start text-white fs-5"><span class="ri-map-pin-line"></span> DENIA, Av. me la
+            invento <br> telf. +34 258 xxx xxx</li>
         </ul>
-      </div>
+      </section>
 
-    </div>
+    </footer>
+
   </div>
-</footer>
 
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const htmlEl = document.documentElement;
-  const themeBtn = document.getElementById("themeToggleBtn");
-  const themeIcon = document.getElementById("themeIcon");
 
-  const savedTheme = localStorage.getItem("theme");
-  const applyTheme = (theme) => {
-    htmlEl.setAttribute("data-bs-theme", theme);
-    themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
-  };
-  applyTheme(savedTheme || "light");
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const htmlEl = document.documentElement;
+    const themeBtn = document.getElementById("themeToggleBtn");
+    const themeIcon = document.getElementById("themeIcon");
 
-  themeBtn.addEventListener("click", () => {
-    const current = htmlEl.getAttribute("data-bs-theme") || "light";
-    const next = current === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", next);
-    applyTheme(next);
-  });
-</script>
+    const savedTheme = localStorage.getItem("theme");
+    const applyTheme = (theme) => {
+      htmlEl.setAttribute("data-bs-theme", theme);
+      themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+    };
+    applyTheme(savedTheme || "light");
+
+    themeBtn.addEventListener("click", () => {
+      const current = htmlEl.getAttribute("data-bs-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", next);
+      applyTheme(next);
+    });
+  </script>
 </body>
+
 </html>
-
-
-
-
