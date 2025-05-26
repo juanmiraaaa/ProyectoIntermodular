@@ -1,17 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --body-bg-color: #99904D;
+    --navbar-bg-color: #7C0D0D;
+    --main-bg-color: #b32f2f;
+    --footer-bg-color: #7C0D0D;
+    --nav-a-bg-color: #B11212;
+    --hero-bg-color: #28072B;
+
+    --nav-a-color: #C1B65F;
+    --footer-h4-color: #DEA508;
+    --footer-p-color: #F6E1A5;
+    --hero-a-color: #6217AE;
+    --hero-h1-color: #A2B309;
+
+    --cinemaSelection-bg-color: #3F3939;
+    --estrenos-bg-color: #457995;
+    --cartelera-bg-color: #B1A78B;
+
+    --list-film-color: #D9D9D9;
+
+    --film-bg-color: #FEFBE7;
+    --film-title-color: #6B621D;
+    --film-desc-color: #47473D;
+    --film-button-bg-color: #3E1164;
+    --film-duration-bg-color: #D9D9D9;
+    --details-section-bg-color: rgba(217, 217, 217, 0.2);
+
+    --width: 1440px;
+}
+
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: "Spectral SC", sans-serif;
 }
 
-body > main {
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--body-bg-color);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-#redirection {
-    display: none;
+.custom-shadow {
+    box-shadow: 0 10px 15px 10px #333;
+}
+
+.bg-main {
+    background: linear-gradient(to bottom, var(--navbar-bg-color) 0%, var(--navbar-bg-color) 15%, var(--main-bg-color) 45%, var(--main-bg-color) 55%, var(--footer-bg-color) 85%, var(--footer-bg-color) 100%);
 }
 
 #scroll-to-top img {
@@ -23,117 +64,24 @@ body > main {
     cursor: pointer;
 }
 
-aside {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
-    background-color: #fffdf3;
+.aside-a-color, .tickets-color { /*Clase personalizada; no tiene que seleccionar nada concreto en el html*/
+    background-color: #511111;
 }
 
-aside a {
-    text-decoration: none;
-}
-
-aside a:nth-of-type(2) h2 {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: var(--navbar-bg-color);
-}
-
-aside a:nth-of-type(1) h2, aside a:nth-of-type(3) h2 {
-    padding: 10px 20px;
-    border-radius: 5px;
+.aside-h2-color { /*Clase personalizada*/
     color: #DEA508;
-    background-color: #511111;
 }
 
-aside a h2:hover {
-    color: var(--nav-a-bg-color);
-    background-color: #DEA508;
+aside a h2 {
+  font-size: 1.5rem;
 }
 
-aside a h2:active {
+aside a:hover h2 {
     color: #fff;
-    background-color: #511111;
 }
 
-aside a h2:focus {
-    background-color: #511111;
-}
-
-#container-entradas {
-    width: 56.5%;
-    margin: 40px 0;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
-.tickets header {
-    height: 20px;
-}
-
-.tickets header { /*Temporal por el root*/
-    min-height: 50px;
-    background-color: transparent;
-}
-
-header h1 {
-    font-size: 2em;
-    color: white;
-    text-align: center;
-}
-
-h2 {
-    color: white;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 20px;
-}
-
-.tickets {
-    width: 100%;
-    padding: 20px;
-    background-color: #511111;
-    border-radius: 10px;
-}
-
-.tickets > main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.ticket-container {
-    width: 100%;
+.ticket-container-color {
     background-color: #fffdf3;
-    padding: 10px 10px 0 10px;
-}
-
-.ticket-film {
-    width: 100%-15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px 0 10px;
-}
-
-.film-information {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 15px;
 }
 
 .film figure img {
@@ -146,22 +94,6 @@ main {
 .ticket-information {
     position: relative;
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 10px;
-}
-
-.ticket-information article h3 {
-    display: inline-block;
-    font-size: 2em;
-}
-
-.ticket-information article:nth-child(2) p:nth-of-type(2) {
-    font-size: 2em;
-    font-weight: 700;
 }
 
 .ticket-information figure img {
@@ -209,4 +141,14 @@ button figure img:hover {
     width: 30px;
     /*mask-image: url('../img/icons/arrowDown.webp');*/
     border: 5px solid #000;
+}
+
+@media (max-width: 768px) {
+    .titulo-responsive {
+        font-size: 1.5rem;
+    }
+    .mb-6 {
+        width: 100%;
+        padding: 5rem;
+}
 }
